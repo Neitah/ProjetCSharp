@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"> 
+        Title="Window1" Height="450" Width="800"> 
     <DockPanel>
-        <Grid DockPanel.Dock="Left">
+        <Grid DockPanel.Dock="Left" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition/>
@@ -21,9 +21,9 @@
             <!-- Menu a gauche -->
 
             <ListBox  Background="LightGreen" Grid.Row="1">
-           
-                <WrapPanel>
-                    <TextBlock Text="Personnage 1" Background="#FFFB6D6D" FontSize="15" ></TextBlock>
+            
+                <WrapPanel >
+                    <TextBlock Text="Personnage 1"  Background="#FFFB6D6D" FontSize="15"></TextBlock>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
                 <WrapPanel>
@@ -49,7 +49,7 @@
                 <WrapPanel>
                     <TextBlock Text="Personnage 7" Background="#FFFB6D6D" FontSize="15"></TextBlock>
                     <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
+                </WrapPanel> 
             </ListBox>
         </Grid>
 
@@ -60,13 +60,13 @@
         </DockPanel>
 
         <!-- Description du jeu -->
-
+     
         <Grid DockPanel.Dock="Top" Background="LightGray" Margin="10">
             <TextBlock Text="Description jeu : " FontSize="15" Margin="10"> </TextBlock>
         </Grid>
 
         <!-- Différentes boites du jeu -->
-        
+
         <Grid DockPanel.Dock="Bottom" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -91,7 +91,6 @@
                 </Button>
                 <TextBlock Text="Boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
-
             <StackPanel Grid.Column="2" Background="LightPink" Margin="10">
                 <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                     <Border BorderBrush="Black" BorderThickness="1">
@@ -102,5 +101,6 @@
             </StackPanel>
 
         </Grid>
+        
     </DockPanel>
 </Window>
