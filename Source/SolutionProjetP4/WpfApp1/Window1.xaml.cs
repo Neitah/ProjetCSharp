@@ -15,9 +15,9 @@ namespace WpfApp1
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class ProfilPersonnage : Window
     {
-        public Window1()
+        public ProfilPersonnage()
         {
             InitializeComponent();
         }

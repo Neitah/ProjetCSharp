@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.Window1"
+﻿<Window x:Class="WpfApp1.ProfilPersonnage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -21,8 +21,23 @@
         
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Dés de vie et équipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
-            <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+            <TextBlock Text="Petite description classe" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Margin="10"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="10">
+                    <TextBlock Text="Dés de vie et équipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10">
+                    <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="1"/>
+                </StackPanel>
+            </Grid>
+            
             
             <!--Descriptif des voies du profil-->
             
