@@ -5,51 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800"> 
+        Title="Window1" Height="450" Width="800" Background="AntiqueWhite"> 
+  
     <DockPanel>
+     
         <Grid DockPanel.Dock="Left" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+      
             <!-- Logo-->
+        
             <DockPanel Grid.Row="0">
                 <Image Source="" MaxWidth="100" Height="60" Width="90">
                     <!-- Inserer le logo -->
                 </Image>
             </DockPanel>
-            <!-- Menu a gauche -->
-
-            <ListBox  Background="LightGreen" Grid.Row="1">
             
-                <WrapPanel >
-                    <TextBlock Text="Personnage 1"  Background="#FFFB6D6D" FontSize="15"></TextBlock>
+            <!-- Menu a gauche -->
+ 
+            <ListBox  Background="LightGreen" Grid.Row="1">
+
+                <WrapPanel Name="Profil1">
+                    <TextBlock Text="Personnage 1"  Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 2" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil2">
+                    <TextBlock Text="Personnage 2" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 3" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil3">
+                    <TextBlock Text="Personnage 3" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 4" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil4">
+                    <TextBlock Text="Personnage 4" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 5" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil5">
+                    <TextBlock Text="Personnage 5" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 6" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil6">
+                    <TextBlock Text="Personnage 6" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
-                <WrapPanel>
-                    <TextBlock Text="Personnage 7" Background="#FFFB6D6D" FontSize="15"></TextBlock>
+
+                <WrapPanel Name="Profil7">
+                    <TextBlock Text="Personnage 7" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel> 
+                
             </ListBox>
         </Grid>
 
@@ -62,7 +74,7 @@
         <!-- Description du jeu -->
      
         <Grid DockPanel.Dock="Top" Background="LightGray" Margin="10">
-            <TextBlock Text="Description jeu : " FontSize="15" Margin="10"> </TextBlock>
+            <TextBlock Text="Description jeu : " FontSize="15" Margin="10"/>
         </Grid>
 
         <!-- Différentes boites du jeu -->

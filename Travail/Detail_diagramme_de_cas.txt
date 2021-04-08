@@ -1,0 +1,95 @@
+Nom cas : S'identifier
+Acteur : Utilisateur
+Cas inclus : Créer profil hybride, Ajouter favori
+Scénario nominal : 
+	1-L'utilisateur demande de se connecter
+	1.1-Le système affiche un formulaire de connexion
+	2-L'utilisateur remplit le formulaire avec les bonnes informations
+	2.1-Le système vérifie les informations du formulaire
+	3-L'utilisateur est connecté à son compte
+	
+Scénarios alternatifs :
+	2-L'utilisateur remplit le formulaire avec des informations erronées
+	2.1-Le système vérifie les informations du formulaire
+	2.2-Le système affiche un message d'erreur et redemande de remplir le formulaire
+	2.3-L'utilisateur reremplit le formulaire
+	
+========================================================================================================
+	
+Nom cas : Créer profil hybride
+Acteur : Utilisateur
+Cas inclus : Aucun
+Scénario nominal :
+	1-L'utilisateur demande de créer un profil hybride
+	1.1-Le système ouvre une nouvelle fenêtre de création
+	2-L'utilisateur sélectionne les profils de base dont hérite le nouveau profil
+	2.1-Le système affiche toutes les voies disponibles
+	3-L'utilisateur choisit les 5 voies conservées dans le profil hybride
+	3.1-Le système enregistre les voies sélectionnées et demande les informations complémentaires à l'utilisateur
+	4-L'utilisateur entre les informations complémentaires (dé de vie, équipement de départ, arme et armure, attaque magique, divers, description du profil)
+	4.1-Le système enregistre le profil nouvellement créé
+	
+Scénarios alternatifs :
+	2-L'utilisateur sélectionne un seul profil
+	2.1-Le système empêche la validation
+        ----------------------------------------------------
+	3.L'utilisateur sélectionne moins de 5 voies
+	3.1-Le système empêche la validation
+	----------------------------------------------------
+	3-L'utilisateur veut sélectionner plus de 5 voies
+	3.1-Le système empêche de sélectionner des voies suplémentaires
+	----------------------------------------------------
+	4-L'utilisateur ne rentre pas toutes les informations requises
+	4.1-Le système empêche la validation
+	
+========================================================================================================
+
+Nom cas : Ajouter favori
+Acteur : Utilisateur
+Cas inclus : Aucun
+Scénario nominal :
+	1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
