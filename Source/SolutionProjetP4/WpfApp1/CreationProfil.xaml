@@ -16,42 +16,51 @@
         <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="26"/>
         <TextBlock Text=" "/>
 
-        <DockPanel>
-        
-            <CheckBox>
-                <TextBlock Text="Profil 1" FontSize="20"/>
-            </CheckBox>
+        <Grid Margin="10">
 
-            <CheckBox>
-                <TextBlock Text="Profil 2" FontSize="20"/>
-            </CheckBox>
-            <CheckBox>
-                <TextBlock Text="Profil 3" FontSize="20"/>
-            </CheckBox>
-            <CheckBox>
-                <TextBlock Text="Profil 4" FontSize="20"/>
-            </CheckBox>
-            <CheckBox>
-                <TextBlock Text="Profil 5" FontSize="20"/>
-            </CheckBox>
-            <CheckBox>
-                <TextBlock Text="Profil 6" FontSize="20"/>
-            </CheckBox>
-        <CheckBox>
-                <TextBlock Text="Profil 7" FontSize="20"/>
-            </CheckBox>
-            </DockPanel>
-        <Button HorizontalAlignment="Right" Content="Valider" Name="BoutValidProfils" Margin="0,0,50,0"/>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="0"   Checked="CheckBox_Checked" Margin="5" Content="Profil 1"  FontSize="20" VerticalContentAlignment="Center"/>
+
+                <CheckBox Grid.Column="1"  Checked="CheckBox_Checked" Margin="5" Content="Profil 2"  FontSize="20" VerticalContentAlignment="Center"/>
+
+            <CheckBox Grid.Column="2"  Checked="CheckBox_Checked" Margin="5" Content="Profil 3"  FontSize="20" VerticalContentAlignment="Center"/>
+
+            <CheckBox Grid.Column="3" Checked="CheckBox_Checked" Margin="5" Content="Profil 4"  FontSize="20" VerticalContentAlignment="Center"/>
+
+            <CheckBox Grid.Column="4"  Checked="CheckBox_Checked" Margin="5" Content="Profil 5"  FontSize="20" VerticalContentAlignment="Center"/>
+
+            <CheckBox Grid.Column="5" Checked="CheckBox_Checked" Margin="5" Content="Profil 6"  FontSize="20" VerticalContentAlignment="Center"/>
+
+            <CheckBox Grid.Column="6" Checked="CheckBox_Checked" Margin="5" Content="Profil 7"  FontSize="20" VerticalContentAlignment="Center"/>
+
+        </Grid>
+
+        <StackPanel Margin="10">
+            <Button Grid.Row="1" HorizontalAlignment="Center" Content="Valider" Name="BoutValidProfils" Margin="0,0,50,0"/>
+        </StackPanel>
+        
+        
+       
         
         <!-- A compléter : Afficher les voies correspondant aux profils sélectionnés-->
         
         <!-- Informations complémentaires-->
-        <DockPanel>
+        <DockPanel Margin="10">
             <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
             <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
         </DockPanel>
 
-        <DockPanel>
+        <DockPanel Margin="10">
             <TextBlock Text="Dé de vie : " FontSize="20"/>
             <TextBox Name="DeVie" Text="1d8" FontSize="20" Margin="0,0,200,0"/>
         </DockPanel>
