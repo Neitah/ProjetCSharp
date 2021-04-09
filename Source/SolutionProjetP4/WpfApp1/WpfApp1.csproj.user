@@ -16,6 +16,9 @@
     <Compile Update="CreationProfil.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PageConnexion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AffichComp.xaml">
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CreationProfil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageConnexion.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
