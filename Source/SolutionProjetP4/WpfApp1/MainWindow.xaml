@@ -15,6 +15,7 @@
             <Grid DockPanel.Dock="Left" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
+                <RowDefinition Height="7*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
       
@@ -64,11 +65,15 @@
                 </WrapPanel> 
                 
             </ListBox>
+            <DockPanel Grid.Row="2">
+                <Button x:Name="Login" Content="Login" Width="50"/>
+                <Button x:Name="Register" Content="Register"/>
+            </DockPanel>
         </Grid>
 
         <!-- Titre de l'application -->
         
-        <DockPanel DockPanel.Dock="Top">
+        <DockPanel DockPanel.Dock="Top" Background="LightBlue">
             <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Caladea" Foreground="Black"  />
         </DockPanel>
 
