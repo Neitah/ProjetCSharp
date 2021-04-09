@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="CreationProfil" Height="450" Width="800" Background="AntiqueWhite">
+        Title="CreationProfil" Height="500" Width="800" Background="AntiqueWhite">
 
     
     <StackPanel>
@@ -13,7 +13,7 @@
             <TextBlock Text="Création profil hybride" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
         </DockPanel>
 
-        <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="26"/>
+        <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="20" Margin="10"/>
         <TextBlock Text=" "/>
 
         <Grid Margin="10">
@@ -46,7 +46,7 @@
         </Grid>
 
         <StackPanel Margin="10">
-            <Button Grid.Row="1" HorizontalAlignment="Center" Content="Valider" Name="BoutValidProfils"/>
+            <Button Grid.Row="1" HorizontalAlignment="Center" Content="Valider" Name="BoutValidProfils" FontSize="14"/>
         </StackPanel>
         
         
@@ -61,8 +61,19 @@
         </DockPanel>
 
         <DockPanel Margin="10">
-            <TextBlock Text="Dé de vie : " FontSize="20"/>
-            <TextBox Name="DeVie" Text="1d8" FontSize="20" Margin="0,0,200,0"/>
+            <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
+            <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
         </DockPanel>
+
+        <DockPanel Margin="10">
+            <TextBlock Text="Divers : " FontSize="20"/>
+            <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
+        </DockPanel>
+
+        <DockPanel Margin="10">
+            <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
+            <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
+        </DockPanel>
+        
     </StackPanel>
 </Window>
