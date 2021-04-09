@@ -19,6 +19,9 @@
     <Compile Update="PageConnexion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PageInscription.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AffichComp.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PageConnexion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageInscription.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
