@@ -69,9 +69,42 @@ Scénarios alternatifs :
 ========================================================================================================
 
 Nom cas : Afficher boîte de jeu
+Acteur : Utilisateur
+Cas inclus : Aucun
+Scénario nominal :
+	1-L'utilisateur demande à arriver sur la page des boîtes de jeu
+	1.1-Le sytème affiche les informations sur les boîtes de jeu disponibles
 
+========================================================================================================
+
+Nom cas : Afficher profil
+Acteur : Utilisateur
+Cas inclus : Ajouter favori, Afficher compétences
+Scénario nominal :
+	1-L'utilisateur demande d'afficher les informations d'un profil
+	1.1-Le système affiche la fenêtre correspondant au profil demandé
+
+========================================================================================================
+
+Nom cas : Afficher compétences
+Acteur : Utilisateur
+Cas inclus : Afficher détails compétence
+Scénario nominal :
+	1-L'utilisateur demande à voir les différentes compétences d'une voie
+	1.1-Le sytème montre les différentes compétences de la voie
+
+Scénario alternatifs
+	1-L'utilisateur sélectionne une voie déjà sélectionnée
+	1.1-Le système cache les compétences de la voie
 	
+========================================================================================================
 
+Nom cas : Afficher détails compétences
+Acteur : Utilisateur
+Cas inclus : Aucun
+Scénario nominal :
+	1-L'utilisateur demande à voir les informations sur une compétence sélectionnée
+	1.1-Le système affiche la fenêtre correspondante
 
 
 
