@@ -25,14 +25,13 @@
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">
             <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
-            <TextBlock Text="Dés de vie et équipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                     
-                <TextBlock Text="Attaque magique :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                <TextBlock Text="Dés de vie et équipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
                 <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="1"/>
             </Grid>
             <!--Descriptif des voies du profil-->

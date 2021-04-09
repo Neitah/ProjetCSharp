@@ -7,29 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="image\boiteDeJeu2.png" />
-    <None Remove="image\BoiteDeJEu3.png" />
-    <None Remove="image\boiteJeuInitiation.png" />
-    <None Remove="image\imagebackground.jpg" />
-    <None Remove="image\logo.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="image\boiteDeJeu2.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="image\BoiteDeJEu3.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="image\boiteJeuInitiation.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="image\imagebackground.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="image\logo.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Compile Remove="image\**" />
+    <EmbeddedResource Remove="image\**" />
+    <None Remove="image\**" />
+    <Page Remove="image\**" />
   </ItemGroup>
 
 </Project>

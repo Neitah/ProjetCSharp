@@ -31,7 +31,7 @@
 
             <CheckBox Grid.Column="0" Margin="5" Content="Profil 1"  FontSize="20" VerticalContentAlignment="Center"/>
 
-                <CheckBox Grid.Column="1" Margin="5" Content="Profil 2"  FontSize="20" VerticalContentAlignment="Center"/>
+            <CheckBox Grid.Column="1" Margin="5" Content="Profil 2"  FontSize="20" VerticalContentAlignment="Center"/>
 
             <CheckBox Grid.Column="2" Margin="5" Content="Profil 3"  FontSize="20" VerticalContentAlignment="Center"/>
 
