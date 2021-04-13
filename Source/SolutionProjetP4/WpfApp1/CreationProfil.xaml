@@ -14,9 +14,8 @@
         </DockPanel>
 
         <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="20" Margin="10"/>
-        <TextBlock Text=" "/>
 
-        <Grid Margin="10">
+        <Grid Margin="10" DockPanel.Dock="Top">
 
 
             <Grid.ColumnDefinitions>
@@ -46,31 +45,32 @@
         </Grid>
 
         <StackPanel Margin="10">
-            <Button Grid.Row="1" HorizontalAlignment="Center" Content="Valider" Name="BoutValidProfils" FontSize="14"/>
+            <Button Grid.Row="1" HorizontalAlignment="Center" Content="Valider" Name="BoutValidProfils" FontSize="14" Background="LightBlue"/>
         </StackPanel>
 
         <!-- A compléter : Afficher les voies correspondant aux profils sélectionnés-->
         
         <!-- Informations complémentaires-->
-        <DockPanel Margin="10">
-            <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
-            <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
-        </DockPanel>
+        <StackPanel>
+            <DockPanel Margin="10">
+                <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
+                <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
+            </DockPanel>
 
-        <DockPanel Margin="10">
-            <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
-            <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
-        </DockPanel>
+            <DockPanel Margin="10">
+                <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
+                <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
+            </DockPanel>
 
-        <DockPanel Margin="10">
-            <TextBlock Text="Divers : " FontSize="20"/>
-            <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
-        </DockPanel>
+            <DockPanel Margin="10">
+                <TextBlock Text="Divers : " FontSize="20"/>
+                <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
+            </DockPanel>
 
-        <DockPanel Margin="10">
-            <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
-            <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
-        </DockPanel>
-        
+            <DockPanel Margin="10">
+                <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
+                <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
+            </DockPanel>
+        </StackPanel>
     </StackPanel>
 </Window>

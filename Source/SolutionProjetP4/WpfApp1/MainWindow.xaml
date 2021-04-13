@@ -12,11 +12,11 @@
         <DockPanel.Background>
             <ImageBrush Stretch="None" ImageSource="\image\imagebackground.jpg"/>
             -->
-            <Grid DockPanel.Dock="Left" >
+            <Grid DockPanel.Dock="Left" Width="100" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="7*"/>
-                <RowDefinition/>
+                <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
       
             <!-- Logo-->
@@ -65,9 +65,9 @@
                 </WrapPanel> 
                 
             </ListBox>
-            <DockPanel Grid.Row="2">
-                <Button x:Name="Login" Content="Login" Width="50"/>
-                <Button x:Name="Register" Content="Register"/>
+            <DockPanel Grid.Row="2" >
+                <Button x:Name="Login" Content="Login" Width="50" Height="20"/>
+                <Button x:Name="Register" Content="Register" Height="20"/>
             </DockPanel>
         </Grid>
 
