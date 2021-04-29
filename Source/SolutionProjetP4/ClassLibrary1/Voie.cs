@@ -4,7 +4,7 @@ using System.Text;
     
 namespace ClassLibrary1
 {   
-    class Voie : Nommable
+    public class Voie : Nommable
     {
         public IList<Compétence> LesCompétences { get; set; }
     
@@ -19,6 +19,20 @@ namespace ClassLibrary1
                 LesCompétences.Add(c);
             else
                 throw new Exception("Une Voie ne peut contenir que 5 compétences");
+        }
+
+        public override bool Equals(object voie)
+        {
+            return base.Equals(voie);
+        }
+        public override string ToString()
+        {
+            String s="";
+            for(int i=0;i < LesCompétences.Count; i++)
+            {
+                s += $"\n\t{LesCompétences[i]}";
+            }
+            return $"{Nom} --> {s}";
         }
     }
 }   

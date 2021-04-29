@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class Profil : Nommable
+    public class Profil : Nommable
     {
         public IList<Voie> LesVoies { get; set; }
         public string DéVie { get; set; }
@@ -27,6 +27,16 @@ namespace ClassLibrary1
                 LesVoies.Add(v);
             else
                 throw new Exception("Un profil ne peut pas avoir plus de 5 voies");
+        }
+
+        public override string ToString()
+        {
+            String s = "";
+            for (int i = 0; i < LesVoies.Count; i++)
+            {
+                s += $"\n\t{LesVoies[i]}";
+            }
+            return $"{Nom} : {DéVie} / {Equipement} / {ArmeEtArmures} / {Divers} \n{s}";
         }
     }
 }
