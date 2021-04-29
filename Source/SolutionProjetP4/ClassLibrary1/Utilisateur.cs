@@ -6,13 +6,15 @@ namespace ClassLibrary1
 {
     class Utilisateur : Nommable
     {
-        private string motDePasse;
-        private IList<Profil> profilsHybrides;
-        private IList<Profil> profilsFavoris;
+        public string MotDePasse { get; set; }
+        public IList<Profil> ProfilsHybrides { get; set; }
+        public IList<Profil> ProfilsFavoris { get; set; }
+
+
         public Utilisateur(string nom, string motDePasse) : base(nom)
         {
-            profilsFavoris = new List<Profil>();
-            profilsHybrides = new List<Profil>();
+            ProfilsFavoris = new List<Profil>();
+            ProfilsHybrides = new List<Profil>();
             MotDePasse = motDePasse;
         }
 
@@ -30,9 +32,5 @@ namespace ClassLibrary1
         {
             ProfilsFavoris.Remove(p);
         }
-
-        public string MotDePasse { get => motDePasse; set => motDePasse = value; }
-        public IList<Profil> ProfilsHybrides { get => profilsHybrides; set => profilsHybrides = value; }
-        public IList<Profil> ProfilsFavoris { get => profilsFavoris; set => profilsFavoris = value; }
     }
 }

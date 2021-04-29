@@ -6,14 +6,12 @@ namespace ClassLibrary1
 {   
     class Voie : Nommable
     {
-        private IList<Compétence> lesCompétences;
+        public IList<Compétence> LesCompétences { get; set; }
     
         public Voie(string nom) : base(nom)
         {
             LesCompétences = new List<Compétence>();
         }
-
-        public IList<Compétence> LesCompétences { get => lesCompétences; set => lesCompétences = value; }
 
         public void AjoutCompétence(Compétence c)
         {

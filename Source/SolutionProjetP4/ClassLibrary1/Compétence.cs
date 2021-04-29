@@ -6,13 +6,11 @@ namespace ClassLibrary1
 {
     class Compétence : Nommable
     {
-        private string description;
+        public string Description { get; set; }
 
         public Compétence(string description, string nom) : base(nom)
         {
-            this.description = description;
+            this.Description = description;
         }
-
-        public string Description { get => description; set => description = value; }
     }
 }
