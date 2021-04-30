@@ -32,6 +32,7 @@ namespace TestProfils
             Console.WriteLine("\nCréation d'une voie : \n");
 
             Voie v1 = new Voie("Voie 1");
+            Voie v2 = new Voie("Voie 1");
             Console.WriteLine(v1);
             v1.AjoutCompétence(c1);
             v1.AjoutCompétence(c2);
@@ -40,16 +41,28 @@ namespace TestProfils
             v1.AjoutCompétence(c4);
             v1.AjoutCompétence(c5);
             v1.AjoutCompétence(c6);
+
+
+            v2.AjoutCompétence(c1);
+            v2.AjoutCompétence(c2);
+            v2.AjoutCompétence(c7);
+            v2.AjoutCompétence(c3);
+            v2.AjoutCompétence(c4);
+            v2.AjoutCompétence(c5);
+            v2.AjoutCompétence(c6);
             Console.WriteLine(v1);
 
             Console.WriteLine("\n-----------------------------------------------");
 
             Console.WriteLine("\nCréation d'un profil : \n");
             Profil p1 = new Profil("Nom Profil 1", "dé de Vie", "équipement", "armes et armures", "divers", "description") ;
+            Profil p2 = new Profil("Nom Profil 1", "dé de Vie", "équipement", "armes et armures", "divers", "description") ;
             Console.WriteLine(p1);
             p1.AjoutVoie(v1);
-            p1.AjoutVoie(v1);
+            p2.AjoutVoie(v2);
             Console.WriteLine(p1);
+            Console.WriteLine(p2);
+            Console.WriteLine(p1.Equals(p2));
         }
     }
 }
