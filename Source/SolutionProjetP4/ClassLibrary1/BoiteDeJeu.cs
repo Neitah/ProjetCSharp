@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class BoiteDeJeu : Nommable
+    public class BoiteDeJeu : Nommable
     {
         public string Description { get; set; }
         public string NomMagasin { get; set; }
@@ -12,6 +12,11 @@ namespace ClassLibrary1
         {
             Description = description;
             NomMagasin = nomMagasin;
+        }
+
+        public override string ToString()
+        {
+            return $"{Nom} + {NomMagasin} : {Description}";
         }
     }
 }
