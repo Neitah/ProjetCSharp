@@ -32,6 +32,11 @@ namespace ClassLibrary1
         public string Divers { get; set; }
 
         /// <summary>
+        /// Description de la manière de jouer du profil 
+        /// </summary>
+        public string Description { get; set; }
+
+        /// <summary>
         /// Constructeur 
         /// </summary>
         /// <param name="nom"> Nom du profil </param>
@@ -39,13 +44,15 @@ namespace ClassLibrary1
         /// <param name="equipement"> Equipement du profil </param>
         /// <param name="armeEtArmures"> Armes et armures du profil </param>
         /// <param name="divers"> Option divers du profil (passif, compagnon, ...) </param>
-        public Profil(string nom,string déVie, string equipement, string armeEtArmures, string divers) : base(nom)
+        /// <param name="description"> Description du profil </param>
+        public Profil(string nom,string déVie, string equipement, string armeEtArmures, string divers, string description) : base(nom)
         {
             LesVoies = new List<Voie>();
-            this.DéVie = déVie;
-            this.Equipement = equipement;
-            this.ArmeEtArmures = armeEtArmures;
-            this.Divers = divers;
+            DéVie = déVie;
+            Equipement = equipement;
+            ArmeEtArmures = armeEtArmures;
+            Divers = divers;
+            Description = description;
         }
 
         /// <summary>
@@ -89,6 +96,7 @@ namespace ClassLibrary1
                    Equipement == profil.Equipement &&
                    ArmeEtArmures == profil.ArmeEtArmures &&
                    Divers == profil.Divers &&
+                   Description == profil.Description &&
                    Nom == profil.Nom;
         }
     }

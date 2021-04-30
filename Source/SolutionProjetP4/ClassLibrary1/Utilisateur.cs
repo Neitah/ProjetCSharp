@@ -68,7 +68,7 @@ namespace ClassLibrary1
         {
             if (ProfilsFavoris.Contains(p) == false)
             {
-                throw new Exception("$Le profil {p} n'est déja pas dans vos favori");
+                throw new Exception($"Le profil {p} n'est déja pas dans vos favori");
             }
             ProfilsFavoris.Remove(p);
         }
@@ -83,7 +83,7 @@ namespace ClassLibrary1
         {
             if (ProfilsHybrides.Contains(p) == false)
             {
-                throw new Exception("$Le profil {p} n'existe pas");
+                throw new Exception($"Le profil {p} n'existe pas");
             }
             ProfilsHybrides.Remove(p);
         }

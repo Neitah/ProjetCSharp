@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class StockageApp
+    class StockageApp 
     {
         /// <summary>
         /// Liste de tous profils 
