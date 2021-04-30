@@ -90,14 +90,19 @@ namespace ClassLibrary1
         /// </summary>
         public override bool Equals(object obj)
         {
-            return obj is Profil profil &&
-                   EqualityComparer<IList<Voie>>.Default.Equals(LesVoies, profil.LesVoies) &&
-                   DéVie == profil.DéVie &&
+            Profil profil = (Profil)obj;
+            bool ret = DéVie == profil.DéVie &&
                    Equipement == profil.Equipement &&
                    ArmeEtArmures == profil.ArmeEtArmures &&
                    Divers == profil.Divers &&
                    Description == profil.Description &&
                    Nom == profil.Nom;
+            for (int i = 0; i<LesVoies.Count;i++)
+            {
+                if (!LesVoies[i].Equals(profil.LesVoies[i]))
+                    ret = false;
+            }
+            return ret;
         }
     }
 }

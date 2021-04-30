@@ -54,9 +54,16 @@ namespace ClassLibrary1
         /// </summary>
         public override bool Equals(object obj)
         {
-            return obj is Voie voie &&
-                   EqualityComparer<IList<Compétence>>.Default.Equals(LesCompétences, voie.LesCompétences) &&
-                   Nom == voie.Nom;
+            
+            Voie v= (Voie) obj;
+            bool ret=Nom.Equals(v.Nom);
+            for (int i = 0; i < LesCompétences.Count; i++)
+            {
+                if (!LesCompétences[i].Equals(v.LesCompétences[i]))
+                    ret = false;
+            }
+            return ret;
+            
         }
     }
 }   

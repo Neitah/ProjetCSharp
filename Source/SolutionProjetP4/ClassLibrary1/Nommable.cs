@@ -12,7 +12,7 @@ namespace ClassLibrary1
         public string Nom { get; set; }
 
         /// <summary>
-        /// Constructeur 
+        /// Constructeur
         /// </summary>
         /// <param name="nom"> Nom d'un Objet </param>
         public Nommable(string nom)
