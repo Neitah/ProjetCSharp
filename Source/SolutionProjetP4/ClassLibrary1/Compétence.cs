@@ -22,19 +22,21 @@ namespace ClassLibrary1
         }
 
         /// <summary>
-        /// Méthode "Equals"  
-        /// </summary>
-        public override bool Equals(object compétence)
-        {
-            return base.Equals(compétence);
-        }
-
-        /// <summary>
         /// Méthode "ToString"
         /// </summary>
         public override string ToString()
         {
             return $"{Nom} : {Description}";
+        }
+
+        /// <summary>
+        /// Méthode "Equals"  
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            return obj is Compétence compétence &&
+                   Description == compétence.Description &&
+                   Nom == compétence.Nom;
         }
     }
 }

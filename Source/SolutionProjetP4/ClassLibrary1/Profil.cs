@@ -56,10 +56,12 @@ namespace ClassLibrary1
         /// Ajoute une Voie dans la liste "LesVoies"
         public void AjoutVoie(Voie v)
         {
+            if (LesVoies.Contains(v))
+                return; 
             if (LesVoies.Count < 5)
                 LesVoies.Add(v);
-            else
-                throw new Exception("Un profil ne peut pas avoir plus de 5 voies");
+            ///else
+               /// throw new Exception("Un profil ne peut pas avoir plus de 5 voies");
         }
 
 
@@ -74,6 +76,20 @@ namespace ClassLibrary1
                 s += $"\n\t{LesVoies[i]}";
             }
             return $"{Nom} : {DéVie} / {Equipement} / {ArmeEtArmures} / {Divers} \n{s}";
+        }
+
+        /// <summary>
+        /// Méthode "Equals"  
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            return obj is Profil profil &&
+                   EqualityComparer<IList<Voie>>.Default.Equals(LesVoies, profil.LesVoies) &&
+                   DéVie == profil.DéVie &&
+                   Equipement == profil.Equipement &&
+                   ArmeEtArmures == profil.ArmeEtArmures &&
+                   Divers == profil.Divers &&
+                   Nom == profil.Nom;
         }
     }
 }

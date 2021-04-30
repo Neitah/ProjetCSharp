@@ -7,7 +7,7 @@ namespace TestUtilisateur
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test de la création d'un profil\n");
+            Console.WriteLine("Test de la création d'un utilisateur\n");
 
             Console.WriteLine("-----------------------------------------------\n");
 
