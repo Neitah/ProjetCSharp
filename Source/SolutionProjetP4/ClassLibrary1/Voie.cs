@@ -28,18 +28,12 @@ namespace ClassLibrary1
         /// Ajoute une cométence dans la liste "LesCompétences"
         public void AjoutCompétence(Compétence c)
         {
+            if (LesCompétences.Contains(c))
+                return;
             if (LesCompétences.Count<5)
                 LesCompétences.Add(c);
             else
                 throw new Exception("Une Voie ne peut contenir que 5 compétences");
-        }
-
-        /// <summary>
-        /// Méthode "Equals"  
-        /// </summary>
-        public override bool Equals(object voie)
-        {
-            return base.Equals(voie);
         }
 
         /// <summary>
@@ -53,6 +47,16 @@ namespace ClassLibrary1
                 s += $"\n\t{LesCompétences[i]}";
             }
             return $"{Nom} --> {s}";
+        }
+
+        /// <summary>
+        /// Méthode "Equals"  
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            return obj is Voie voie &&
+                   EqualityComparer<IList<Compétence>>.Default.Equals(LesCompétences, voie.LesCompétences) &&
+                   Nom == voie.Nom;
         }
     }
 }   

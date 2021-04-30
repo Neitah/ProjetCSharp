@@ -42,7 +42,8 @@ namespace ClassLibrary1
         /// Ajoute un profil hybride dans la liste " ProfilsHybrides"
         public void AjoutProfilHybride(Profil p)
         {
-            ProfilsHybrides.Add(p);
+            if(!ProfilsHybrides.Contains(p))
+                ProfilsHybrides.Add(p);
         }
 
         /// <summary>
@@ -53,7 +54,8 @@ namespace ClassLibrary1
         /// Ajoute un profil favori dans la liste " ProfilsFavoris"
         public void AjoutProfilFavori(Profil p)
         {
-            ProfilsFavoris.Add(p);
+            if(!ProfilsFavoris.Contains(p))
+                ProfilsFavoris.Add(p);
         }
 
         /// <summary>
@@ -92,6 +94,18 @@ namespace ClassLibrary1
         public override string ToString()
         {
             return $"{Nom} : {MotDePasse}";
+        }
+
+        /// <summary>
+        /// Méthode "Equals"  
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            return obj is Utilisateur utilisateur &&
+                   MotDePasse == utilisateur.MotDePasse &&
+                   EqualityComparer<IList<Profil>>.Default.Equals(ProfilsHybrides, utilisateur.ProfilsHybrides) &&
+                   EqualityComparer<IList<Profil>>.Default.Equals(ProfilsFavoris, utilisateur.ProfilsFavoris) &&
+                   Nom == utilisateur.Nom;
         }
     }
 }

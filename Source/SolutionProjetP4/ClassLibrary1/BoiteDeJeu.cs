@@ -35,5 +35,16 @@ namespace ClassLibrary1
         {
             return $"{Nom} + {NomMagasin} : {Description}";
         }
+
+        /// <summary>
+        /// Méthode "Equals"  
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            return obj is BoiteDeJeu jeu &&
+                   Description == jeu.Description &&
+                   NomMagasin == jeu.NomMagasin &&
+                   Nom == jeu.Nom;
+        }
     }
 }

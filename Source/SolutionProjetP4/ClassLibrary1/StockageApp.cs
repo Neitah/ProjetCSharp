@@ -7,7 +7,7 @@ namespace ClassLibrary1
     class StockageApp
     {
         /// <summary>
-        /// ??? 
+        /// Liste de tous profils 
         /// </summary>
         public IList<Profil> lesProfils;
 
@@ -17,13 +17,19 @@ namespace ClassLibrary1
         public IList<Utilisateur> lesUtilisateurs;
 
         /// <summary>
+        /// Liste des boites de jeu
+        /// </summary>
+        public IList<BoiteDeJeu> lesBoites;
+
+        /// <summary>
         /// Constructeur 
         /// </summary>
-      
+
         public StockageApp()
         {
             lesProfils = new List<Profil>();
             lesUtilisateurs = new List<Utilisateur>();
+            lesBoites = new List<BoiteDeJeu>();
         }
 
         /// <summary>
@@ -34,7 +40,8 @@ namespace ClassLibrary1
         /// Ajoute un profil dans la liste "LesProfils"
         public void AjoutProfil(Profil p)
         {
-            lesProfils.Add(p);
+            if(!lesProfils.Contains(p))
+                lesProfils.Add(p);
         }
 
         /// <summary>
@@ -45,7 +52,20 @@ namespace ClassLibrary1
         /// Ajoute un utilisateur dans la liste "lesUtilisateurs"
         public void AjoutUtilisateur(Utilisateur u)
         {
-            lesUtilisateurs.Add(u);
+            if (!lesUtilisateurs.Contains(u))
+                lesUtilisateurs.Add(u);
+        }
+
+        /// <summary>
+        /// Méthode "AjoutBoite"  
+        /// </summary>
+        /// <param name="b"> Boite de Jeu à ajouter </param>
+        /// 
+        /// Ajoute un utilisateur dans la liste "lesBoites"
+        public void AjoutBoite(BoiteDeJeu b) 
+        {
+            if(!lesBoites.Contains(b))
+                lesBoites.Add(b);
         }
     }
 }
