@@ -61,7 +61,7 @@ namespace ClassLibrary1
         /// </summary>
         /// <param name="b"> Boite de Jeu à ajouter </param>
         /// 
-        /// Ajoute un utilisateur dans la liste "lesBoites"
+        /// Ajoute une boîte dans la liste "lesBoites"
         public void AjoutBoite(BoiteDeJeu b) 
         {
             if(!lesBoites.Contains(b))
