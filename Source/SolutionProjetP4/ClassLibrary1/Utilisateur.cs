@@ -101,11 +101,20 @@ namespace ClassLibrary1
         /// </summary>
         public override bool Equals(object obj)
         {
-            return obj is Utilisateur utilisateur &&
-                   MotDePasse == utilisateur.MotDePasse &&
-                   EqualityComparer<IList<Profil>>.Default.Equals(ProfilsHybrides, utilisateur.ProfilsHybrides) &&
-                   EqualityComparer<IList<Profil>>.Default.Equals(ProfilsFavoris, utilisateur.ProfilsFavoris) &&
+            Utilisateur utilisateur = (Utilisateur)obj; 
+            bool ret = MotDePasse == utilisateur.MotDePasse &&
                    Nom == utilisateur.Nom;
+            for (int i = 0; i<ProfilsFavoris.Count; i++)
+            {
+                if (!ProfilsFavoris[i].Equals(utilisateur.ProfilsFavoris[i]))
+                    ret = false;
+            }
+            for (int i = 0; i < ProfilsHybrides.Count; i++)
+            {
+                if (!ProfilsHybrides[i].Equals(utilisateur.ProfilsHybrides[i]))
+                    ret = false;
+            }
+            return ret;
         }
     }
 }

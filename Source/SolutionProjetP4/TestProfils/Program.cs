@@ -41,8 +41,7 @@ namespace TestProfils
             v1.AjoutCompétence(c4);
             v1.AjoutCompétence(c5);
             v1.AjoutCompétence(c6);
-
-
+            
             v2.AjoutCompétence(c1);
             v2.AjoutCompétence(c2);
             v2.AjoutCompétence(c7);
