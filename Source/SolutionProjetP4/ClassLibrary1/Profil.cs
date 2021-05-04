@@ -4,8 +4,14 @@ using System.Text;
 
 namespace ClassLibrary1
 {
+    [Serializable]
     public class Profil : Nommable
     {
+        /// <summary>
+        /// Chemin d'accés à l'image du profil
+        /// </summary>
+        public string Image { get; set; }
+
         /// <summary>
         /// Liste contenant les Voies de ce profil
         /// </summary>
@@ -44,8 +50,8 @@ namespace ClassLibrary1
         /// <param name="equipement"> Equipement du profil </param>
         /// <param name="armeEtArmures"> Armes et armures du profil </param>
         /// <param name="divers"> Option divers du profil (passif, compagnon, ...) </param>
-        /// <param name="description"> Description du profil </param>
-        public Profil(string nom,string déVie, string equipement, string armeEtArmures, string divers, string description) : base(nom)
+        /// <param name="image"> Chemin d'accés à l'image du profil </param>
+        public Profil(string nom,string déVie, string equipement, string armeEtArmures, string divers, string description, string image) : base(nom)
         {
             LesVoies = new List<Voie>();
             DéVie = déVie;
@@ -53,6 +59,7 @@ namespace ClassLibrary1
             ArmeEtArmures = armeEtArmures;
             Divers = divers;
             Description = description;
+            Image = image;
         }
 
         /// <summary>
@@ -67,8 +74,8 @@ namespace ClassLibrary1
                 return; 
             if (LesVoies.Count < 5)
                 LesVoies.Add(v);
-            ///else
-               /// throw new Exception("Un profil ne peut pas avoir plus de 5 voies");
+            else
+                throw new Exception("Un profil ne peut pas avoir plus de 5 voies");
         }
 
 
@@ -82,7 +89,7 @@ namespace ClassLibrary1
             {
                 s += $"\n\t{LesVoies[i]}";
             }
-            return $"{Nom} : {DéVie} / {Equipement} / {ArmeEtArmures} / {Divers} \n{s}";
+            return $"{Nom} : {DéVie} / {Equipement} / {ArmeEtArmures} / {Divers} / {Image}\n{s}";
         }
 
         /// <summary>
@@ -96,7 +103,8 @@ namespace ClassLibrary1
                    ArmeEtArmures == profil.ArmeEtArmures &&
                    Divers == profil.Divers &&
                    Description == profil.Description &&
-                   Nom == profil.Nom;
+                   Nom == profil.Nom &&
+                   Image == profil.Image; ;
             for (int i = 0; i<LesVoies.Count;i++)
             {
                 if (!LesVoies[i].Equals(profil.LesVoies[i]))
