@@ -4,8 +4,14 @@ using System.Text;
 
 namespace ClassLibrary1
 {
+    [Serializable]
     public class BoiteDeJeu : Nommable
     {
+        /// <summary>
+        /// Chemin d'accés à l'image de la boite de jeu 
+        /// </summary>
+        public string Image { get; set; }
+
         /// <summary>
         /// Description de la boite de jeu
         /// </summary>
@@ -22,10 +28,12 @@ namespace ClassLibrary1
         /// <param name="description"> Description de la boite de jeu </param>
         /// <param name="nomMagasin"> Nom du magasin de la boite de jeu </param>
         /// <param name="nom"> Nom de la boite de jeu </param>
-        public BoiteDeJeu(string description,string nomMagasin, string nom) : base(nom)
+        /// <param name="image"> Chemin d'accès de l'image de la boite de jeu </param>
+        public BoiteDeJeu(string description,string nomMagasin, string nom, string image) : base(nom)
         {
             Description = description;
             NomMagasin = nomMagasin;
+            Image = image;
         }
 
         /// <summary>
@@ -33,7 +41,7 @@ namespace ClassLibrary1
         /// </summary>
         public override string ToString()
         {
-            return $"{Nom} + {NomMagasin} : {Description}";
+            return $"{Nom} + {NomMagasin} : {Description} / {Image}";
         }
 
         /// <summary>
@@ -44,7 +52,8 @@ namespace ClassLibrary1
             return obj is BoiteDeJeu jeu &&
                    Description == jeu.Description &&
                    NomMagasin == jeu.NomMagasin &&
-                   Nom == jeu.Nom;
+                   Nom == jeu.Nom &&
+                   Image == jeu.Image;
         }
     }
 }

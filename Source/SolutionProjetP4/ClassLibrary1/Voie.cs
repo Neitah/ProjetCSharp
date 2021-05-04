@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Text;
     
 namespace ClassLibrary1
-{   
+{
+    [Serializable]
     public class Voie : Nommable
     {
         /// <summary>
@@ -32,8 +33,8 @@ namespace ClassLibrary1
                 return;
             if (LesCompétences.Count<5)
                 LesCompétences.Add(c);
-            ///else
-               /// throw new Exception("Une Voie ne peut contenir que 5 compétences");
+            else
+                throw new Exception("Une Voie ne peut contenir que 5 compétences");
         }
 
         /// <summary>

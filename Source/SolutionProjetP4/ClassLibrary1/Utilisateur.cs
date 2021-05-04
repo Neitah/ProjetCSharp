@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
+    [Serializable]
     public class Utilisateur : Nommable
     {
         /// <summary>
@@ -89,14 +90,6 @@ namespace ClassLibrary1
         }
 
         /// <summary>
-        /// Méthode "ToString"
-        /// </summary>
-        public override string ToString()
-        {
-            return $"{Nom} : {MotDePasse}";
-        }
-
-        /// <summary>
         /// Méthode "Equals"  
         /// </summary>
         public override bool Equals(object obj)
@@ -115,6 +108,29 @@ namespace ClassLibrary1
                     ret = false;
             }
             return ret;
+        }
+
+        /// <summary>
+        /// Méthode "ToString"
+        /// </summary>
+        public override string ToString()
+        {
+            String s = "";
+            s += "\n\tProfils Hybrides : ";
+            for (int i = 0; i < ProfilsHybrides.Count; i++)
+            {
+                s += $"\n\t{ProfilsHybrides[i]}";
+            }
+
+            s += "\n\tProfils Favoris : ";
+            for (int i = 0; i < ProfilsFavoris.Count; i++)
+            {
+                s += $"\n\t{ProfilsFavoris[i]}";
+            }
+
+
+            ///return $"{Nom} --> {s}";
+            return $"{Nom} : {MotDePasse} \n\t {s}";
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class StockageApp 
+    [Serializable]
+    public class StockageApp 
     {
         /// <summary>
         /// Liste de tous profils 
@@ -66,6 +67,33 @@ namespace ClassLibrary1
         {
             if(!lesBoites.Contains(b))
                 lesBoites.Add(b);
+        }
+
+        /// <summary>
+        /// Méthode "ToString"
+        /// </summary>
+        public override string ToString()
+        {
+            String s = "";
+            s += "\n Liste des profils : ";
+            for (int i = 0; i < lesProfils.Count; i++)
+            {
+                s += $"\n\t{lesProfils[i]}";
+            }
+
+            s += "\n Liste des utilisateurs : ";
+            for (int i = 0; i < lesUtilisateurs.Count; i++)
+            {
+                s += $"\n\t{lesUtilisateurs[i]}";
+            }
+
+            s += "\n Liste des boite de jeu : ";
+            for (int i = 0; i < lesBoites.Count; i++)
+            {
+                s += $"\n\t{lesBoites[i]}";
+            }
+
+            return $"{s} \n";
         }
     }
 }
