@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Data
 {
-    class Sauveur
+    public class Sauveur
     {
         public void Sauver (string chemin, StockageApp stock)
         {

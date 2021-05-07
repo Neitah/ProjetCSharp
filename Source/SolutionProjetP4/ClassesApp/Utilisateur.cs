@@ -94,7 +94,14 @@ namespace ClassesApp
         /// </summary>
         public override bool Equals(object obj)
         {
-            Utilisateur utilisateur = (Utilisateur)obj; 
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is Utilisateur utilisateur))
+            {
+                return false;
+            }
             bool ret = MotDePasse == utilisateur.MotDePasse &&
                    Nom == utilisateur.Nom;
             for (int i = 0; i<ProfilsFavoris.Count; i++)

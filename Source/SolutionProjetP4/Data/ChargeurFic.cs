@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Data
 {
-    class ChargeurFic : Chargeur
+    public class ChargeurFic : Chargeur
     {
         /// <summary>
         /// Méthode de chargement des données depuis un fichier

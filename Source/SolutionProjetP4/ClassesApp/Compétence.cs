@@ -35,6 +35,10 @@ namespace ClassesApp
         /// </summary>
         public override bool Equals(object obj)
         {
+            if (obj == null)
+            {
+                return false;
+            }
             return obj is Compétence compétence &&
                    Description == compétence.Description &&
                    Nom == compétence.Nom;
