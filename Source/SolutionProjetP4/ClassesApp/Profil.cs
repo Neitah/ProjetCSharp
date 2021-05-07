@@ -112,11 +112,10 @@ namespace ClassesApp
                    Description == profil.Description &&
                    Nom == profil.Nom &&
                    Image == profil.Image; ;
-            for (int i = 0; i<LesVoies.Count;i++)
+
+            foreach(Voie v in LesVoies)
             {
-                if (profil.LesVoies.Count <= i)
-                    ret = false;
-                else if (!LesVoies[i].Equals(profil.LesVoies[i]))
+                if (!profil.LesVoies.Contains(v))
                     ret = false;
             }
             return ret;

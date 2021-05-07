@@ -64,13 +64,9 @@ namespace ClassesApp
                 return false;
             }
             bool ret=Nom.Equals(v.Nom);
-            for (int i = 0; i < LesCompétences.Count; i++)
-            {
-                if (v.LesCompétences.Count <= i)
+            foreach (Compétence c in LesCompétences)
+                if (!v.LesCompétences.Contains(c))
                     ret = false;
-                else if (!LesCompétences[i].Equals(v.LesCompétences[i]))
-                    ret = false;
-            }
             return ret;
             
         }
