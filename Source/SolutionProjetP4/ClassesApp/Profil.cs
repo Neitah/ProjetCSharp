@@ -5,7 +5,7 @@ using System.Text;
 namespace ClassesApp
 {
     [Serializable]
-    public class Profil : Nommable
+    public class Profil : Nommable, IEquatable<object>
     {
         /// <summary>
         /// Chemin d'accés à l'image du profil
