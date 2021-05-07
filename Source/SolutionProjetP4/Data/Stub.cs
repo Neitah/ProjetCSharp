@@ -10,13 +10,12 @@ namespace Data
         /// </summary>
         /// <param name="chemin">paramètre inutilisé mais nécessaire</param>
         /// <returns name="stock">Ensemble de données préconçues</returns>
-        public override StockageApp Charger (string chemin)
+        public override StockageApp Charger(string chemin)
         {
 
             /// Stockage application :
 
             StockageApp stock = new StockageApp();
-            stock = new StockageApp();
 
             /// Boite de jeu :
 
@@ -25,7 +24,7 @@ namespace Data
 
             /// Compétences :
 
-            Compétence c1 = new Compétence("Description compétences 1", "Nom compétences 1");      
+            Compétence c1 = new Compétence("Description compétences 1", "Nom compétences 1");
             Compétence c2 = new Compétence("Description compétences 2", "Nom compétences 2");
             Compétence c3 = new Compétence("Description compétences 3", "Nom compétences 3");
             Compétence c4 = new Compétence("Description compétences 4", "Nom compétences 4");
@@ -127,6 +126,6 @@ namespace Data
 
 
             return stock;
-        
+        }
     }
 }

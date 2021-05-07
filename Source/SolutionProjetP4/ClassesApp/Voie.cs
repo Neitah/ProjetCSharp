@@ -66,7 +66,9 @@ namespace ClassesApp
             bool ret=Nom.Equals(v.Nom);
             for (int i = 0; i < LesCompétences.Count; i++)
             {
-                if (!LesCompétences[i].Equals(v.LesCompétences[i]))
+                if (v.LesCompétences.Count <= i)
+                    ret = false;
+                else if (!LesCompétences[i].Equals(v.LesCompétences[i]))
                     ret = false;
             }
             return ret;

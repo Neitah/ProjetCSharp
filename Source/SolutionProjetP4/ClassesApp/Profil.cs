@@ -114,7 +114,9 @@ namespace ClassesApp
                    Image == profil.Image; ;
             for (int i = 0; i<LesVoies.Count;i++)
             {
-                if (!LesVoies[i].Equals(profil.LesVoies[i]))
+                if (profil.LesVoies.Count <= i)
+                    ret = false;
+                else if (!LesVoies[i].Equals(profil.LesVoies[i]))
                     ret = false;
             }
             return ret;
