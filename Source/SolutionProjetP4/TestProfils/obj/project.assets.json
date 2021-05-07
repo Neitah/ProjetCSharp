@@ -2,21 +2,11 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "ClassesApp/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/ClassesApp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClassesApp.dll": {}
-        }
-      },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "ClassesApp": "1.0.0"
+          "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Data.dll": {}
@@ -28,11 +18,6 @@
     }
   },
   "libraries": {
-    "ClassesApp/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary1/ClassesApp.csproj",
-      "msbuildProject": "../ClassLibrary1/ClassesApp.csproj"
-    },
     "Data/1.0.0": {
       "type": "project",
       "path": "../Data/Data.csproj",
@@ -41,8 +26,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "ClassesApp >= 1.0.0",
-      "Data >= 1.0.0"
+      "Data >= 1.0.0",
+      "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
     ]
   },
   "packageFolders": {
@@ -78,8 +63,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibrary1\\ClassesApp.csproj": {
-              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibrary1\\ClassesApp.csproj"
+            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
             },
             "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
               "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj"
@@ -113,5 +98,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Les informations de projet sont introuvables pour 'U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj'. Dans Visual Studio, c'est peut-être parce que le projet est déchargé ou qu'il ne fait pas partie de la solution actuelle. Dans ce cas, exécutez une restauration à partir de la ligne de commande. Sinon, le fichier projet n'est peut-être pas valide ou des cibles nécessaires à la restauration sont manquantes.",
+      "libraryId": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }
