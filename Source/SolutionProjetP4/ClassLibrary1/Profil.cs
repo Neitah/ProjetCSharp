@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ClassLibrary1
+namespace ClassesApp
 {
     [Serializable]
     public class Profil : Nommable
