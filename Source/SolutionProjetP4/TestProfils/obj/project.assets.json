@@ -46,25 +46,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bamalvezin\\.nuget\\packages\\": {},
+    "C:\\Users\\mamaulus1\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "projectUniqueName": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
       "projectName": "TestProfils",
-      "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
-      "packagesPath": "C:\\Users\\bamalvezin\\.nuget\\packages\\",
-      "outputPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
+      "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "packagesPath": "C:\\Users\\mamaulus1\\.nuget\\packages\\",
+      "outputPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\bamalvezin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mamaulus1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -78,11 +78,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
-              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
+            "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+              "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
             },
-            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
-              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj"
+            "U:\\Projet P4\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
+              "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\Data\\Data.csproj"
             }
           }
         }

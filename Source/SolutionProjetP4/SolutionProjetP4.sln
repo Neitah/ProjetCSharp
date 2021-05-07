@@ -21,7 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesApp", "ClassesApp\Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{9E4BCE43-3810-4894-B2AC-5218384BACD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesAppTests1", "ClassesAppTests1\ClassesAppTests1.csproj", "{C1462CC8-B824-4123-BFCD-F27ECCE545A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesAppTests1", "ClassesAppTests1\ClassesAppTests1.csproj", "{C1462CC8-B824-4123-BFCD-F27ECCE545A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{C955C5A5-8A4C-4693-A70A-1F299A37134B}"
+	ProjectSection(SolutionItems) = preProject
+		WpfApp1\image\boiteDeJeuCthulhu.png = WpfApp1\image\boiteDeJeuCthulhu.png
+		WpfApp1\image\boiteDeJeuInitationAventure.png = WpfApp1\image\boiteDeJeuInitationAventure.png
+		WpfApp1\image\boiteDeJeuInitationAventureVengeance.png = WpfApp1\image\boiteDeJeuInitationAventureVengeance.png
+		C:\Users\mamaulus1\Pictures\imagebackground.jpg = C:\Users\mamaulus1\Pictures\imagebackground.jpg
+		C:\Users\mamaulus1\Pictures\logo.jpg = C:\Users\mamaulus1\Pictures\logo.jpg
+		C:\Users\mamaulus1\Pictures\logo1.jpg = C:\Users\mamaulus1\Pictures\logo1.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

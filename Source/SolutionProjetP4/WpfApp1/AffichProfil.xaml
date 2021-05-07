@@ -20,7 +20,7 @@
         </DockPanel>
         
         <!--Ajout d'un boutton pour mettre en favori-->
-        <Button Content="Favori" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ClickFavori"/>
+        <Button Content="Ajouter Favori" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ClickFavori"/>
 
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">

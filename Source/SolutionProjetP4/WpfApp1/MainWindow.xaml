@@ -80,7 +80,7 @@
         <!-- Description du jeu -->
      
         <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-            <TextBlock Text="Description jeu : " FontSize="15" Margin="10"/>
+            <TextBlock Text="Description jeu : " FontSize="15" Margin="10" FontFamily="C"/>
         </Grid>
 
         <!-- Différentes boites du jeu -->
