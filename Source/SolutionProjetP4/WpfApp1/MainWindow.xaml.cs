@@ -25,5 +25,9 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

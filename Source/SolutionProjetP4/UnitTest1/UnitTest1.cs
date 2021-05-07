@@ -10,7 +10,6 @@ namespace UnitTest1
         [TestMethod]
         public void AjoutProfilFavori()
         {
-           
             // Création d'un profil
             Profil profil = new Profil("Nom Profil 1", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             // Création d'un utilisateur
@@ -19,7 +18,7 @@ namespace UnitTest1
             if (utilisateur.ProfilsFavoris.Contains(profil))
                 return;
             else
-                throw new Exception("PB AjoutProfilFavori");
+                throw new Exception("Problème AjoutProfilFavori");
         }
     }
 }
