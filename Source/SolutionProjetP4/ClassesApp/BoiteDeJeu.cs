@@ -5,7 +5,7 @@ using System.Text;
 namespace ClassesApp
 {
     [Serializable]
-    public class BoiteDeJeu : Nommable
+    public class BoiteDeJeu : Nommable, IEquatable<object>
     {
         /// <summary>
         /// Chemin d'accés à l'image de la boite de jeu 

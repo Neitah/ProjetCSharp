@@ -5,7 +5,7 @@ using System.Text;
 namespace ClassesApp
 {
     [Serializable]
-    public class Voie : Nommable
+    public class Voie : Nommable, IEquatable<object>
     {
         /// <summary>
         /// Liste contenant les compétences de cette voie

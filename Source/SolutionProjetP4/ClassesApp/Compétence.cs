@@ -5,7 +5,7 @@ using System.Text;
 namespace ClassesApp
 {
     [Serializable]
-    public class Compétence : Nommable
+    public class Compétence : Nommable, IEquatable<object>
     {
         /// <summary>
         /// Description de la compétence 

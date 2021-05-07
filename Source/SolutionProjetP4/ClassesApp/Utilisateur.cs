@@ -5,7 +5,7 @@ using System.Text;
 namespace ClassesApp
 {
     [Serializable]
-    public class Utilisateur : Nommable
+    public class Utilisateur : Nommable, IEquatable<object>
     {
         /// <summary>
         /// Mot de passe de l'utilisateur 
