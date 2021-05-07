@@ -1,5 +1,6 @@
 ﻿using System;
-using ClassLibrary1;
+using ClassesApp;
+using Data;
 
 namespace TestProfils
 {
@@ -9,8 +10,7 @@ namespace TestProfils
         {
             Console.WriteLine("Test de la création d'un profil\n");
 
-            Console.WriteLine("-----------------------------------------------");
-
+            Console.WriteLine("-----------------------------------------------"); 
             Console.WriteLine("\nCréation de 5 compétences : \n");
 
             Compétence c1 = new Compétence("Description compétences 1", "Nom compétences 1");

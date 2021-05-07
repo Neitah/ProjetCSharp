@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{528B1F2F-E514-4AF6-AAA7-5EC34070ED9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{5CCE70C0-6663-4FA4-BD71-474ED7DB5DCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesApp", "ClassLibrary1\ClassesApp.csproj", "{5CCE70C0-6663-4FA4-BD71-474ED7DB5DCA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF8F22BF-0CFB-4BC1-BC3D-A80AE3279DEE}"
 EndProject
@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBoiteDeJeu", "TestBoite
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestUtilisateur", "TestUtilisateur\TestUtilisateur.csproj", "{27362F93-7CB5-48AD-BDF9-6EC15F2EEFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStockageApp", "TestStockageApp\TestStockageApp.csproj", "{D575B7EF-6200-4E9F-B29D-2C9A734BD393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestStockageApp", "TestStockageApp\TestStockageApp.csproj", "{D575B7EF-6200-4E9F-B29D-2C9A734BD393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{42218B5C-2BB1-4856-9EF5-13C49479DF27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesAppTests", "ClassesAppTests\ClassesAppTests.csproj", "{D9E25EC5-5308-4A5D-8F51-95EABC79E55F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,14 @@ Global
 		{D575B7EF-6200-4E9F-B29D-2C9A734BD393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D575B7EF-6200-4E9F-B29D-2C9A734BD393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D575B7EF-6200-4E9F-B29D-2C9A734BD393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42218B5C-2BB1-4856-9EF5-13C49479DF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42218B5C-2BB1-4856-9EF5-13C49479DF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42218B5C-2BB1-4856-9EF5-13C49479DF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42218B5C-2BB1-4856-9EF5-13C49479DF27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E25EC5-5308-4A5D-8F51-95EABC79E55F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E25EC5-5308-4A5D-8F51-95EABC79E55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E25EC5-5308-4A5D-8F51-95EABC79E55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E25EC5-5308-4A5D-8F51-95EABC79E55F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
