@@ -55,8 +55,14 @@ namespace ClassesApp
         /// </summary>
         public override bool Equals(object obj)
         {
-            
-            Voie v= (Voie) obj;
+            if(!(obj is Voie v))
+            {
+                return false;
+            }
+            if(obj==null)
+            {
+                return false;
+            }
             bool ret=Nom.Equals(v.Nom);
             for (int i = 0; i < LesCompétences.Count; i++)
             {

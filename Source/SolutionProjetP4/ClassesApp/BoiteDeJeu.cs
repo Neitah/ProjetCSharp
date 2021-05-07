@@ -49,6 +49,10 @@ namespace ClassesApp
         /// </summary>
         public override bool Equals(object obj)
         {
+            if(obj==null)
+            {
+                return false;
+            }
             return obj is BoiteDeJeu jeu &&
                    Description == jeu.Description &&
                    NomMagasin == jeu.NomMagasin &&

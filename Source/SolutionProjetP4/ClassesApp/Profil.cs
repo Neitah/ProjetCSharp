@@ -97,7 +97,14 @@ namespace ClassesApp
         /// </summary>
         public override bool Equals(object obj)
         {
-            Profil profil = (Profil)obj;
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is Profil profil))
+            {
+                return false;
+            }
             bool ret = DéVie == profil.DéVie &&
                    Equipement == profil.Equipement &&
                    ArmeEtArmures == profil.ArmeEtArmures &&
