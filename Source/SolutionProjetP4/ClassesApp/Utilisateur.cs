@@ -104,16 +104,12 @@ namespace ClassesApp
             }
             bool ret = MotDePasse == utilisateur.MotDePasse &&
                    Nom == utilisateur.Nom;
-            for (int i = 0; i<ProfilsFavoris.Count; i++)
-            {
-                if (!ProfilsFavoris[i].Equals(utilisateur.ProfilsFavoris[i]))
+            foreach (Profil p in ProfilsFavoris)
+                if (!utilisateur.ProfilsFavoris.Contains(p))
                     ret = false;
-            }
-            for (int i = 0; i < ProfilsHybrides.Count; i++)
-            {
-                if (!ProfilsHybrides[i].Equals(utilisateur.ProfilsHybrides[i]))
+            foreach (Profil p in ProfilsHybrides)
+                if (!utilisateur.ProfilsHybrides.Contains(p))
                     ret = false;
-            }
             return ret;
         }
 
