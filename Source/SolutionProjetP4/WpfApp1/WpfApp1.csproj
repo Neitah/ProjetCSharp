@@ -13,4 +13,8 @@
     <Page Remove="image\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryImage\ClassLibraryImage.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -23,15 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest1", "UnitTest1\Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesAppTests1", "ClassesAppTests1\ClassesAppTests1.csproj", "{C1462CC8-B824-4123-BFCD-F27ECCE545A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{C955C5A5-8A4C-4693-A70A-1F299A37134B}"
-	ProjectSection(SolutionItems) = preProject
-		WpfApp1\image\boiteDeJeuCthulhu.png = WpfApp1\image\boiteDeJeuCthulhu.png
-		WpfApp1\image\boiteDeJeuInitationAventure.png = WpfApp1\image\boiteDeJeuInitationAventure.png
-		WpfApp1\image\boiteDeJeuInitationAventureVengeance.png = WpfApp1\image\boiteDeJeuInitationAventureVengeance.png
-		C:\Users\mamaulus1\Pictures\imagebackground.jpg = C:\Users\mamaulus1\Pictures\imagebackground.jpg
-		C:\Users\mamaulus1\Pictures\logo.jpg = C:\Users\mamaulus1\Pictures\logo.jpg
-		C:\Users\mamaulus1\Pictures\logo1.jpg = C:\Users\mamaulus1\Pictures\logo1.jpg
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryImage", "ClassLibraryImage\ClassLibraryImage.csproj", "{345151E3-B946-41E9-9526-FED151B9F662}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +67,10 @@ Global
 		{C1462CC8-B824-4123-BFCD-F27ECCE545A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1462CC8-B824-4123-BFCD-F27ECCE545A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1462CC8-B824-4123-BFCD-F27ECCE545A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345151E3-B946-41E9-9526-FED151B9F662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345151E3-B946-41E9-9526-FED151B9F662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345151E3-B946-41E9-9526-FED151B9F662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345151E3-B946-41E9-9526-FED151B9F662}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
