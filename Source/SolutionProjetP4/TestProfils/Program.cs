@@ -10,7 +10,7 @@ namespace TestProfils
         {
             Chargeur chargeur = new Stub();
 
-            Console.WriteLine();
+            Console.WriteLine(chargeur.Charger(""));
 
 
             /* 
