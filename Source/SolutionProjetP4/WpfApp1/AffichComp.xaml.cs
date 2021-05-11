@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ClassesApp;
 
 namespace WpfApp1
 {
@@ -17,9 +18,11 @@ namespace WpfApp1
     /// </summary>
     public partial class AffichComp : Window
     {
+        Compétence c = new Compétence("Description", "nom");
         public AffichComp()
         {
             InitializeComponent();
+            this.DataContext = c;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassesApp;
+using Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,10 +19,17 @@ namespace WpfApp1
     /// </summary>
     public partial class Window1 : Window
     {
+        Profil p = new Stub().Charger("").lesProfils[0];
         private static int fav = 0;
         public Window1()
         {
             InitializeComponent();
+            this.DataContext = p;
+            voie1.ItemsSource = p.LesVoies[0].LesCompétences;
+            voie2.ItemsSource = p.LesVoies[1].LesCompétences;
+            voie3.ItemsSource = p.LesVoies[2].LesCompétences;
+            voie4.ItemsSource = p.LesVoies[3].LesCompétences;
+            voie5.ItemsSource = p.LesVoies[4].LesCompétences;
         }
 
         private void ClickFavori(object sender, RoutedEventArgs e)

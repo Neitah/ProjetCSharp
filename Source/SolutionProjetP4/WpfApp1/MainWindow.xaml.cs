@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassesApp;
+using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,12 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        IList<Profil> lesProfils = new Stub().Charger("").lesProfils;
+
         public MainWindow()
         {
             InitializeComponent();
+            LBprofils.ItemsSource = lesProfils;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
