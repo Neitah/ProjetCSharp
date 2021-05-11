@@ -42,6 +42,18 @@ namespace Data
             Compétence c14 = new Compétence("Description compétences 14", "Nom compétences 14");
             Compétence c15 = new Compétence("Description compétences 15", "Nom compétences 15");
 
+            Compétence c16 = new Compétence("Description compétences 11", "Nom compétences 11");
+            Compétence c17 = new Compétence("Description compétences 12", "Nom compétences 12");
+            Compétence c18 = new Compétence("Description compétences 13", "Nom compétences 13");
+            Compétence c19 = new Compétence("Description compétences 14", "Nom compétences 14");
+            Compétence c20 = new Compétence("Description compétences 15", "Nom compétences 15");
+
+            Compétence c21 = new Compétence("Description compétences 11", "Nom compétences 11");
+            Compétence c22 = new Compétence("Description compétences 12", "Nom compétences 12");
+            Compétence c23 = new Compétence("Description compétences 13", "Nom compétences 13");
+            Compétence c24 = new Compétence("Description compétences 14", "Nom compétences 14");
+            Compétence c25 = new Compétence("Description compétences 15", "Nom compétences 15");
+
             /// Voies
 
             Voie v1 = new Voie("Voie 1");
@@ -58,26 +70,26 @@ namespace Data
             v2.AjoutCompétence(c9);
             v2.AjoutCompétence(c10);
 
-            Voie v3 = new Voie("Voie 2");
+            Voie v3 = new Voie("Voie 3");
             v3.AjoutCompétence(c11);
             v3.AjoutCompétence(c12);
             v3.AjoutCompétence(c13);
             v3.AjoutCompétence(c14);
             v3.AjoutCompétence(c15);
 
-            Voie v4 = new Voie("Voie 2");
-            v4.AjoutCompétence(c10);
-            v4.AjoutCompétence(c2);
-            v4.AjoutCompétence(c13);
-            v4.AjoutCompétence(c6);
-            v4.AjoutCompétence(c9);
+            Voie v4 = new Voie("Voie 4");
+            v4.AjoutCompétence(c16);
+            v4.AjoutCompétence(c17);
+            v4.AjoutCompétence(c18);
+            v4.AjoutCompétence(c19);
+            v4.AjoutCompétence(c20);
 
-            Voie v5 = new Voie("Voie 2");
-            v5.AjoutCompétence(c6);
-            v5.AjoutCompétence(c2);
-            v5.AjoutCompétence(c3);
-            v5.AjoutCompétence(c14);
-            v5.AjoutCompétence(c1);
+            Voie v5 = new Voie("Voie 5");
+            v5.AjoutCompétence(c21);
+            v5.AjoutCompétence(c22);
+            v5.AjoutCompétence(c23);
+            v5.AjoutCompétence(c24);
+            v5.AjoutCompétence(c25);
 
 
             /// Profils :
@@ -87,6 +99,7 @@ namespace Data
             p1.AjoutVoie(v2);
             p1.AjoutVoie(v3);
             p1.AjoutVoie(v4);
+            p1.AjoutVoie(v5);
             stock.AjoutProfil(p1);
 
             Profil p2 = new Profil("Nom Profil 2", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
@@ -99,13 +112,13 @@ namespace Data
             p3.AjoutVoie(v1);
             p3.AjoutVoie(v3);
             p3.AjoutVoie(v5);
-            stock.AjoutProfil(p2);
+            stock.AjoutProfil(p3);
 
             Profil p4 = new Profil("Nom Profil 4", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             p4.AjoutVoie(v2);
             p4.AjoutVoie(v3);
             p4.AjoutVoie(v4);
-            stock.AjoutProfil(p2);
+            stock.AjoutProfil(p4);
 
             /// Utilisateurs
 

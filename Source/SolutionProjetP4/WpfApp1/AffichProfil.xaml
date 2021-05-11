@@ -7,32 +7,72 @@
         mc:Ignorable="d"
         Title="AffichProfil" Height="450" Width="800" Background="AntiqueWhite">
     <!-- Fenêtre de description d'une classe-->
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <!--Nom du profil-->
         <DockPanel DockPanel.Dock="Top" Background="LightBlue" Grid.Row="0">
-            <TextBlock Text="Profil 1" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
+            <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
         </DockPanel>
-        
+
         <!--Ajout d'un boutton pour mettre en favori-->
         <Button Content="Ajouter Favori" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ClickFavori"/>
 
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+            <StackPanel>
+                <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+            </StackPanel>
+
+            <!--Dé de vie et Equipement -->
+
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                    
-                <TextBlock Text="Dés de vie et équipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
-                <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="1"/>
+
+                <!--Dé de vie -->
+
+                <StackPanel Grid.Column="0">
+                        <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                        <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                </StackPanel>
+
+                <!--Equipement -->
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Armes et armures et Divers -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Armes et armures -->
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                </StackPanel>
+
+                <!-- Armes et armures et Divers -->
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                </StackPanel>
             </Grid>
             <!--Descriptif des voies du profil-->
 
@@ -44,108 +84,79 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
+                <!--  Voie 1 -->
+
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="Voie 1" FontSize="18" TextAlignment="Center"/>
-                    <ListBox>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 1"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 2"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 3"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 4"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 5"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
+                    <TextBlock Text="{Binding LesVoies[0].Nom}" FontSize="18" TextAlignment="Center"/>
+                    <ListBox Name="voie1" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel >
+                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
+
+                <!--  Voie 2 -->
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="Voie 2" FontSize="18" TextAlignment="Center"/>
-                    <ListBox>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 1"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 2"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 3"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 4"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 5"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
+                    <TextBlock Text="{Binding LesVoies[1].Nom}" FontSize="18" TextAlignment="Center"/>
+                    <ListBox Name="voie2" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel >
+                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
+
+                <!--  Voie 3 -->
 
                 <StackPanel Grid.Column="2">
-                    <TextBlock Text="Voie 3" FontSize="18" TextAlignment="Center"/>
-                    <ListBox>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 1"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 2"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 3"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 4"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 5"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
+                    <TextBlock Text="{Binding LesVoies[2].Nom}" FontSize="18" TextAlignment="Center"/>
+                    <ListBox Name="voie3" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel >
+                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
+
+                <!--  Voie 4 -->
 
                 <StackPanel Grid.Column="3">
-                    <TextBlock Text="Voie 4" FontSize="18" TextAlignment="Center"/>
-                    <ListBox>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 1"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 2"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 3"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 4"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 5"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
+                    <TextBlock Text="{Binding LesVoies[3].Nom}" FontSize="18" TextAlignment="Center"/>
+                    <ListBox Name="voie4" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel >
+                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
 
+                <!--  Voie 5 -->
+
                 <StackPanel Grid.Column="4">
-                    <TextBlock Text="Voie 5" FontSize="18" TextAlignment="Center"/>
-                    <ListBox>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 1"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 2"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 3"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 4"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
-                        <WrapPanel >
-                            <TextBlock Text="Compétence 5"  Background="#FFFB6D6D" FontSize="15"/>
-                        </WrapPanel>
+                    <TextBlock Text="{Binding LesVoies[4].Nom}" FontSize="18" TextAlignment="Center"/>
+                    <ListBox Name="voie5" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel >
+                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
             </Grid>

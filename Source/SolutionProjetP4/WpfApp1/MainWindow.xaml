@@ -9,9 +9,11 @@
 
     <DockPanel>
 
+        <!--
         <DockPanel.Background>
-            <ImageBrush Stretch="None" ImageSource="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\imagebackground.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush Stretch="None"/>
         </DockPanel.Background>
+        -->
 
         <!-- Attention : regler la taille du background -->
         <Grid DockPanel.Dock="Left" Width="100" >
@@ -31,42 +33,22 @@
 
             <!-- Menu a gauche -->
 
-            <ListBox  Background="LightGreen" Grid.Row="1">
-
-                <WrapPanel Name="Profil1">
-                    <TextBlock Text="Personnage 1"  Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
-                <WrapPanel Name="Profil2">
-                    <TextBlock Text="Personnage 2" Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
-                <WrapPanel Name="Profil3">
-                    <TextBlock Text="Personnage 3" Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
-                <WrapPanel Name="Profil4">
-                    <TextBlock Text="Personnage 4" Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
-                <WrapPanel Name="Profil5">
-                    <TextBlock Text="Personnage 5" Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
-                <WrapPanel Name="Profil6">
-                    <TextBlock Text="Personnage 6" Background="#FFFB6D6D" FontSize="15"/>
-                    <Image Source="" MaxWidth="90"/>
-                </WrapPanel>
-
+            <ListBox Name="LBprofils" Background="LightGreen" Grid.Row="1" ItemsSource="{Binding}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding Nom}" Background="#FFFB6D6D" FontSize="15"/>
+                            <Image Source="{Binding Chemin}" MaxWidth="90"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                  
+                <!--
                 <WrapPanel Name="Profil7">
                     <TextBlock Text="Personnage 7" Background="#FFFB6D6D" FontSize="15"/>
                     <Image Source="" MaxWidth="90"/>
                 </WrapPanel>
+                -->
 
             </ListBox>
 

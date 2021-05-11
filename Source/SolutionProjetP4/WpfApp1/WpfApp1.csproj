@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassesApp\ClassesApp.csproj" />
     <ProjectReference Include="..\ClassLibraryImage\ClassLibraryImage.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
 </Project>
