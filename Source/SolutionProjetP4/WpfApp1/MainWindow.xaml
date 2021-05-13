@@ -6,6 +6,66 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" Background="AntiqueWhite">
+    <Window.Resources>
+
+        <!--  Style du bonton -->
+
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="BoutMainWindow" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#EAB01E"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#EAB01E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#F1CA68"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#F1CA68"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <DockPanel>
 
@@ -16,7 +76,7 @@
         -->
 
         <!-- Attention : regler la taille du background -->
-        <Grid DockPanel.Dock="Left" Width="100" >
+        <Grid DockPanel.Dock="Left" Width="150" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="7*"/>
@@ -33,16 +93,25 @@
 
             <!-- Menu a gauche -->
 
-            <ListBox Name="LBprofils" Background="LightGreen" Grid.Row="1" ItemsSource="{Binding}">
+            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding}">
+                <ListBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF8BFFEF" Offset="0"/>
+                        <GradientStop Color="#FF8DF7AF" Offset="0.122"/>
+                        <GradientStop Color="#FF40CFA8" Offset="0.225"/>
+                        <GradientStop Color="#FF84B668" Offset="0.372"/>
+                    </LinearGradientBrush>
+                </ListBox.Background>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Height="40">
-                            <TextBlock Text="{Binding Nom}" Background="#FFFB6D6D" FontSize="15" Height="40" TextAlignment="Center"/>
-                            <Image Source="{Binding Chemin}" MaxWidth="90"/>
+                            <TextBlock Text="{Binding Nom}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
+                            <Image Source="{Binding Chemin}" Width="65" Height="40"/>
                         </WrapPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
-                  
+
                 <!--
                 <WrapPanel Name="Profil7">
                     <TextBlock Text="Personnage 7" Background="#FFFB6D6D" FontSize="15"/>
@@ -54,28 +123,41 @@
 
             <!-- Bouton de création d'un profil hybride -->
 
-            <DockPanel Grid.Row="2" >
-                <Button x:Name="hybride" Content="Créer hybride"  Height="20"/>
+            <DockPanel Grid.Row="2">
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Créer hybride" Name="CréationProfilHybride" Height="20" Width="150" 
+                        Background="#FF64CCF1"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        FontSize="10"/>
+
             </DockPanel>
 
             <!-- Bouton d'inscritpion et de connexion  -->
 
             <DockPanel Grid.Row="3" >
-                <Button x:Name="Login" Content="Login" Width="50" Height="20"/>
-                <Button x:Name="Register" Content="Register" Height="20"/>
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Connexion" Name="BoutConnexion" Height="20" Width="75" 
+                        Background="#FF64CCF1"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        FontSize="10"/>
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Inscription" Name="BoutInscription" Height="20" Width="75" 
+                        Background="#FF64CCF1"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        FontSize="10"/>
             </DockPanel>
         </Grid>
 
         <!-- Titre de l'application -->
 
-        <DockPanel DockPanel.Dock="Top" Background="LightBlue">
+        <DockPanel DockPanel.Dock="Top" Background="LightBlue" Height="60">
             <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Arial" Foreground="Black"  />
         </DockPanel>
 
         <!-- Description du jeu -->
 
         <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-            <TextBlock Text="Description jeu : " FontSize="15" FontFamily="C" Height="18" VerticalAlignment="Bottom" Margin="10"/>
+            <TextBlock Text="Description jeu : " FontSize="15" FontFamily="Arial" Height="18" VerticalAlignment="Bottom" Margin="10"/>
         </Grid>
 
         <!-- Différentes boites du jeu -->
@@ -90,38 +172,38 @@
 
             <!-- Boite de jeu 1 -->
 
-            <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Opacity="0.8" Background="White">
+            <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White">
                 <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                     <Border BorderBrush="Black" BorderThickness="3">
                         <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuInitationAventure.png"  Width="100"/>
                     </Border>
                 </Button>
-                <TextBlock Text="Boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
-                <TextBlock Text="Information boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
+                <TextBlock Text="Boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                <TextBlock Text="Information boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
             </StackPanel>
 
             <!-- Boite de jeu 2 -->
 
-            <StackPanel Grid.Column="1"  Margin="10" VerticalAlignment="Bottom" Background="White" Opacity="0.8">
+            <StackPanel Grid.Column="1"  Margin="10" VerticalAlignment="Bottom" Background="White">
                 <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                     <Border BorderBrush="Black" BorderThickness="3">
                         <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuInitationAventureVengeance.png"  Width="100"/>
                     </Border>
                 </Button>
-                <TextBlock Text="Boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
-                <TextBlock Text="Information boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
+                <TextBlock Text="Boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                <TextBlock Text="Information boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
             </StackPanel>
 
             <!-- Boite de jeu 3 -->
 
-            <StackPanel Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Opacity="0.8">
+            <StackPanel Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White">
                 <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                     <Border BorderBrush="Black" BorderThickness="3">
                         <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuCthulhu.png"  Width="100"/>
                     </Border>
                 </Button>
-                <TextBlock Text="Boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
-                <TextBlock Text="Information boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
+                <TextBlock Text="Boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                <TextBlock Text="Information boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
             </StackPanel>
         </Grid>
     </DockPanel>
