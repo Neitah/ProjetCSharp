@@ -36,8 +36,8 @@
             <ListBox Name="LBprofils" Background="LightGreen" Grid.Row="1" ItemsSource="{Binding}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <WrapPanel>
-                            <TextBlock Text="{Binding Nom}" Background="#FFFB6D6D" FontSize="15"/>
+                        <WrapPanel Height="40">
+                            <TextBlock Text="{Binding Nom}" Background="#FFFB6D6D" FontSize="15" Height="40" TextAlignment="Center"/>
                             <Image Source="{Binding Chemin}" MaxWidth="90"/>
                         </WrapPanel>
                     </DataTemplate>
@@ -69,7 +69,7 @@
         <!-- Titre de l'application -->
 
         <DockPanel DockPanel.Dock="Top" Background="LightBlue">
-            <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Caladea" Foreground="Black"  />
+            <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Arial" Foreground="Black"  />
         </DockPanel>
 
         <!-- Description du jeu -->
