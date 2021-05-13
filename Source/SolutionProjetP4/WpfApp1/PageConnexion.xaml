@@ -100,7 +100,7 @@
             <!-- Bouton valider -->
 
             <StackPanel  Grid.Row="2" Margin="10">
-                <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutValidLogin" Height="40" Width="120" 
+                <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutValidConnexion" Height="40" Width="120" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
