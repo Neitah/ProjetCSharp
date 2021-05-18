@@ -23,12 +23,14 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        IList<Profil> lesProfils = new Stub().Charger("").lesProfils;
+        StockageApp sa = new Stub().Charger("");
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            LBprofils.ItemsSource = lesProfils;
+            this.DataContext = sa;
+            LBprofils.ItemsSource = sa.lesProfils;           
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
