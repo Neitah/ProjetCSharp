@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AffichProfil" Height="450" Width="800" Background="AntiqueWhite">
+        Title="AffichProfil" Height="450" Width="800" Background="White">
 
     <!--  Style du bonton -->
 
@@ -72,36 +72,39 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.225*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!--Nom du profil-->
-        <DockPanel DockPanel.Dock="Top" Background="LightGreen" Grid.Row="0">
-            <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
+        <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
+            <Image Source="{Binding Image}" Width="50" Height="60" Margin="10"/>
+            <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Arial" FontSize="56"/>
         </DockPanel>
 
         <!--Ajout d'un boutton pour mettre en favori-->
 
         <StackPanel Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}"  Content="Favori" Name="BoutAjoutFavori" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ClickFavori" Height="40" Width="120" 
+            <Button Style="{DynamicResource RoundedButtonStyle}"  Content="Favori" Name="BoutAjoutFavori" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ClickFavori" Height="30" Width="100" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="20"/>
+                        FontSize="15"/>
 
         </StackPanel>
-      
+
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">
-            <StackPanel>
-                <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
-                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+            <Border BorderBrush="Black" BorderThickness="1"/>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="White"/>
             </StackPanel>
 
             <!--Dé de vie et Equipement -->
 
-            <Grid>
+            <Grid  Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
@@ -110,21 +113,21 @@
                 <!--Dé de vie -->
 
                 <StackPanel Grid.Column="0">
-                        <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
-                        <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                    <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                    <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
                 </StackPanel>
 
                 <!--Equipement -->
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
-                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                    <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White"/>
                 </StackPanel>
             </Grid>
 
             <!-- Armes et armures et Divers -->
 
-            <Grid>
+            <Grid  Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
@@ -133,20 +136,20 @@
                 <!-- Armes et armures -->
 
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
-                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite" Grid.Column="0"/>
+                    <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
                 </StackPanel>
 
                 <!-- Armes et armures et Divers -->
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
-                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="AntiqueWhite"/>
+                    <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White"/>
                 </StackPanel>
             </Grid>
             <!--Descriptif des voies du profil-->
 
-            <Grid>
+            <Grid  Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -163,7 +166,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -178,7 +181,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -193,7 +196,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -208,7 +211,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -223,7 +226,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="#FFFB6D6D" FontSize="15"/>
+                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

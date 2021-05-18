@@ -38,11 +38,15 @@ namespace WpfApp1
             {
                 ((Button)sender).Content = "Enlever des favoris";
                 fav = 1;
+                ((Button)sender).Width = 160;
+
+
             }
             else
             {
                 ((Button)sender).Content = "Favori";
                 fav = 0;
+                ((Button)sender).Width = 100;
             }
         }   
     }
