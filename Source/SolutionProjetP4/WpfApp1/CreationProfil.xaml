@@ -105,7 +105,7 @@
         </Grid>
 
         <StackPanel  Grid.Row="2" Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" 
+            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider les profils parents " Name="BoutValidProfParent" Height="40" Width="300" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
@@ -135,6 +135,14 @@
                 <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
                 <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
             </DockPanel>
+        </StackPanel>
+
+        <StackPanel Margin="10">
+            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" 
+                        Background="#FF64CCF1"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        FontSize="20"/>
         </StackPanel>
     </StackPanel>
 </Window>

@@ -147,7 +147,7 @@
 
 
             <DockPanel.Background>
-                <ImageBrush Stretch="None" ImageSource="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\wallpaperTest1.jpg"/>
+                <ImageBrush Stretch="Fill" ImageSource="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\wallpaperTest1.jpg"/>
             </DockPanel.Background>
 
 
@@ -159,7 +159,7 @@
 
             <!-- Différentes boites du jeu -->
 
-            <Grid DockPanel.Dock="Bottom" Margin="10">
+            <Grid DockPanel.Dock="Bottom" Margin="10" x:Name="GridBoiteDeJeu">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -172,10 +172,10 @@
                 <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White" Height="150">
                     <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                         <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuInitationAventure.png"  Width="100" />
+                            <Image Source="{Binding lesBoites[0].Image}"  Width="100" />
                         </Border>
                     </Button>
-                    <TextBlock Text="Boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding lesBoites[0].Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
                     <TextBlock Text="Information boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
                 </StackPanel>
 
