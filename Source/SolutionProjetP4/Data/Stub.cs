@@ -29,67 +29,67 @@ namespace Data
 
             /// Compétences :
 
-            Compétence c1 = new Compétence("Description compétences 1", "Nom compétences 1");
-            Compétence c2 = new Compétence("Description compétences 2", "Nom compétences 2");
-            Compétence c3 = new Compétence("Description compétences 3", "Nom compétences 3");
-            Compétence c4 = new Compétence("Description compétences 4", "Nom compétences 4");
-            Compétence c5 = new Compétence("Description compétences 5", "Nom compétences 5");
+            Compétence c1 = new Compétence("Description compétences 1", "Mécanisme");
+            Compétence c2 = new Compétence("Description compétences 2", "Tir de semonce");
+            Compétence c3 = new Compétence("Description compétences 3", "Tir de barrage");
+            Compétence c4 = new Compétence("Description compétences 4", "Couleuvrine");
+            Compétence c5 = new Compétence("Description compétences 5", "Feu nourri");
 
-            Compétence c6 = new Compétence("Description compétences 6", "Nom compétences 6");
-            Compétence c7 = new Compétence("Description compétences 7", "Nom compétences 7");
-            Compétence c8 = new Compétence("Description compétences 8", "Nom compétences 8");
-            Compétence c9 = new Compétence("Description compétences 9", "Nom compétences 9");
-            Compétence c10 = new Compétence("Description compétences 10", "Nom compétences 10");
+            Compétence c6 = new Compétence("Description compétences 6", "Chimiste");
+            Compétence c7 = new Compétence("Description compétences 7", "Démolition");
+            Compétence c8 = new Compétence("Description compétences 8", "Poudre puissante");
+            Compétence c9 = new Compétence("Description compétences 9", "Piège explosif");
+            Compétence c10 = new Compétence("Description compétences 10", "Boulet explosif");
 
-            Compétence c11 = new Compétence("Description compétences 11", "Nom compétences 11");
-            Compétence c12 = new Compétence("Description compétences 12", "Nom compétences 12");
-            Compétence c13 = new Compétence("Description compétences 13", "Nom compétences 13");
-            Compétence c14 = new Compétence("Description compétences 14", "Nom compétences 14");
-            Compétence c15 = new Compétence("Description compétences 15", "Nom compétences 15");
+            Compétence c11 = new Compétence("Description compétences 11", "Action concertée");
+            Compétence c12 = new Compétence("Description compétences 12", "À couvert");
+            Compétence c13 = new Compétence("Description compétences 13", "Combattant aguerri");
+            Compétence c14 = new Compétence("Description compétences 14", "Combat de masse");
+            Compétence c15 = new Compétence("Description compétences 15", "Constitution héroïque");
 
-            Compétence c16 = new Compétence("Description compétences 11", "Nom compétences 11");
-            Compétence c17 = new Compétence("Description compétences 12", "Nom compétences 12");
-            Compétence c18 = new Compétence("Description compétences 13", "Nom compétences 13");
-            Compétence c19 = new Compétence("Description compétences 14", "Nom compétences 14");
-            Compétence c20 = new Compétence("Description compétences 15", "Nom compétences 15");
+            Compétence c16 = new Compétence("Description compétences 16", "Plus vite que son ombre");
+            Compétence c17 = new Compétence("Description compétences 17", "Cadence de tir");
+            Compétence c18 = new Compétence("Description compétences 18", "Tir double");
+            Compétence c19 = new Compétence("Description compétences 19", "As de la gâchette");
+            Compétence c20 = new Compétence("Description compétences 20", "Dextérité héroïque");
 
-            Compétence c21 = new Compétence("Description compétences 11", "Nom compétences 11");
-            Compétence c22 = new Compétence("Description compétences 12", "Nom compétences 12");
-            Compétence c23 = new Compétence("Description compétences 13", "Nom compétences 13");
-            Compétence c24 = new Compétence("Description compétences 14", "Nom compétences 14");
-            Compétence c25 = new Compétence("Description compétences 15", "Nom compétences 15");
+            Compétence c21 = new Compétence("Description compétences 21", "Joli coup");
+            Compétence c22 = new Compétence("Description compétences 22", "Tir précis");
+            Compétence c23 = new Compétence("Description compétences 23", "Défaut dans la cuirasse");
+            Compétence c24 = new Compétence("Description compétences 24", "Tir parabolique");
+            Compétence c25 = new Compétence("Description compétences 25", "Tir mortel");
 
             /// Voies
 
-            Voie v1 = new Voie("Voie 1");
+            Voie v1 = new Voie("Voie de l'artilleur");
             v1.AjoutCompétence(c1);
             v1.AjoutCompétence(c2);
             v1.AjoutCompétence(c3);
             v1.AjoutCompétence(c4);
             v1.AjoutCompétence(c5);
 
-            Voie v2 = new Voie("Voie 2");
+            Voie v2 = new Voie("Voie des explosifs");
             v2.AjoutCompétence(c6);
             v2.AjoutCompétence(c7);
             v2.AjoutCompétence(c8);
             v2.AjoutCompétence(c9);
             v2.AjoutCompétence(c10);
 
-            Voie v3 = new Voie("Voie 3");
+            Voie v3 = new Voie("Voie du champ de bataille");
             v3.AjoutCompétence(c11);
             v3.AjoutCompétence(c12);
             v3.AjoutCompétence(c13);
             v3.AjoutCompétence(c14);
             v3.AjoutCompétence(c15);
 
-            Voie v4 = new Voie("Voie 4");
+            Voie v4 = new Voie("Voie du pistolero");
             v4.AjoutCompétence(c16);
             v4.AjoutCompétence(c17);
             v4.AjoutCompétence(c18);
             v4.AjoutCompétence(c19);
             v4.AjoutCompétence(c20);
 
-            Voie v5 = new Voie("Voie 5");
+            Voie v5 = new Voie("Voie de la précision");
             v5.AjoutCompétence(c21);
             v5.AjoutCompétence(c22);
             v5.AjoutCompétence(c23);
@@ -99,7 +99,7 @@ namespace Data
 
             /// Profils :
 
-            Profil p1 = new Profil("Nom Profil 1", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
+            Profil p1 = new Profil("Arquebusier", "1d8", "Pétoire, épée longue, dague, armure de cuir", "armes de contact à une main, armes à distance, armes à poudre, armure jusqu'à la chemise de maille", "divers", "L’arquebusier est un dur à cuir, un soldat ou un mercenaire habitué des champs de bataille. C’est un spécialiste du combat à distance et plus particulièrement des armes à feu et des explosifs.", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\Profil\\Arquebusier.png");
             p1.AjoutVoie(v1);
             p1.AjoutVoie(v2);
             p1.AjoutVoie(v3);

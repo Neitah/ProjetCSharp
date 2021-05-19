@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AffichProfil" Height="450" Width="800" Background="White">
+        Title="AffichProfil" Height="600" Width="1000" Background="White">
 
     <!--  Style du bonton -->
 
@@ -78,7 +78,7 @@
 
         <!--Nom du profil-->
         <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
-            <Image Source="{Binding Image}" Width="50" Height="60" Margin="10"/>
+            <Image Source="{Binding Image}" Width="80" Height="100" Margin="10"/>
             <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Arial" FontSize="56"/>
         </DockPanel>
 
@@ -99,7 +99,7 @@
 
             <StackPanel Margin="10">
                 <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="White"/>
+                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
             </StackPanel>
 
             <!--Dé de vie et Equipement -->
@@ -114,14 +114,14 @@
 
                 <StackPanel Grid.Column="0">
                     <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
-                    <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                    <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
                 </StackPanel>
 
                 <!--Equipement -->
 
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White"/>
+                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
                 </StackPanel>
             </Grid>
 
@@ -137,14 +137,14 @@
 
                 <StackPanel Grid.Column="0">
                     <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
-                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
                 </StackPanel>
 
                 <!-- Armes et armures et Divers -->
 
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White"/>
+                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
                 </StackPanel>
             </Grid>
             <!--Descriptif des voies du profil-->
