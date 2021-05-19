@@ -20,8 +20,8 @@ namespace Data
             /// Boite de jeu :
 
             BoiteDeJeu b1 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventure.png");
-            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventureVengeance.png");
-            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuCthulhu.png");
+            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Magasin boite 2", "Nom de la boite  2", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventureVengeance.png");
+            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Magasin boite 3", "Nom de la boite  3", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuCthulhu.png");
             stock.AjoutBoite(b1);
             stock.AjoutBoite(b2);
             stock.AjoutBoite(b3);
