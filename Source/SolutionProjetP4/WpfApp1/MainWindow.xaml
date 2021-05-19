@@ -100,7 +100,7 @@
                     <DataTemplate>
                         <WrapPanel Height="40">
                             <TextBlock Text="{Binding Nom}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
-                            <Image Source="{Binding Chemin}" Width="65" Height="40"/>
+                            <Image Source="{Binding Image}" Width="80" Height="40"/>
                         </WrapPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
