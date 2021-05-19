@@ -169,38 +169,41 @@
 
                 <!-- Boite de jeu 1 -->
 
-                <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White" Height="150">
+                <StackPanel x:Name="Boite1" Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
                     <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                         <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="{Binding lesBoites[0].Image}"  Width="100" />
+                            <Image Source="{Binding Image}"  Width="100" />
                         </Border>
                     </Button>
-                    <TextBlock Text="{Binding lesBoites[0].Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                    <TextBlock Text="Information boite de jeu 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
                 </StackPanel>
 
                 <!-- Boite de jeu 2 -->
 
-                <StackPanel Grid.Column="1"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="150">
+                <StackPanel x:Name="Boite2" Grid.Column="1"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
                     <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                         <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuInitationAventureVengeance.png"  Width="100"/>
+                            <Image Source="{Binding Image}"  Width="100"/>
                         </Border>
                     </Button>
-                    <TextBlock Text="Boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                    <TextBlock Text="Information boite de jeu 2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
                 </StackPanel>
 
                 <!-- Boite de jeu 3 -->
 
-                <StackPanel Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="150">
+                <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
                     <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                         <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\boiteDeJeuCthulhu.png"  Width="100"/>
+                            <Image Source="{Binding Image}"  Width="100"/>
                         </Border>
                     </Button>
-                    <TextBlock Text="Boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                    <TextBlock Text="Information boite de jeu 3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
                 </StackPanel>
             </Grid>
         </DockPanel>
