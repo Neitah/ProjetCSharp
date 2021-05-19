@@ -30,7 +30,10 @@ namespace WpfApp1
         {
             InitializeComponent();
             this.DataContext = sa;
-            LBprofils.ItemsSource = sa.lesProfils;           
+            LBprofils.ItemsSource = sa.lesProfils;
+            Boite1.DataContext = sa.lesBoites[0];
+            Boite2.DataContext = sa.lesBoites[1];
+            Boite3.DataContext = sa.lesBoites[2];
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
