@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" Background="White">
+        Title="Window1" Height="600" Width="1000" Background="White">
     <Window.Resources>
 
         <!--  Style du bonton -->
@@ -70,7 +70,7 @@
 
     <DockPanel>
         <!-- Attention : regler la taille du background -->
-        <Grid DockPanel.Dock="Left" Width="150" >
+        <Grid DockPanel.Dock="Left" Width="180" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="7*"/>
@@ -109,7 +109,7 @@
             <!-- Bouton de création d'un profil hybride -->
 
             <DockPanel Grid.Row="2">
-                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Créer hybride" Name="CréationProfilHybride" Height="20" Width="150" 
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Créer hybride" Name="CréationProfilHybride" Height="20" Width="180" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
@@ -120,12 +120,12 @@
             <!-- Bouton d'inscrption et de connexion  -->
 
             <DockPanel Grid.Row="3" >
-                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Connexion" Name="BoutConnexion" Height="20" Width="75" 
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Connexion" Name="BoutConnexion" Height="20" Width="90" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
                         FontSize="10"/>
-                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Inscription" Name="BoutInscription" Height="20" Width="75" 
+                <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Inscription" Name="BoutInscription" Height="20" Width="90" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
@@ -170,7 +170,7 @@
                 <!-- Boite de jeu 1 -->
 
                 <StackPanel x:Name="Boite1" Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
+                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" >
                         <Border BorderBrush="Black" BorderThickness="3">
                             <Image Source="{Binding Image}"  Width="100" />
                         </Border>
