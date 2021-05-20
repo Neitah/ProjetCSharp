@@ -25,7 +25,6 @@ namespace WpfApp1
     {
         StockageApp sa = new Stub().Charger("");
         
-
         public MainWindow()
         {
             InitializeComponent();
@@ -36,9 +35,22 @@ namespace WpfApp1
             Boite3.DataContext = sa.lesBoites[2];
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void CréationProfilHybride_Click(object sender, RoutedEventArgs e)
         {
+            Window fenCrePro=new CreationProfil();
+            fenCrePro.Show();           
+        }
 
+        private void BoutInscription_Click(object sender, RoutedEventArgs e)
+        {
+            Window fenInscription = new PageInscription(sa);
+            fenInscription.Show();
+        }
+
+        private void BoutConnexion_Click(object sender, RoutedEventArgs e)
+        {
+            Window fenLogin = new PageConnexion(sa);
+            fenLogin.Show();
         }
     }
 }

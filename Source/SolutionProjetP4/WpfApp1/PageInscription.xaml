@@ -78,6 +78,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
             <!-- Login -->
@@ -101,14 +102,20 @@
                 <PasswordBox Name="MotDePasseVerif" FontSize="20" HorizontalAlignment="Center" Width="150"/>
             </StackPanel>
 
+            <StackPanel Grid.Row="3">
+                <TextBlock x:Name="Erreur1" FontStyle="Italic" TextAlignment="Center"/>
+                <TextBlock x:Name="Erreur2" FontStyle="Italic" TextAlignment="Center"/>
+            </StackPanel>
+               
             <!-- Bouton valider -->
 
-            <StackPanel  Grid.Row="3" Margin="10">
+            <StackPanel  Grid.Row="4" Margin="10">
                 <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutValidInscription" Height="40" Width="120" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="20"/>
+                        FontSize="20"
+                        Click="BoutValidInscription_Click"/>
             </StackPanel>
         </Grid>
     </StackPanel>

@@ -17,6 +17,7 @@
     <ProjectReference Include="..\ClassesApp\ClassesApp.csproj" />
     <ProjectReference Include="..\ClassLibraryImage\ClassLibraryImage.csproj" />
     <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Images\Images.csproj" />
   </ItemGroup>
 
 </Project>
