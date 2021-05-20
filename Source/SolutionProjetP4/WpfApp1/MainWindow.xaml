@@ -81,7 +81,7 @@
             <!-- Logo-->
 
             <DockPanel Grid.Row="0" Background="White">
-                <Image Source="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\logo.jpg"/>
+                <Image Source="U:\COO IHM\Projet\Source\SolutionProjetP4\ClassLibraryImage\Image\logo.jpg"/>
             </DockPanel>
 
             <!-- Menu a gauche -->
@@ -147,14 +147,14 @@
 
 
             <DockPanel.Background>
-                <ImageBrush Stretch="Fill" ImageSource="U:\Projet P4\Source\SolutionProjetP4\ClassLibraryImage\Image\wallpaperTest1.jpg"/>
+                <ImageBrush Stretch="Fill" ImageSource="U:\COO IHM\Projet\Source\SolutionProjetP4\ClassLibraryImage\Image\wallpaperTest1.jpg"/>
             </DockPanel.Background>
 
 
             <!-- Description du jeu -->
 
             <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-                <TextBlock Text="Description jeu : " FontSize="15" FontFamily="Arial" Height="18" VerticalAlignment="Bottom" Margin="10"/>
+                <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux nouveaux joueurs. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
             </Grid>
 
             <!-- Différentes boites du jeu -->

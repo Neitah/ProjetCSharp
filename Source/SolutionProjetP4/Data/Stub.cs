@@ -19,9 +19,9 @@ namespace Data
 
             /// Boite de jeu :
 
-            BoiteDeJeu b1 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventure.png");
-            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Magasin boite 2", "Nom de la boite  2", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventureVengeance.png");
-            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Magasin boite 3", "Nom de la boite  3", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuCthulhu.png");
+            BoiteDeJeu b1 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventure.png");
+            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Magasin boite 2", "Nom de la boite  2", "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuInitationAventureVengeance.png");
+            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Magasin boite 3", "Nom de la boite  3", "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\boiteDeJeuCthulhu.png");
             stock.AjoutBoite(b1);
             stock.AjoutBoite(b2);
             stock.AjoutBoite(b3);
@@ -99,7 +99,7 @@ namespace Data
 
             /// Profils :
 
-            Profil p1 = new Profil("Arquebusier", "1d8", "Pétoire, épée longue, dague, armure de cuir", "armes de contact à une main, armes à distance, armes à poudre, armure jusqu'à la chemise de maille", "divers", "L’arquebusier est un dur à cuir, un soldat ou un mercenaire habitué des champs de bataille. C’est un spécialiste du combat à distance et plus particulièrement des armes à feu et des explosifs.", "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\Profil\\Arquebusier.png");
+            Profil p1 = new Profil("Arquebusier", "1d8", "Pétoire, épée longue, dague, armure de cuir", "armes de contact à une main, armes à distance, armes à poudre, armure jusqu'à la chemise de maille", "divers", "L’arquebusier est un dur à cuir, un soldat ou un mercenaire habitué des champs de bataille. C’est un spécialiste du combat à distance et plus particulièrement des armes à feu et des explosifs.", "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassLibraryImage\\Image\\Profil\\Arquebusier.png");
             p1.AjoutVoie(v1);
             p1.AjoutVoie(v2);
             p1.AjoutVoie(v3);
