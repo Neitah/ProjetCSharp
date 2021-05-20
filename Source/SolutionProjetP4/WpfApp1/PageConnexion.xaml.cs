@@ -19,10 +19,12 @@ namespace WpfApp1
     public partial class PageConnexion : Window
     {
         StockageApp sa;
-        public PageConnexion(StockageApp sa)
+        Utilisateur utilisateurActuel;
+        public PageConnexion(StockageApp sa, Utilisateur utilisateurActuel)
         {
             InitializeComponent();
             this.sa = sa;
+            this.utilisateurActuel = utilisateurActuel;
         }
 
         private void BoutValidConnexion_Click(object sender, RoutedEventArgs e)
@@ -34,6 +36,7 @@ namespace WpfApp1
             }
             else
             {
+                utilisateurActuel = utilisateur;
                 this.Close();
             }
         }
