@@ -81,7 +81,7 @@
             <!-- Logo-->
 
             <DockPanel Grid.Row="0" Background="White">
-                <Image Source="U:\COO IHM\Projet\Source\SolutionProjetP4\ClassLibraryImage\Image\logo.jpg"/>
+                <Image Source="\Images;Component\logo.jpg"/>
             </DockPanel>
 
             <!-- Menu a gauche -->
@@ -150,7 +150,7 @@
 
 
             <DockPanel.Background>
-                <ImageBrush Stretch="Fill" ImageSource="U:\COO IHM\Projet\Source\SolutionProjetP4\ClassLibraryImage\Image\wallpaperTest1.jpg"/>
+                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\wallpaperTest1.jpg"/>
             </DockPanel.Background>
 
 

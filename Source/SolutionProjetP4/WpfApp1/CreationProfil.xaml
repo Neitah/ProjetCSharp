@@ -65,148 +65,233 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="FocusVisual1">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background1" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border1" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background1}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border1}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#EAB01E"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#EAB01E"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="#F1CA68"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#F1CA68"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground1}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
 
     <StackPanel>
-        <DockPanel DockPanel.Dock="Top" Background="LightBlue" Grid.Row="0">
-            <TextBlock Text="Création profil hybride" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
+        <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
+            <TextBlock Text="Création d'un profil hybride" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="56"/>
         </DockPanel>
-
-        <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="20" Margin="10"/>
-
-        <Grid Margin="10" DockPanel.Dock="Top">
-
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Button x:Name="bouton1" Grid.Column="0" Grid.Row="0" Content="{Binding Nom}"  VerticalContentAlignment="Center" Click="Profil1_Click"/>
-            <ListBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-
-            <Button Grid.Column="1" Grid.Row="0" Content="Profil 2"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste2" Grid.Column="1" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}" />
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-            <Button Grid.Column="2" Grid.Row="0" Content="Profil 3"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste3" Grid.Column="2" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-            <Button Grid.Column="3" Grid.Row="0" Content="Profil 4"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste4" Grid.Column="3" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-            <Button Grid.Column="4" Grid.Row="0" Content="Profil 5"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste5" Grid.Column="4" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-            <Button Grid.Column="5" Grid.Row="0" Content="Profil 6"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste6" Grid.Column="5" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-            <Button Grid.Column="6" Grid.Row="0" Content="Profil 7"  VerticalContentAlignment="Center"/>
-            <ListBox x:Name="liste7" Grid.Column="6" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-
-            
-            
-            <Button Grid.Column="0" Grid.Row="2" Content="Profil 8"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="Profil 9"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="2" Grid.Row="2" Content="Profil 10"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="3" Grid.Row="2" Content="Profil 11"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="4" Grid.Row="2" Content="Profil 12"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="5" Grid.Row="2" Content="Profil 13"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="6" Grid.Row="2" Content="Profil 14"  VerticalContentAlignment="Center"/>
-        </Grid>
-
-        <StackPanel  Grid.Row="2" Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider les voies" IsEnabled="False" Name="BoutValidProfParent" Height="40" Width="300" 
-                        Background="#FF64CCF1"
-                        Foreground="White"
-                        FontFamily="Arial"
-                        FontSize="20"/>
-        </StackPanel>
-
-        <!-- A compléter : Afficher les voies correspondant aux profils sélectionnés-->
         
-        <!-- Informations complémentaires-->
+
         <StackPanel>
-            <DockPanel Margin="10">
-                <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
-                <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
-            </DockPanel>
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\\profilhybride.jpg"/>
+            </StackPanel.Background>
 
-            <DockPanel Margin="10">
-                <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
-                <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
-            </DockPanel>
+            <StackPanel Background="White" Margin="20">
+                <TextBlock Text="Choix des profils parents du profil hybride :"  FontSize="20" Margin="10"/>
 
-            <DockPanel Margin="10">
-                <TextBlock Text="Divers : " FontSize="20"/>
-                <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
-            </DockPanel>
+                <Grid Margin="10" DockPanel.Dock="Top" Background="White">
 
-            <DockPanel Margin="10">
-                <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
-                <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
-            </DockPanel>
-        </StackPanel>
 
-        <StackPanel Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False"
-                        Background="#FF64CCF1"
-                        Foreground="White"
-                        FontFamily="Arial"
-                        FontSize="20"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button Style="{DynamicResource ButtonStyle}" x:Name="bouton1" Grid.Column="0" Grid.Row="0" Content="{Binding Nom}"  VerticalContentAlignment="Center" Click="Profil1_Click"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="1" Grid.Row="0" Content="Profil 2"  VerticalContentAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste2" Grid.Column="1" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="2" Grid.Row="0" Content="Profil 3"  VerticalContentAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste3" Grid.Column="2" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="3" Grid.Row="0" Content="Profil 4"  VerticalContentAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste4" Grid.Column="3" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="4" Grid.Row="0" Content="Profil 5"  VerticalContentAlignment="Center"
+                            Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste5" Grid.Column="4" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="5" Grid.Row="0" Content="Profil 6"  VerticalContentAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste6" Grid.Column="5" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Style="{DynamicResource ButtonStyle}" Grid.Column="6" Grid.Row="0" Content="Profil 7"  VerticalContentAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                    <ListBox x:Name="liste7" Grid.Column="6" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Nom}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+            
+            
+                    <Button Grid.Column="0" Grid.Row="2" Content="Profil 8"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="1" Grid.Row="2" Content="Profil 9"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="2" Grid.Row="2" Content="Profil 10"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="3" Grid.Row="2" Content="Profil 11"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="4" Grid.Row="2" Content="Profil 12"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="5" Grid.Row="2" Content="Profil 13"  VerticalContentAlignment="Center"/>
+                    <Button Grid.Column="6" Grid.Row="2" Content="Profil 14"  VerticalContentAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel  Grid.Row="2" Margin="10">
+                <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider les voies" IsEnabled="False" Name="BoutValidProfParent" Height="40" Width="300" 
+                            Background="#FF64CCF1"
+                            Foreground="White"
+                            FontFamily="Arial"
+                            FontSize="20"/>
+            </StackPanel>
+
+            <!-- A compléter : Afficher les voies correspondant aux profils sélectionnés-->
+        
+            <!-- Informations complémentaires-->
+            <StackPanel Background="White" Margin="20">
+                <DockPanel Margin="5">
+                    <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
+                    <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
+                </DockPanel>
+
+                <DockPanel Margin="5">
+                    <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
+                    <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
+                </DockPanel>
+
+                <DockPanel Margin="5">
+                    <TextBlock Text="Divers : " FontSize="20"/>
+                    <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
+                </DockPanel>
+
+                <DockPanel Margin="5">
+                    <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
+                    <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
+                </DockPanel>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False"
+                            Background="#FF64CCF1"
+                            Foreground="White"
+                            FontFamily="Arial"
+                            FontSize="20"/>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </Window>
