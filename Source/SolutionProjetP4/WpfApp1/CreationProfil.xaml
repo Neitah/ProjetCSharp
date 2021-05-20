@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="CreationProfil" Height="550" Width="800" Background="AntiqueWhite">
+        Title="CreationProfil" Height="600" Width="800" Background="AntiqueWhite">
 
     <!--  Style du bonton -->
 
@@ -263,27 +263,29 @@
             <!-- A compléter : Afficher les voies correspondant aux profils sélectionnés-->
         
             <!-- Informations complémentaires-->
-            <StackPanel Background="White" Margin="20">
-                <DockPanel Margin="5">
-                    <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
-                    <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
-                </DockPanel>
+            <Border CornerRadius="10" Background="White" Margin="10">
+                <StackPanel Background="White" Margin="20">
+                    <DockPanel Margin="5">
+                        <TextBlock Text="Nom du nouveau profil : " FontSize="20"/>
+                        <TextBox Name="NomProfil" Margin="0,0,200,0" FontSize="20"/>
+                    </DockPanel>
 
-                <DockPanel Margin="5">
-                    <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
-                    <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
-                </DockPanel>
+                    <DockPanel Margin="5">
+                        <TextBlock Text="Dé de vie et équipements : " FontSize="20"/>
+                        <TextBox Name="DeVie" FontSize="20" Margin="0,0,200,0"/>
+                    </DockPanel>
 
-                <DockPanel Margin="5">
-                    <TextBlock Text="Divers : " FontSize="20"/>
-                    <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
-                </DockPanel>
+                    <DockPanel Margin="5">
+                        <TextBlock Text="Divers : " FontSize="20"/>
+                        <TextBox Name="Divers" FontSize="20" Margin="0,0,200,0"/>
+                    </DockPanel>
 
-                <DockPanel Margin="5">
-                    <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
-                    <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
-                </DockPanel>
-            </StackPanel>
+                    <DockPanel Margin="5">
+                        <TextBlock Text="Description du nouveau profil : " FontSize="20"/>
+                        <TextBox Name="Description" FontSize="20" Margin="0,0,200,0"/>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
 
             <StackPanel Margin="10">
                 <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False"
