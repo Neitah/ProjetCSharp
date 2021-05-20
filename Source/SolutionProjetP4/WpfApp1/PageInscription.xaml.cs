@@ -19,7 +19,8 @@ namespace WpfApp1
     public partial class PageInscription : Window
     {
         StockageApp sa;
-        public PageInscription(StockageApp sa)
+        Utilisateur utilisateurActuel;
+        public PageInscription(StockageApp sa,Utilisateur utilisateurActuel)
         {
             InitializeComponent();
             this.sa = sa;
@@ -52,7 +53,8 @@ namespace WpfApp1
 
             if (!err)
             {
-                sa.AjoutUtilisateur(new Utilisateur(Login.Text, MotDePasse.Password));
+                utilisateurActuel = new Utilisateur(Login.Text, MotDePasse.Password);
+                sa.AjoutUtilisateur(utilisateurActuel);
                 this.Close();
             }
         }

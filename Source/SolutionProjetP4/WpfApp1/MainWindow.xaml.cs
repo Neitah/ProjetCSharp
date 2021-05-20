@@ -24,6 +24,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         StockageApp sa = new Stub().Charger("");
+        Utilisateur utilisateurActuel;
         
         public MainWindow()
         {
@@ -43,13 +44,13 @@ namespace WpfApp1
 
         private void BoutInscription_Click(object sender, RoutedEventArgs e)
         {
-            Window fenInscription = new PageInscription(sa);
+            Window fenInscription = new PageInscription(sa, utilisateurActuel);
             fenInscription.Show();
         }
 
         private void BoutConnexion_Click(object sender, RoutedEventArgs e)
         {
-            Window fenLogin = new PageConnexion(sa);
+            Window fenLogin = new PageConnexion(sa, utilisateurActuel);
             fenLogin.Show();
         }
     }

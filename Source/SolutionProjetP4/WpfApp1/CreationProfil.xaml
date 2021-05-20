@@ -107,7 +107,7 @@
             <ListBox x:Name="liste2" Grid.Column="1" Grid.Row="1">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox Content="{Binding Nom}"/>
+                        <CheckBox Content="{Binding Nom}" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
