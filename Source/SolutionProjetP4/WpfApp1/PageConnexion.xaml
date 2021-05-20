@@ -81,6 +81,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
             <!-- Login -->
@@ -97,14 +98,17 @@
                 <PasswordBox Name="MotDePasse" FontSize="20" HorizontalAlignment="Center" Width="150"/>
             </StackPanel>
 
+            <TextBlock x:Name="Erreur" FontStyle="Italic" Grid.Row="2" TextAlignment="Center"/>
+
             <!-- Bouton valider -->
 
-            <StackPanel  Grid.Row="2" Margin="10">
+            <StackPanel  Grid.Row="3" Margin="10">
                 <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutValidConnexion" Height="40" Width="120" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="20"/>
+                        FontSize="20"
+                        Click="BoutValidConnexion_Click"/>
                 
             </StackPanel>
         </Grid>

@@ -102,15 +102,8 @@ namespace ClassesApp
             {
                 return false;
             }
-            bool ret = MotDePasse == utilisateur.MotDePasse &&
+            return MotDePasse == utilisateur.MotDePasse &&
                    Nom == utilisateur.Nom;
-            foreach (Profil p in ProfilsFavoris)
-                if (!utilisateur.ProfilsFavoris.Contains(p))
-                    ret = false;
-            foreach (Profil p in ProfilsHybrides)
-                if (!utilisateur.ProfilsHybrides.Contains(p))
-                    ret = false;
-            return ret;
         }
 
         /// <summary>

@@ -113,7 +113,8 @@
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="10"/>
+                        FontSize="10"
+                        Click="CréationProfilHybride_Click"/>
 
             </DockPanel>
 
@@ -124,12 +125,14 @@
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="10"/>
+                        FontSize="10"
+                        Click="BoutConnexion_Click"/>
                 <Button Style="{DynamicResource BoutMainWindow}" HorizontalAlignment="Center" Content="Inscription" Name="BoutInscription" Height="20" Width="90" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
-                        FontSize="10"/>
+                        FontSize="10"
+                        Click="BoutInscription_Click"/>
             </DockPanel>
         </Grid>
 

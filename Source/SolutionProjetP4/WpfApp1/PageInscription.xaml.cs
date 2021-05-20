@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassesApp;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,43 @@ namespace WpfApp1
     /// </summary>
     public partial class PageInscription : Window
     {
-        public PageInscription()
+        StockageApp sa;
+        public PageInscription(StockageApp sa)
         {
             InitializeComponent();
+            this.sa = sa;
+        }
+
+        private void BoutValidInscription_Click(object sender, RoutedEventArgs e)
+        {
+            bool err = false;
+            if (Login.Text.Trim().Equals(""))
+            {
+                Erreur1.Text = "Veuillez entrer un login";
+                err = true;
+            }
+            else
+            {
+                Erreur1.Text = "";
+                err = false; 
+            }
+
+            if(MotDePasse.Password.Equals(""))
+            {
+                Erreur2.Text = "Veuillez entrer un Mot De Passe";
+                err = true;
+            }
+            else if (!MotDePasse.Password.Equals(MotDePasseVerif.Password))
+            {
+                Erreur2.Text = "Les deux mots de passe ne sont pas identiques";
+                err = true;
+            }
+
+            if (!err)
+            {
+                sa.AjoutUtilisateur(new Utilisateur(Login.Text, MotDePasse.Password));
+                this.Close();
+            }
         }
     }
 }

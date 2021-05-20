@@ -127,7 +127,7 @@ namespace Data
 
             /// Utilisateurs
 
-            Utilisateur u1 = new Utilisateur("Nom utilisateur 1", "Mot de passe utilisateur 1");
+            Utilisateur u1 = new Utilisateur("utilisateur1", "Motdepasse1");
             u1.AjoutProfilFavori(p1);
             u1.AjoutProfilHybride(p2);
             stock.AjoutUtilisateur(u1);
