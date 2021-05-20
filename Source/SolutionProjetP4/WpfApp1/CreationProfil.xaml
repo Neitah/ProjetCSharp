@@ -89,29 +89,87 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
+                <RowDefinition/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="0" Grid.Row="0" Content="Profil 1"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="1" Grid.Row="0" Content="Profil 2"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="2" Grid.Row="0" Content="Profil 3"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="3" Grid.Row="0" Content="Profil 4"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="4" Grid.Row="0" Content="Profil 5"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="5" Grid.Row="0" Content="Profil 6"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="6" Grid.Row="0" Content="Profil 7"  VerticalContentAlignment="Center"/>
-            
-            <Button Grid.Column="0" Grid.Row="1" Content="Profil 8"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="1" Grid.Row="1" Content="Profil 9"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="2" Grid.Row="1" Content="Profil 10"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="3" Grid.Row="1" Content="Profil 11"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="4" Grid.Row="1" Content="Profil 12"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="5" Grid.Row="1" Content="Profil 13"  VerticalContentAlignment="Center"/>
-            <Button Grid.Column="6" Grid.Row="1" Content="Profil 14"  VerticalContentAlignment="Center"/>
+            <Button x:Name="bouton1" Grid.Column="0" Grid.Row="0" Content="{Binding Nom}"  VerticalContentAlignment="Center" Click="Profil1_Click"/>
+            <ListBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
+            <Button Grid.Column="1" Grid.Row="0" Content="Profil 2"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste2" Grid.Column="1" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="2" Grid.Row="0" Content="Profil 3"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste3" Grid.Column="2" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="3" Grid.Row="0" Content="Profil 4"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste4" Grid.Column="3" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="4" Grid.Row="0" Content="Profil 5"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste5" Grid.Column="4" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="5" Grid.Row="0" Content="Profil 6"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste6" Grid.Column="5" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Button Grid.Column="6" Grid.Row="0" Content="Profil 7"  VerticalContentAlignment="Center"/>
+            <ListBox x:Name="liste7" Grid.Column="6" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Nom}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            
+            
+            <Button Grid.Column="0" Grid.Row="2" Content="Profil 8"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="Profil 9"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="2" Grid.Row="2" Content="Profil 10"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="3" Grid.Row="2" Content="Profil 11"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="4" Grid.Row="2" Content="Profil 12"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="5" Grid.Row="2" Content="Profil 13"  VerticalContentAlignment="Center"/>
+            <Button Grid.Column="6" Grid.Row="2" Content="Profil 14"  VerticalContentAlignment="Center"/>
         </Grid>
 
         <StackPanel  Grid.Row="2" Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider les profils parents " Name="BoutValidProfParent" Height="40" Width="300" 
+            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider les voies" IsEnabled="False" Name="BoutValidProfParent" Height="40" Width="300" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
@@ -144,7 +202,7 @@
         </StackPanel>
 
         <StackPanel Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" 
+            <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False"
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"
