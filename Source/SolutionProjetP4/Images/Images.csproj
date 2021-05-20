@@ -5,4 +5,42 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="boiteDeJeuCthulhu.png" />
+    <None Remove="boiteDeJeuInitationAventure.png" />
+    <None Remove="boiteDeJeuInitationAventureVengeance.png" />
+    <None Remove="imagebackground.jpg" />
+    <None Remove="logo.jpg" />
+    <None Remove="logoA.jpg" />
+    <None Remove="profilhybride.jpg" />
+    <None Remove="wallpaperTest1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="boiteDeJeuCthulhu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="boiteDeJeuInitationAventure.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="boiteDeJeuInitationAventureVengeance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="imagebackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="logoA.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="profilhybride.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="wallpaperTest1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

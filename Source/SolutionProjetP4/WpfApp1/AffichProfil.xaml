@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AffichProfil" Height="600" Width="1000" Background="White">
+        Title="AffichProfil" Height="650" Width="1000" Background="White">
 
     <!--  Style du bonton -->
 
@@ -95,58 +95,72 @@
 
         <!--Infos sur le profil-->
         <StackPanel Grid.Row="1">
-            <Border BorderBrush="Black" BorderThickness="1"/>
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF8BFFEF" Offset="0"/>
+                    <GradientStop Color="#FF8DF7AF" Offset="0.122"/>
+                    <GradientStop Color="#FF40CFA8" Offset="0.225"/>
+                    <GradientStop Color="#FF84B668" Offset="0.372"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            
+            <Border CornerRadius="10" Background="White" Margin="10">
+                <StackPanel Margin="10" Background="Transparent">
 
-            <StackPanel Margin="10">
-                <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
-            </StackPanel>
+                    <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea"/>
+                    <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
 
             <!--Dé de vie et Equipement -->
+            <Border CornerRadius="10" Background="White" Margin="10">
 
-            <Grid  Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
+                <Grid  Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
 
-                <!--Dé de vie -->
+                    <!--Dé de vie -->
 
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
-                    <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
-                </StackPanel>
+                    <StackPanel Grid.Column="0" Background="White">
+                        <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                        <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
+                    </StackPanel>
 
-                <!--Equipement -->
+                    <!--Equipement -->
 
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                    <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
-                </StackPanel>
-            </Grid>
+                    <StackPanel Grid.Column="1" Background="White">
+                        <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                        <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
 
             <!-- Armes et armures et Divers -->
+            <Border CornerRadius="10" Background="White" Margin="10">
+                <Grid  Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
 
-            <Grid  Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
+                    <!-- Armes et armures -->
 
-                <!-- Armes et armures -->
+                    <StackPanel Grid.Column="0" Background="White">
+                        <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                        <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
+                    </StackPanel>
 
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
-                    <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
-                </StackPanel>
+                    <!-- Armes et armures et Divers -->
 
-                <!-- Armes et armures et Divers -->
-
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="White"/>
-                    <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
-                </StackPanel>
-            </Grid>
+                    <StackPanel Grid.Column="1" Background="White">
+                        <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                        <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
             <!--Descriptif des voies du profil-->
 
             <Grid  Margin="10">
