@@ -21,6 +21,7 @@ namespace WpfApp1
     {
         StockageApp sa;
         Utilisateur utilisateurActuel;
+        Profil p;
         static IList<Boolean> lesBoutons = new List<Boolean>() ;
 
         public CreationProfil(StockageApp sa, Utilisateur utilisateurActuel)
@@ -33,9 +34,8 @@ namespace WpfApp1
             bouton1.DataContext = sa.lesProfils[0];
         }
 
-        private void Profil_Click(object sender, RoutedEventArgs e)
+        private void Profil_Click1(object sender, RoutedEventArgs e)
         {
-            String num=((Button)sender).Name.Remove(0, 6);
             
             if (lesBoutons[0] == false)
             {
@@ -46,6 +46,32 @@ namespace WpfApp1
             {
                 liste1.ItemsSource = null;
                 lesBoutons[0] = false;
+            }
+        }
+
+        private void BoutCreationHybride_Click(object sender, RoutedEventArgs e)
+        {
+            if (NomProfil.Text.Trim().Equals("") || DeVie.Text.Trim().Equals("") || Equipement.Text.Trim().Equals(""))
+            {
+                MessageErreur.Text = "Champ(s) obligatoire(s) non rempli(s)";
+            }
+            else
+            {
+                p = new Profil(NomProfil.Text, DeVie.Text, Equipement.Text, ArmesEtArmures.Text, Divers.Text, Description.Text,"");
+                this.Close();
+            }
+        }
+
+        private void BoutValidProfParent_Click(object sender, RoutedEventArgs e)
+        {
+            int nbVoies=0;
+            if(nbVoies==5)
+            {
+                BoutCreationHybride.IsEnabled = true;
+            }
+            else
+            {
+                ErreurVoies.Text = "Veuillez sélectionner 5 voies";
             }
         }
     }

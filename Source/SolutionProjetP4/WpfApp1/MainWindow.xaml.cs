@@ -39,8 +39,16 @@ namespace WpfApp1
 
         private void CréationProfilHybride_Click(object sender, RoutedEventArgs e)
         {
-            Window fenCrePro=new CreationProfil(sa,UtilisateurActuel);
-            fenCrePro.Show();           
+            if (UtilisateurActuel == null)
+            {
+                Window fenLogin = new PageConnexion(sa, this);
+                fenLogin.Show();
+            }
+            else
+            {
+                Window fenCrePro = new CreationProfil(sa, UtilisateurActuel);
+                fenCrePro.Show();
+            }
         }
 
         private void BoutInscription_Click(object sender, RoutedEventArgs e)

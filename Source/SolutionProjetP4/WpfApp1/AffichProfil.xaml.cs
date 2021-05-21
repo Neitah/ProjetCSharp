@@ -25,6 +25,11 @@ namespace WpfApp1
         {
             InitializeComponent();
             this.p = p;
+            this.utilisateurActuel = utilisateurActuel;
+            if(utilisateurActuel==null)
+            {
+                BoutAjoutFavori.Visibility=Visibility.Hidden;
+            }
             this.DataContext = p;
             voie1.ItemsSource = p.LesVoies[0].LesCompétences;
             voie2.ItemsSource = p.LesVoies[1].LesCompétences;
