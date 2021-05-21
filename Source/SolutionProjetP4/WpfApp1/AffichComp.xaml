@@ -5,12 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AffichComp" Height="400" Width="300" Background="AntiqueWhite">
-    <StackPanel>
-        <DockPanel DockPanel.Dock="Top" Background="LightBlue" Grid.Row="0">
+        Title="AffichComp" Height="400" Width="300">
+    <DockPanel >
+        
+        <DockPanel.Background>
+            <ImageBrush Stretch="Fill" ImageSource="\Images;Component\backgroundcompetence.jpg"/>
+        </DockPanel.Background>
+        
+        
+        <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
             <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Caladea" FontSize="30"/>
         </DockPanel>
-        <TextBlock Text="{Binding Description}" FontSize="20" />
+        <Border CornerRadius="10" Background="White" Margin="20" VerticalAlignment="Center">
+            <DockPanel VerticalAlignment="Center" Background="White" Margin="20">
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontSize="15" TextAlignment="Center" />
+            </DockPanel>
+        </Border>
 
-    </StackPanel>
+    </DockPanel>
 </Window>

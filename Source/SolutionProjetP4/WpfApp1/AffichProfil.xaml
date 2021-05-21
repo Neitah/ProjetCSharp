@@ -79,7 +79,7 @@
         <!--Nom du profil-->
         <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
             <Image Source="{Binding Image}" Width="80" Height="100" Margin="10"/>
-            <TextBlock Text="{Binding Nom}" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Arial" FontSize="56"/>
+            <TextBlock Text="{Binding Nom}"  FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black"/>
         </DockPanel>
 
         <!--Ajout d'un boutton pour mettre en favori-->

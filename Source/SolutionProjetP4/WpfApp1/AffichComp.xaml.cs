@@ -18,7 +18,7 @@ namespace WpfApp1
     /// </summary>
     public partial class AffichComp : Window
     {
-        Compétence c = new Compétence("Description", "nom");
+        Compétence c = new Compétence("Description compétences Description compétences v Description compétenc esDescription compétencesDescri ption compétences Description compétences ", "Mécanisme");
         public AffichComp()
         {
             InitializeComponent();
