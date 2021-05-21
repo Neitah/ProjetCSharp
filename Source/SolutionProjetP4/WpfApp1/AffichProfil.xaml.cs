@@ -21,11 +21,12 @@ namespace WpfApp1
     {
         Profil p;
         Utilisateur utilisateurActuel;
-        public AffichProfil(Utilisateur utilisateurActuel, Profil p)
+        ///public AffichProfil(Utilisateur utilisateurActuel, Profil p) Attention pas possible : on ne peut pas mettre des parametre  dans un constructeur / il faut trouver une autres solution
+        public AffichProfil()
         {
             InitializeComponent();
-            this.p = p;
-            this.utilisateurActuel = utilisateurActuel;
+            ///this.p = p;
+            ///this.utilisateurActuel = utilisateurActuel;
             if(utilisateurActuel==null)
             {
                 BoutAjoutFavori.Visibility=Visibility.Hidden;
