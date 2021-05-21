@@ -24,7 +24,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         StockageApp sa = new Stub().Charger("");
-        Utilisateur utilisateurActuel;
+        public Utilisateur UtilisateurActuel { get; set; }
         
         public MainWindow()
         {
@@ -34,23 +34,24 @@ namespace WpfApp1
             Boite1.DataContext = sa.lesBoites[0];
             Boite2.DataContext = sa.lesBoites[1];
             Boite3.DataContext = sa.lesBoites[2];
+            UtilisateurConnecte.DataContext = UtilisateurActuel;
         }
 
         private void CréationProfilHybride_Click(object sender, RoutedEventArgs e)
         {
-            Window fenCrePro=new CreationProfil();
+            Window fenCrePro=new CreationProfil(sa,UtilisateurActuel);
             fenCrePro.Show();           
         }
 
         private void BoutInscription_Click(object sender, RoutedEventArgs e)
         {
-            Window fenInscription = new PageInscription(sa, utilisateurActuel);
+            Window fenInscription = new PageInscription(sa, this);
             fenInscription.Show();
         }
 
         private void BoutConnexion_Click(object sender, RoutedEventArgs e)
         {
-            Window fenLogin = new PageConnexion(sa, utilisateurActuel);
+            Window fenLogin = new PageConnexion(sa, this);
             fenLogin.Show();
         }
     }

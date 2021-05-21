@@ -19,19 +19,24 @@ namespace WpfApp1
     /// </summary>
     public partial class CreationProfil : Window
     {
-        StockageApp sa = new Stub().Charger("");
+        StockageApp sa;
+        Utilisateur utilisateurActuel;
         static IList<Boolean> lesBoutons = new List<Boolean>() ;
 
-        public CreationProfil()
+        public CreationProfil(StockageApp sa, Utilisateur utilisateurActuel)
         {
             InitializeComponent();
+            this.sa = sa;
+            this.utilisateurActuel = utilisateurActuel;
             for (int i = 0; i < 14; ++i)
                 lesBoutons.Add(false);
             bouton1.DataContext = sa.lesProfils[0];
         }
 
-        private void Profil1_Click(object sender, RoutedEventArgs e)
+        private void Profil_Click(object sender, RoutedEventArgs e)
         {
+            String num=((Button)sender).Name.Remove(0, 6);
+            
             if (lesBoutons[0] == false)
             {
                 liste1.ItemsSource = sa.lesProfils[0].LesVoies;

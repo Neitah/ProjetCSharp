@@ -139,6 +139,7 @@
         <!-- Titre de l'application -->
 
         <DockPanel DockPanel.Dock="Top" Background="White" Height="60">
+            <TextBlock x:Name="UtilisateurConnecte" Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="18"/>
             <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Sylfaen" Foreground="Black"  />
         </DockPanel>
 
