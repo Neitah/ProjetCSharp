@@ -108,7 +108,7 @@
             <Border CornerRadius="10" Background="White" Margin="10">
                 <StackPanel Margin="10" Background="Transparent">
 
-                    <TextBlock Text="Description de la classe :" FontSize="20" FontFamily="Caladea"/>
+                    <TextBlock Text="Description de la classe :" FontSize="25" FontFamily="Caladea" Foreground="#EAB01E"/>
                     <TextBlock Text="{Binding Description}" FontSize="20" FontFamily="Caladea" TextWrapping="Wrap"/>
                 </StackPanel>
             </Border>
@@ -125,14 +125,14 @@
                     <!--Dé de vie -->
 
                     <StackPanel Grid.Column="0" Background="White">
-                        <TextBlock Text="Dés de vie :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                        <TextBlock Text="Dés de vie :" FontSize="25" FontFamily="Caladea" Background="White" Grid.Column="0" Foreground="#EAB01E"/>
                         <TextBlock Text="{Binding DéVie}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
                     </StackPanel>
 
                     <!--Equipement -->
 
                     <StackPanel Grid.Column="1" Background="White">
-                        <TextBlock Text="Equipement :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                        <TextBlock Text="Equipement :" FontSize="25" FontFamily="Caladea" Background="White" Foreground="#EAB01E"/>
                         <TextBlock Text="{Binding Equipement}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
                     </StackPanel>
                 </Grid>
@@ -149,14 +149,14 @@
                     <!-- Armes et armures -->
 
                     <StackPanel Grid.Column="0" Background="White">
-                        <TextBlock Text="Armes et armures :" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0"/>
+                        <TextBlock Text="Armes et armures :" FontSize="25" FontFamily="Caladea" Background="White" Grid.Column="0" Foreground="#EAB01E"/>
                         <TextBlock Text="{Binding ArmeEtArmures}" FontSize="20" FontFamily="Caladea" Background="White" Grid.Column="0" TextWrapping="Wrap"/>
                     </StackPanel>
 
                     <!-- Armes et armures et Divers -->
 
                     <StackPanel Grid.Column="1" Background="White">
-                        <TextBlock Text="Divers :" FontSize="20" FontFamily="Caladea" Background="White"/>
+                        <TextBlock Text="Divers :" FontSize="25" FontFamily="Caladea" Background="White" Foreground="#EAB01E"/>
                         <TextBlock Text="{Binding Divers}" FontSize="20" FontFamily="Caladea" Background="White" TextWrapping="Wrap"/>
                     </StackPanel>
                 </Grid>

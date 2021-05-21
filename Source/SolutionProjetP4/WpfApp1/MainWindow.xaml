@@ -157,13 +157,15 @@
 
             <!-- Description du jeu -->
 
-            <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-                <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux nouveaux joueurs. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
-            </Grid>
+            <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top">
+                <Grid DockPanel.Dock="Top" Background="White" Margin="10">
+                    <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux nouveaux joueurs. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
+                </Grid>
+            </Border>
 
             <!-- Différentes boites du jeu -->
 
-            <Grid DockPanel.Dock="Bottom" Margin="10" x:Name="GridBoiteDeJeu">
+            <Grid DockPanel.Dock="Bottom"  Margin="10,10,10,20" x:Name="GridBoiteDeJeu">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -173,42 +175,48 @@
 
                 <!-- Boite de jeu 1 -->
 
-                <StackPanel x:Name="Boite1" Grid.Column="0" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" >
-                        <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="{Binding Image}"  Width="100" />
-                        </Border>
-                    </Button>
-                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                </StackPanel>
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
+                    <StackPanel x:Name="Boite1" Margin="10" Background="White" Height="200">
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" >
+                            <Border BorderBrush="Black" BorderThickness="3">
+                                <Image Source="{Binding Image}"  Width="100" />
+                            </Border>
+                        </Button>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    </StackPanel>
+                </Border>
 
                 <!-- Boite de jeu 2 -->
 
-                <StackPanel x:Name="Boite2" Grid.Column="1"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
-                        <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="{Binding Image}"  Width="100"/>
-                        </Border>
-                    </Button>
-                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                </StackPanel>
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
+                    <StackPanel x:Name="Boite2"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
+                            <Border BorderBrush="Black" BorderThickness="3">
+                                <Image Source="{Binding Image}"  Width="100"/>
+                            </Border>
+                        </Button>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    </StackPanel>
+                </Border>
 
                 <!-- Boite de jeu 3 -->
 
-                <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
-                        <Border BorderBrush="Black" BorderThickness="3">
-                            <Image Source="{Binding Image}"  Width="100"/>
-                        </Border>
-                    </Button>
-                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                    <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                    <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                </StackPanel>
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
+                    <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
+                            <Border BorderBrush="Black" BorderThickness="3">
+                                <Image Source="{Binding Image}"  Width="100"/>
+                            </Border>
+                        </Button>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                    </StackPanel>
+                </Border>
             </Grid>
         </DockPanel>
     </DockPanel>
