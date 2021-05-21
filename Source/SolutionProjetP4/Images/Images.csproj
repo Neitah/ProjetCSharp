@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="backgroundCompetence.jpg" />
     <None Remove="boiteDeJeuCthulhu.png" />
     <None Remove="boiteDeJeuInitationAventure.png" />
     <None Remove="boiteDeJeuInitationAventureVengeance.png" />
@@ -17,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="backgroundcompetence.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="boiteDeJeuCthulhu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
