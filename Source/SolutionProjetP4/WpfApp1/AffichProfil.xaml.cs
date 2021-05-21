@@ -17,13 +17,14 @@ namespace WpfApp1
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AffichProfil : Window
     {
-        Profil p = new Stub().Charger("").lesProfils[0];
-        private static int fav = 0;
-        public Window1()
+        Profil p;
+        Utilisateur utilisateurActuel;
+        public AffichProfil(Utilisateur utilisateurActuel, Profil p)
         {
             InitializeComponent();
+            this.p = p;
             this.DataContext = p;
             voie1.ItemsSource = p.LesVoies[0].LesCompétences;
             voie2.ItemsSource = p.LesVoies[1].LesCompétences;
@@ -34,18 +35,16 @@ namespace WpfApp1
 
         private void ClickFavori(object sender, RoutedEventArgs e)
         {
-            if (fav == 0)
+            if (utilisateurActuel.ProfilsFavoris.Contains(p))
             {
                 ((Button)sender).Content = "Enlever des favoris";
-                fav = 1;
+                utilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 160;
-
-
             }
             else
             {
                 ((Button)sender).Content = "Favori";
-                fav = 0;
+                utilisateurActuel.AjoutProfilFavori(p);
                 ((Button)sender).Width = 100;
             }
         }   
