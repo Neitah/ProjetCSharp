@@ -70,8 +70,8 @@
         <!-- Titre connexion -->
 
         <TextBlock Text="Inscription" FontSize="25" TextAlignment="Center" Margin="10" FontFamily="Arial"/>
-        
-        
+
+
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -82,14 +82,14 @@
             </Grid.RowDefinitions>
 
             <!-- Login -->
-            
+
             <StackPanel Grid.Row="0" Margin="10">
                 <TextBlock Text="Login" TextAlignment="Center" Margin="5" FontFamily="Arial"/>
                 <TextBox Name="Login" FontSize="20" HorizontalAlignment="Center" Width="150"/>
             </StackPanel>
 
             <!-- Mot de passe -->
-            
+
             <StackPanel Grid.Row="1" Margin="10">
                 <TextBlock Text="Mot de passe" TextAlignment="Center" Margin="5" FontFamily="Arial"/>
                 <PasswordBox Name="MotDePasse" FontSize="20" HorizontalAlignment="Center" Width="150"/>
@@ -106,7 +106,7 @@
                 <TextBlock x:Name="Erreur1" FontStyle="Italic" TextAlignment="Center"/>
                 <TextBlock x:Name="Erreur2" FontStyle="Italic" TextAlignment="Center"/>
             </StackPanel>
-               
+
             <!-- Bouton valider -->
 
             <StackPanel  Grid.Row="4" Margin="10">
