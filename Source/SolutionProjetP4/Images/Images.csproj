@@ -14,6 +14,7 @@
     <None Remove="logo.jpg" />
     <None Remove="logoA.jpg" />
     <None Remove="profilhybride.jpg" />
+    <None Remove="Profil\Arquebusier.PNG" />
     <None Remove="wallpaperTest1.jpg" />
   </ItemGroup>
 
@@ -40,6 +41,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="profilhybride.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Arquebusier.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="wallpaperTest1.jpg">
