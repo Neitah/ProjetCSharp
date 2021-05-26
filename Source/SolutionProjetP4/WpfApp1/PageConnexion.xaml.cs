@@ -36,7 +36,7 @@ namespace WpfApp1
             }
             else
             {
-                mw.UtilisateurActuel = utilisateur;
+                mw.UtilConnecte(utilisateur);                
                 this.Close();
             }
         }

@@ -176,7 +176,7 @@
 
                 <StackPanel Grid.Column="0">
                     <TextBlock Text="{Binding LesVoies[0].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie1" ItemsSource="{Binding}">
+                    <ListBox Name="voie1" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
@@ -191,7 +191,7 @@
 
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="{Binding LesVoies[1].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie2" ItemsSource="{Binding}">
+                    <ListBox Name="voie2" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
@@ -206,7 +206,7 @@
 
                 <StackPanel Grid.Column="2">
                     <TextBlock Text="{Binding LesVoies[2].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie3" ItemsSource="{Binding}">
+                    <ListBox Name="voie3" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
@@ -221,7 +221,7 @@
 
                 <StackPanel Grid.Column="3">
                     <TextBlock Text="{Binding LesVoies[3].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie4" ItemsSource="{Binding}">
+                    <ListBox Name="voie4" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >
@@ -236,7 +236,7 @@
 
                 <StackPanel Grid.Column="4">
                     <TextBlock Text="{Binding LesVoies[4].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie5" ItemsSource="{Binding}">
+                    <ListBox Name="voie5" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel >

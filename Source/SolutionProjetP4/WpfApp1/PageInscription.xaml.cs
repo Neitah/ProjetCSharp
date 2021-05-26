@@ -56,7 +56,7 @@ namespace WpfApp1
             {
                 Utilisateur utilisateurActuel = new Utilisateur(Login.Text, MotDePasse.Password);
                 sa.AjoutUtilisateur(utilisateurActuel);
-                mw.UtilisateurActuel = utilisateurActuel;
+                mw.UtilConnecte(utilisateurActuel);
                 this.Close();
             }
         }

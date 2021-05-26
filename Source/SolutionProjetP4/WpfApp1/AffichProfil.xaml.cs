@@ -52,6 +52,12 @@ namespace WpfApp1
                 utilisateurActuel.AjoutProfilFavori(p);
                 ((Button)sender).Width = 100;
             }
-        }   
+        }
+
+        private void voie_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Window fen = new AffichComp((Compétence)((ListBox)sender).SelectedItem);
+            fen.Show();
+        }
     }
 }
