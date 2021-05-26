@@ -113,11 +113,11 @@ namespace Data
             p2.AjoutVoie(v5);
             stock.AjoutProfil(p2);
 
-            Profil p3 = new Profil("Nom Profil 3", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
-            p3.AjoutVoie(v1);
-            p3.AjoutVoie(v3);
-            p3.AjoutVoie(v5);
-            stock.AjoutProfil(p3);
+            Profil p5 = new Profil("Nom Profil 3", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
+            p5.AjoutVoie(v1);
+            p5.AjoutVoie(v3);
+            p5.AjoutVoie(v5);
+            stock.AjoutProfil(p5);
 
             Profil p4 = new Profil("Nom Profil 4", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             p4.AjoutVoie(v2);
@@ -128,12 +128,11 @@ namespace Data
             /// Utilisateurs
 
             Utilisateur u1 = new Utilisateur("utilisateur1", "Motdepasse1");
-            u1.AjoutProfilFavori(p1);
-            u1.AjoutProfilHybride(p2);
+            u1.AjoutProfilFavori(p5);
             stock.AjoutUtilisateur(u1);
 
             Utilisateur u2 = new Utilisateur("Nom utilisateur 2", "Mot de passe utilisateur 2");
-            u2.AjoutProfilFavori(p3);
+            u2.AjoutProfilFavori(p5);
             u2.AjoutProfilHybride(p4);
             stock.AjoutUtilisateur(u1);
 

@@ -246,99 +246,17 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
 
-                            <Button Style="{DynamicResource ButtonStyle}" x:Name="bouton1"  Grid.Column="0" Grid.Row="0" Content="{Binding Nom}"  VerticalContentAlignment="Center" Click="Profil_Click1" 
+                            <TextBlock x:Name="bouton1"  Grid.Column="0" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
                                 Background="#FF64CCF1"
                                 Foreground="White"
                                 FontFamily="Arial"/>
-                            <ListBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="1" Grid.Row="0" Content="Profil 2"  VerticalContentAlignment="Center" Click="Profil_Click1"
-                                Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste2" Grid.Column="1" Grid.Row="1">
-                                <ListBox.ItemTemplate>
+                            <ComboBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
+                                <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" />
                                     </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="2" Grid.Row="0" Content="Profil 3"  VerticalContentAlignment="Center"
-                                Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste3" Grid.Column="2" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="3" Grid.Row="0" Content="Profil 4"  VerticalContentAlignment="Center"
-                                Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste4" Grid.Column="3" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="4" Grid.Row="0" Content="Profil 5"  VerticalContentAlignment="Center"
-                            Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste5" Grid.Column="4" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="5" Grid.Row="0" Content="Profil 6"  VerticalContentAlignment="Center"
-                                Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste6" Grid.Column="5" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-                            <Button Style="{DynamicResource ButtonStyle}" Grid.Column="6" Grid.Row="0" Content="Profil 7"  VerticalContentAlignment="Center"
-                                Background="#FF64CCF1"
-                                Foreground="White"
-                                FontFamily="Arial"/>
-                            <ListBox x:Name="liste7" Grid.Column="6" Grid.Row="1">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-
-
-
-                            <Button Grid.Column="0" Grid.Row="2" Content="Profil 8"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="1" Grid.Row="2" Content="Profil 9"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="2" Grid.Row="2" Content="Profil 10"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="3" Grid.Row="2" Content="Profil 11"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="4" Grid.Row="2" Content="Profil 12"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="5" Grid.Row="2" Content="Profil 13"  VerticalContentAlignment="Center"/>
-                            <Button Grid.Column="6" Grid.Row="2" Content="Profil 14"  VerticalContentAlignment="Center"/>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
                         </Grid>
                         <TextBlock x:Name="ErreurVoies" FontSize="16" FontStyle="Italic"/>
                     </StackPanel>

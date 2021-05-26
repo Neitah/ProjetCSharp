@@ -32,22 +32,11 @@ namespace WpfApp1
             for (int i = 0; i < 14; ++i)
                 lesBoutons.Add(false);
             bouton1.DataContext = sa.lesProfils[0];
+            liste1.ItemsSource = sa.lesProfils[0].LesVoies;
+
         }
 
-        private void Profil_Click1(object sender, RoutedEventArgs e)
-        {
-            
-            if (lesBoutons[0] == false)
-            {
-                liste1.ItemsSource = sa.lesProfils[0].LesVoies;
-                lesBoutons[0] = true;
-            }
-            else
-            {
-                liste1.ItemsSource = null;
-                lesBoutons[0] = false;
-            }
-        }
+
 
         private void BoutCreationHybride_Click(object sender, RoutedEventArgs e)
         {

@@ -2,6 +2,7 @@
 using Data;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,16 +26,22 @@ namespace WpfApp1
     {
         StockageApp sa = new Stub().Charger("");
         public Utilisateur UtilisateurActuel { get; set; }
-        
+        IList<Profil> Profils = new ObservableCollection<Profil>();
+
+
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = sa;
-            LBprofils.ItemsSource = sa.lesProfils;
+            UtilisateurActuel = null;
+            foreach (Profil p in sa.lesProfils)
+                Profils.Add(p);
+            LBprofils.ItemsSource = Profils;
             Boite1.DataContext = sa.lesBoites[0];
             Boite2.DataContext = sa.lesBoites[1];
             Boite3.DataContext = sa.lesBoites[2];
             UtilisateurConnecte.DataContext = UtilisateurActuel;
+    
         }
 
         private void CréationProfilHybride_Click(object sender, RoutedEventArgs e)
@@ -61,6 +68,36 @@ namespace WpfApp1
         {
             Window fenLogin = new PageConnexion(sa, this);
             fenLogin.Show();
+        }
+
+        public void UtilConnecte(Utilisateur nouvUtil)
+        {
+            UtilisateurActuel = nouvUtil;
+            UtilisateurConnecte.DataContext = UtilisateurActuel;
+            Profils.Clear();
+            foreach(Profil p in UtilisateurActuel.ProfilsFavoris)
+            {
+                Profils.Add(p);
+            }
+
+            foreach(Profil p in sa.lesProfils)
+            {
+                if (!Profils.Contains(p))
+                    Profils.Add(p); 
+            }
+
+            foreach(Profil p in UtilisateurActuel.ProfilsHybrides)
+            {
+                if (!Profils.Contains(p))
+                    Profils.Add(p);
+            }
+
+        }
+
+        private void LBprofils_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Window fen = new AffichProfil(UtilisateurActuel,(Profil)((ListBox)sender).SelectedItem);
+            fen.Show();
         }
     }
 }

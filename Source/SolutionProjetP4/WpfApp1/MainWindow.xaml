@@ -85,8 +85,8 @@
             </DockPanel>
 
             <!-- Menu a gauche -->
-
-            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding}">
+            
+            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" MouseDoubleClick="LBprofils_MouseDoubleClick">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
                         <GradientStop Color="Black" Offset="1"/>
