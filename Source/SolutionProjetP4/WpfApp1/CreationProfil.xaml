@@ -258,6 +258,18 @@
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
 
+                            <TextBlock x:Name="txtProfil2"  Grid.Column="1" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste2" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
 
 
 

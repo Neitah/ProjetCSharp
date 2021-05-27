@@ -33,7 +33,8 @@ namespace WpfApp1
             lesVoies = new List<Voie>();
             txtProfil1.DataContext = sa.lesProfils[0];
             liste1.ItemsSource = sa.lesProfils[0].LesVoies;
-
+            txtProfil2.DataContext = sa.lesProfils[1];
+            liste2.ItemsSource = sa.lesProfils[1].LesVoies;
         }
 
 
@@ -47,6 +48,9 @@ namespace WpfApp1
             else
             {
                 p = new Profil(NomProfil.Text, DeVie.Text, Equipement.Text, ArmesEtArmures.Text, Divers.Text, Description.Text,"");
+                foreach (Voie v in lesVoies)
+                    p.AjoutVoie(v);
+                utilisateurActuel.AjoutProfilHybride(p);
                 this.Close();
             }
         }
@@ -58,6 +62,7 @@ namespace WpfApp1
             {
                 BoutCreationHybride.IsEnabled = true;
                 liste1.IsEnabled = false;
+                liste2.IsEnabled = false;
             }
             else
             {

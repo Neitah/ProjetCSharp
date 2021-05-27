@@ -58,15 +58,14 @@ namespace WpfApp1
                 ((Button)sender).Content = "Enlever des favoris";
                 utilisateurActuel.AjoutProfilFavori(p);
                 ((Button)sender).Width = 160;
-                mw.Update_ListBox();
             }
             else
             {
                 ((Button)sender).Content = "Favori";
                 utilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 100;
-                mw.Update_ListBox();
             }
+            mw.Update_ListBox();
         }
 
         private void voie_MouseDoubleClick(object sender, MouseButtonEventArgs e)
