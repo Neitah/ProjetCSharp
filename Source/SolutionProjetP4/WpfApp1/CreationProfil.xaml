@@ -246,17 +246,21 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
 
-                            <TextBlock x:Name="bouton1"  Grid.Column="0" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                            <TextBlock x:Name="txtProfil1"  Grid.Column="0" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
                                 Background="#FF64CCF1"
                                 Foreground="White"
                                 FontFamily="Arial"/>
-                            <ComboBox x:Name="liste1" Grid.Column="0" Grid.Row="1">
+                            <ComboBox x:Name="liste1" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding}">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
-                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" />
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
+
+
+
+
                         </Grid>
                         <TextBlock x:Name="ErreurVoies" FontSize="16" FontStyle="Italic"/>
                     </StackPanel>

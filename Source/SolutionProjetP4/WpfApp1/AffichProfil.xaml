@@ -85,7 +85,7 @@
         <!--Ajout d'un boutton pour mettre en favori-->
 
         <StackPanel Margin="10">
-            <Button Style="{DynamicResource RoundedButtonStyle}"  Content="Favori" Name="BoutAjoutFavori" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ClickFavori" Height="30" Width="100" 
+            <Button Style="{DynamicResource RoundedButtonStyle}" Name="BoutAjoutFavori" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ClickFavori" Height="30" Width="100" 
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"

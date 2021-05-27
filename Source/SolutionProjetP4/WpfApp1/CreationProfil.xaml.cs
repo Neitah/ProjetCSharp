@@ -22,16 +22,16 @@ namespace WpfApp1
         StockageApp sa;
         Utilisateur utilisateurActuel;
         Profil p;
-        static IList<Boolean> lesBoutons = new List<Boolean>() ;
+        List<Voie> lesVoies;
+
 
         public CreationProfil(StockageApp sa, Utilisateur utilisateurActuel)
         {
             InitializeComponent();
             this.sa = sa;
             this.utilisateurActuel = utilisateurActuel;
-            for (int i = 0; i < 14; ++i)
-                lesBoutons.Add(false);
-            bouton1.DataContext = sa.lesProfils[0];
+            lesVoies = new List<Voie>();
+            txtProfil1.DataContext = sa.lesProfils[0];
             liste1.ItemsSource = sa.lesProfils[0].LesVoies;
 
         }
@@ -53,14 +53,28 @@ namespace WpfApp1
 
         private void BoutValidProfParent_Click(object sender, RoutedEventArgs e)
         {
-            int nbVoies=0;
+            int nbVoies=lesVoies.Count;
             if(nbVoies==5)
             {
                 BoutCreationHybride.IsEnabled = true;
+                liste1.IsEnabled = false;
             }
             else
             {
                 ErreurVoies.Text = "Veuillez sélectionner 5 voies";
+            }
+        }
+
+        private void Voie_CheckedChange(object sender, RoutedEventArgs e)
+        {
+            Voie voie = (Voie)(((CheckBox)sender).DataContext);
+            if (lesVoies.Contains(voie))
+            {
+                lesVoies.Remove(voie);
+            }
+            else
+            {
+                lesVoies.Add(voie);
             }
         }
     }

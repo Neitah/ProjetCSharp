@@ -99,8 +99,8 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Height="40">
-                            <TextBlock Text="{Binding Nom}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
-                            <Image Source="{Binding Image}" Width="80" Height="40"/>
+                            <TextBlock Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
+                            <Image Source="{Binding Path=Image, UpdateSourceTrigger=PropertyChanged}" Width="80" Height="40"/>
                         </WrapPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

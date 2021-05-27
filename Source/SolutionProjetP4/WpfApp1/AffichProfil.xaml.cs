@@ -21,14 +21,26 @@ namespace WpfApp1
     {
         Profil p;
         Utilisateur utilisateurActuel;
-        public AffichProfil(Utilisateur utilisateurActuel, Profil p)
+        MainWindow mw;
+        public AffichProfil(Utilisateur utilisateurActuel, Profil p, MainWindow mw)
         {
             InitializeComponent();
             this.p = p;
             this.utilisateurActuel = utilisateurActuel;
-            if(utilisateurActuel==null)
+            this.mw = mw;
+            if (utilisateurActuel == null)
             {
-                BoutAjoutFavori.Visibility=Visibility.Hidden;
+                BoutAjoutFavori.Visibility = Visibility.Hidden;
+            }
+            else if (utilisateurActuel.ProfilsFavoris.Contains(p))
+            {
+                BoutAjoutFavori.Content = "Enlever des favoris";
+                BoutAjoutFavori.Width = 160;
+            }
+            else
+            {
+                BoutAjoutFavori.Content = "Favori";
+                BoutAjoutFavori.Width = 100;
             }
             this.DataContext = p;
             voie1.ItemsSource = p.LesVoies[0].LesCompétences;
@@ -36,21 +48,24 @@ namespace WpfApp1
             voie3.ItemsSource = p.LesVoies[2].LesCompétences;
             voie4.ItemsSource = p.LesVoies[3].LesCompétences;
             voie5.ItemsSource = p.LesVoies[4].LesCompétences;
+            
         }
 
         private void ClickFavori(object sender, RoutedEventArgs e)
         {
-            if (utilisateurActuel.ProfilsFavoris.Contains(p))
+            if (!utilisateurActuel.ProfilsFavoris.Contains(p))
             {
                 ((Button)sender).Content = "Enlever des favoris";
-                utilisateurActuel.SupprimerProfilFavori(p);
+                utilisateurActuel.AjoutProfilFavori(p);
                 ((Button)sender).Width = 160;
+                mw.Update_ListBox();
             }
             else
             {
                 ((Button)sender).Content = "Favori";
-                utilisateurActuel.AjoutProfilFavori(p);
+                utilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 100;
+                mw.Update_ListBox();
             }
         }
 
