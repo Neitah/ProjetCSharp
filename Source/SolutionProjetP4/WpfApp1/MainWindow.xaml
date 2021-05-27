@@ -81,7 +81,7 @@
             <!-- Logo-->
 
             <DockPanel Grid.Row="0" Background="White">
-                <Image Source="\Images;Component\logo.jpg"/>
+                <Image Source="\Images;Component\Logo\logo.jpg"/>
             </DockPanel>
 
             <!-- Menu a gauche -->
@@ -138,10 +138,20 @@
 
         <!-- Titre de l'application -->
 
-        <DockPanel DockPanel.Dock="Top" Background="White" Height="60">
-            <TextBlock x:Name="UtilisateurConnecte" Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="18"/>
-            <TextBlock Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black"/>
+        <DockPanel DockPanel.Dock="Top"  Background="White" Height="60">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black"/>
+                <TextBlock Grid.Column="1" x:Name="UtilisateurConnecte" Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="20" HorizontalAlignment="Center" Foreground="#EAB01E"/>
+            </Grid>
+
+
         </DockPanel>
+        
+        
 
 
 
@@ -151,7 +161,7 @@
 
 
             <DockPanel.Background>
-                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\wallpaperTest1.jpg"/>
+                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\MainWindow\fondSerre.png"/>
             </DockPanel.Background>
 
 
@@ -159,7 +169,7 @@
 
             <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top">
                 <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-                    <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux débutants de jeux de rôles. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
+                    <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux débutants de jeux de rôles. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" VerticalAlignment="Bottom" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -175,46 +185,46 @@
 
                 <!-- Boite de jeu 1 -->
 
-                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
+                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
                     <StackPanel x:Name="Boite1" Margin="10" Background="White" Height="200">
                         <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" >
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100" />
                             </Border>
                         </Button>
-                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Boite de jeu 2 -->
 
-                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
+                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
                     <StackPanel x:Name="Boite2"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
                         <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
                         </Button>
-                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Boite de jeu 3 -->
 
-                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
+                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
                     <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
                         <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
                         </Button>
-                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
-                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial" />
-                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontFamily="Arial"/>
+                        <TextBlock Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
+                        <TextBlock Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
+                        <TextBlock Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
                     </StackPanel>
                 </Border>
             </Grid>

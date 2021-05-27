@@ -214,7 +214,7 @@
 
     <StackPanel>
         <StackPanel.Background>
-            <ImageBrush Stretch="Fill" ImageSource="\Images;Component\\profilhybride.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="\Images;Component\CreationProfilHybride\profilhybride.jpg"/>
         </StackPanel.Background>
         <DockPanel DockPanel.Dock="Top" Background="White" Grid.Row="0">
             <TextBlock Text="Création d'un profil hybride"  FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black"/>

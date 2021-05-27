@@ -9,7 +9,7 @@
     <DockPanel >
         
         <DockPanel.Background>
-            <ImageBrush Stretch="Fill" ImageSource="\Images;Component\backgroundcompetence.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="\Images;Component\AfficheCompétence\backgroundcompetence.jpg"/>
         </DockPanel.Background>
         
         
