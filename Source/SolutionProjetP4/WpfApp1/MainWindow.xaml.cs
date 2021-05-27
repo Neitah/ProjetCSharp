@@ -26,13 +26,15 @@ namespace WpfApp1
     {
         StockageApp sa = new Stub().Charger("");
         public Utilisateur UtilisateurActuel { get; set; }
-        IList<Profil> Profils = new ObservableCollection<Profil>();
+        public IList<Profil> Profils { get; set; }
+
 
 
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = sa;
+            Profils = new ObservableCollection<Profil>();
             UtilisateurActuel = null;
             foreach (Profil p in sa.lesProfils)
                 Profils.Add(p);
@@ -74,30 +76,36 @@ namespace WpfApp1
         {
             UtilisateurActuel = nouvUtil;
             UtilisateurConnecte.DataContext = UtilisateurActuel;
+            Update_ListBox();
+            
+        }
+
+        private void LBprofils_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Window fen = new AffichProfil(UtilisateurActuel,(Profil)((ListBox)sender).SelectedItem, this);
+            fen.Show();
+        }
+
+        public void Update_ListBox ()
+        {
             Profils.Clear();
-            foreach(Profil p in UtilisateurActuel.ProfilsFavoris)
+            foreach (Profil p in UtilisateurActuel.ProfilsFavoris)
             {
                 Profils.Add(p);
             }
 
-            foreach(Profil p in sa.lesProfils)
-            {
-                if (!Profils.Contains(p))
-                    Profils.Add(p); 
-            }
-
-            foreach(Profil p in UtilisateurActuel.ProfilsHybrides)
+            foreach (Profil p in sa.lesProfils)
             {
                 if (!Profils.Contains(p))
                     Profils.Add(p);
             }
 
-        }
+            foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
+            {
+                if (!Profils.Contains(p))
+                    Profils.Add(p);
+            }
 
-        private void LBprofils_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Window fen = new AffichProfil(UtilisateurActuel,(Profil)((ListBox)sender).SelectedItem);
-            fen.Show();
         }
     }
 }
