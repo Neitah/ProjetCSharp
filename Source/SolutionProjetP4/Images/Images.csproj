@@ -6,47 +6,75 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AfficheCompétence\backgroundcompetence.jpg" />
+    <None Remove="AfficheProfil\testImageFond.jpg" />
+    <None Remove="AfficheProfil\testImageFond2.png" />
+    <None Remove="AfficheProfil\testImageFond3.jpg" />
+    <None Remove="AfficheProfil\testImageFond4.jpg" />
     <None Remove="backgroundCompetence.jpg" />
     <None Remove="boiteDeJeuCthulhu.png" />
     <None Remove="boiteDeJeuInitationAventure.png" />
     <None Remove="boiteDeJeuInitationAventureVengeance.png" />
+    <None Remove="BoiteDeJeu\boiteDeJeuCthulhu.png" />
+    <None Remove="BoiteDeJeu\boiteDeJeuInitationAventure.png" />
+    <None Remove="BoiteDeJeu\boiteDeJeuInitationAventureVengeance.png" />
+    <None Remove="CreationProfilHybride\profilhybride.jpg" />
+    <None Remove="fondSerre.png" />
     <None Remove="imagebackground.jpg" />
     <None Remove="logo.jpg" />
     <None Remove="logoA.jpg" />
+    <None Remove="Logo\logo.jpg" />
+    <None Remove="Logo\logoA.jpg" />
+    <None Remove="MainWindow\fondSerre.png" />
+    <None Remove="MainWindow\wallpaperTest1.jpg" />
     <None Remove="profilhybride.jpg" />
     <None Remove="Profil\Arquebusier.PNG" />
+    <None Remove="testImageFond.jpg" />
+    <None Remove="testImageFond2.png" />
     <None Remove="wallpaperTest1.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="backgroundcompetence.jpg">
+    <Resource Include="AfficheCompétence\backgroundcompetence.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="boiteDeJeuCthulhu.png">
+    <Resource Include="AfficheProfil\testImageFond.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="boiteDeJeuInitationAventure.png">
+    <Resource Include="AfficheProfil\testImageFond2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="boiteDeJeuInitationAventureVengeance.png">
+    <Resource Include="AfficheProfil\testImageFond3.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="imagebackground.jpg">
+    <Resource Include="AfficheProfil\testImageFond4.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="logo.jpg">
+    <Resource Include="BoiteDeJeu\boiteDeJeuCthulhu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="logoA.jpg">
+    <Resource Include="BoiteDeJeu\boiteDeJeuInitationAventure.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="profilhybride.jpg">
+    <Resource Include="BoiteDeJeu\boiteDeJeuInitationAventureVengeance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="CreationProfilHybride\profilhybride.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Logo\logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Logo\logoA.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MainWindow\fondSerre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MainWindow\wallpaperTest1.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Profil\Arquebusier.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="wallpaperTest1.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

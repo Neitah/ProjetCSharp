@@ -67,7 +67,6 @@
         </Style>
     </Window.Resources>
 
-
     <!-- Fenêtre de description d'une classe-->
 
     <Grid>
@@ -90,21 +89,15 @@
                         Foreground="White"
                         FontFamily="Arial"
                         FontSize="15"/>
-
         </StackPanel>
 
         <!--Infos sur le profil-->
+        
         <StackPanel Grid.Row="1">
             <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF8BFFEF" Offset="0"/>
-                    <GradientStop Color="#FF8DF7AF" Offset="0.122"/>
-                    <GradientStop Color="#FF40CFA8" Offset="0.225"/>
-                    <GradientStop Color="#FF84B668" Offset="0.372"/>
-                </LinearGradientBrush>
+                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\AfficheProfil\testImageFond4.jpg"/>
             </StackPanel.Background>
-            
+
             <Border CornerRadius="10" Background="White" Margin="10">
                 <StackPanel Margin="10" Background="Transparent">
 
@@ -114,6 +107,7 @@
             </Border>
 
             <!--Dé de vie et Equipement -->
+            
             <Border CornerRadius="10" Background="White" Margin="10">
 
                 <Grid  Margin="10">
@@ -139,6 +133,7 @@
             </Border>
 
             <!-- Armes et armures et Divers -->
+            
             <Border CornerRadius="10" Background="White" Margin="10">
                 <Grid  Margin="10">
                     <Grid.ColumnDefinitions>
@@ -161,6 +156,7 @@
                     </StackPanel>
                 </Grid>
             </Border>
+            
             <!--Descriptif des voies du profil-->
 
             <Grid  Margin="10">
@@ -173,79 +169,89 @@
                 </Grid.ColumnDefinitions>
 
                 <!--  Voie 1 -->
-
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="{Binding LesVoies[0].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie1" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel>
-                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+                
+                <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="0">
+                    <StackPanel >
+                        <TextBlock Text="{Binding LesVoies[0].Nom}" FontSize="18" TextAlignment="Center"/>
+                        <ListBox Name="voie1" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel>
+                                        <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
 
                 <!--  Voie 2 -->
-
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding LesVoies[1].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie2" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+                
+                <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="1">
+                    <StackPanel>
+                        <TextBlock Text="{Binding LesVoies[1].Nom}" FontSize="18" TextAlignment="Center"/>
+                        <ListBox Name="voie2" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel >
+                                        <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
 
                 <!--  Voie 3 -->
-
-                <StackPanel Grid.Column="2">
-                    <TextBlock Text="{Binding LesVoies[2].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie3" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+                
+                <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="2">
+                    <StackPanel>
+                        <TextBlock Text="{Binding LesVoies[2].Nom}" FontSize="18" TextAlignment="Center"/>
+                        <ListBox Name="voie3" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel >
+                                        <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
 
                 <!--  Voie 4 -->
-
-                <StackPanel Grid.Column="3">
-                    <TextBlock Text="{Binding LesVoies[3].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie4" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+                
+                <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="3">
+                    <StackPanel>
+                        <TextBlock Text="{Binding LesVoies[3].Nom}" FontSize="18" TextAlignment="Center"/>
+                        <ListBox Name="voie4" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel >
+                                        <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
 
                 <!--  Voie 5 -->
-
-                <StackPanel Grid.Column="4">
-                    <TextBlock Text="{Binding LesVoies[4].Nom}" FontSize="18" TextAlignment="Center"/>
-                    <ListBox Name="voie5" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel >
-                                    <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+                
+                <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="4">
+                    <StackPanel>
+                        <TextBlock Text="{Binding LesVoies[4].Nom}" FontSize="18" TextAlignment="Center"/>
+                        <ListBox Name="voie5" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel >
+                                        <TextBlock Text="{Binding Nom}"  Background="Transparent" FontSize="15"/>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
             </Grid>
         </StackPanel>
     </Grid>
