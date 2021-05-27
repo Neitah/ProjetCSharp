@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="600" Width="1000" Background="White">
+        Title="Window1" Height="600" Width="1100" Background="White">
     <Window.Resources>
 
         <!--  Style du bonton -->
@@ -159,7 +159,7 @@
 
             <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top">
                 <Grid DockPanel.Dock="Top" Background="White" Margin="10">
-                    <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux nouveaux joueurs. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
+                    <TextBlock Text="Chroniques Oubliées est un jeu de rôles créé en 2011, fait pour plaire aux débutants de jeux de rôles. Ainsi, les joueurs devront se plonger dans un monde de fantaisie posé par le Maître du Jeu, en incarnant leurs personnages. Ici, vous trouverez les informations sur les profils du jeu, brique élémentaire de la création de personnage." TextWrapping="Wrap" FontSize="15" FontFamily="Arial"  VerticalAlignment="Bottom" Margin="10"/>
                 </Grid>
             </Border>
 

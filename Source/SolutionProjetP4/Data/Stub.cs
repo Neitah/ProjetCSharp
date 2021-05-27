@@ -96,6 +96,12 @@ namespace Data
             v5.AjoutCompétence(c24);
             v5.AjoutCompétence(c25);
 
+            Voie v6 = new Voie("Voie de test");
+            v6.AjoutCompétence(c17);
+            v6.AjoutCompétence(c18);
+            v6.AjoutCompétence(c19);
+            v6.AjoutCompétence(c20);
+            v6.AjoutCompétence(c21);
 
             /// Profils :
 
@@ -110,7 +116,7 @@ namespace Data
             Profil p2 = new Profil("Nom Profil 2", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             p2.AjoutVoie(v2);
             p2.AjoutVoie(v1);
-            p2.AjoutVoie(v5);
+            p2.AjoutVoie(v6);
             stock.AjoutProfil(p2);
 
             Profil p5 = new Profil("Nom Profil 3", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");

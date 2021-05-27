@@ -3,6 +3,7 @@ using Data;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,19 +23,26 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         StockageApp sa = new Stub().Charger("");
+
         public Utilisateur UtilisateurActuel { get; set; }
-        public IList<Profil> Profils { get; set; }
+        private IList<Profil> profils;
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        public IList<Profil> Profils 
+        { 
+            get => profils;
+            set => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Profils")); 
+        }
 
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = sa;
-            Profils = new ObservableCollection<Profil>();
+            profils = new ObservableCollection<Profil>(); 
             UtilisateurActuel = null;
             foreach (Profil p in sa.lesProfils)
                 Profils.Add(p);
@@ -105,7 +113,6 @@ namespace WpfApp1
                 if (!Profils.Contains(p))
                     Profils.Add(p);
             }
-
         }
     }
 }
