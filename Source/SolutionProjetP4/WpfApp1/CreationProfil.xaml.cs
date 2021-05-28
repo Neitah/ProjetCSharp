@@ -23,12 +23,13 @@ namespace WpfApp1
         Utilisateur utilisateurActuel;
         Profil p;
         List<Voie> lesVoies;
+        MainWindow mw;
 
-
-        public CreationProfil(StockageApp sa, Utilisateur utilisateurActuel)
+        public CreationProfil(StockageApp sa, Utilisateur utilisateurActuel, MainWindow mw)
         {
             InitializeComponent();
             this.sa = sa;
+            this.mw = mw;
             this.utilisateurActuel = utilisateurActuel;
             lesVoies = new List<Voie>();
             txtProfil1.DataContext = sa.lesProfils[0];
@@ -51,8 +52,10 @@ namespace WpfApp1
                 foreach (Voie v in lesVoies)
                     p.AjoutVoie(v);
                 utilisateurActuel.AjoutProfilHybride(p);
+                mw.Update_ListBox();
                 this.Close();
             }
+
         }
 
         private void BoutValidProfParent_Click(object sender, RoutedEventArgs e)

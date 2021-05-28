@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="600" Width="1100" Background="White">
     <Window.Resources>
-
         <!--  Style du bonton -->
-
+                                
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -86,7 +85,8 @@
 
             <!-- Menu a gauche -->
             
-            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" MouseDoubleClick="LBprofils_MouseDoubleClick">
+            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding Path=Profils, UpdateSourceTrigger=PropertyChanged}" MouseDoubleClick="LBprofils_MouseDoubleClick" IsSynchronizedWithCurrentItem="True"
+                     ScrollViewer.CanContentScroll="True">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
                         <GradientStop Color="Black" Offset="1"/>

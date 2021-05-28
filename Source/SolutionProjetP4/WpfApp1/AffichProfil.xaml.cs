@@ -65,7 +65,7 @@ namespace WpfApp1
                 utilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 100;
             }
-            mw.Update_ListBox();
+           // mw.Update_ListBox();
         }
 
         private void voie_MouseDoubleClick(object sender, MouseButtonEventArgs e)
