@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassesApp
 {
-    [Serializable]
+    [Serializable()]
     public class StockageApp 
     {
         /// <summary>

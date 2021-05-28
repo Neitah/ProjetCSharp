@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AffichComp" Height="400" Width="300">
+        Title="AffichComp" Height="500" Width="400">
     <DockPanel >
         
         <DockPanel.Background>

@@ -3,6 +3,7 @@
 namespace ClassesApp
 
 {
+    [Serializable()]
     public abstract class Nommable
     {
 

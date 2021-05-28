@@ -25,8 +25,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        StockageApp sa = new Stub().Charger("");
-
+        StockageApp sa = new ChargeurFic().Charger("donnees.bin");
+        Sauveur sauveur = new Sauveur();
         public Utilisateur UtilisateurActuel { get; set; }
         private IList<Profil> profils;
 
@@ -35,24 +35,38 @@ namespace WpfApp1
         public IList<Profil> Profils 
         { 
             get => profils;
-            set => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Profils")); 
+            set
+            {
+                profils = value;
+                OnPropertyChanged();
+            }
         }
 
+      
         public MainWindow()
         {
             InitializeComponent();
+            sauveur.Sauver("donnees.bin", sa);
+            
             this.DataContext = sa;
             profils = new ObservableCollection<Profil>(); 
             UtilisateurActuel = null;
+
             foreach (Profil p in sa.lesProfils)
                 Profils.Add(p);
-            LBprofils.ItemsSource = Profils;
+            LBprofils.DataContext = this;
             Boite1.DataContext = sa.lesBoites[0];
             Boite2.DataContext = sa.lesBoites[1];
             Boite3.DataContext = sa.lesBoites[2];
-            UtilisateurConnecte.DataContext = UtilisateurActuel;
-    
+            
+            UtilisateurConnecte.DataContext = UtilisateurActuel;   
         }
+
+        private void OnPropertyChanged()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Profils"));
+        }
+
 
         private void CréationProfilHybride_Click(object sender, RoutedEventArgs e)
         {
@@ -63,7 +77,7 @@ namespace WpfApp1
             }
             else
             {
-                Window fenCrePro = new CreationProfil(sa, UtilisateurActuel);
+                Window fenCrePro = new CreationProfil(sa, UtilisateurActuel, this);
                 fenCrePro.Show();
             }
         }
@@ -84,8 +98,7 @@ namespace WpfApp1
         {
             UtilisateurActuel = nouvUtil;
             UtilisateurConnecte.DataContext = UtilisateurActuel;
-            Update_ListBox();
-            
+            Update_ListBox();            
         }
 
         private void LBprofils_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -96,23 +109,24 @@ namespace WpfApp1
 
         public void Update_ListBox ()
         {
-            Profils.Clear();
+            IList<Profil> lesProfils = new ObservableCollection<Profil>();
             foreach (Profil p in UtilisateurActuel.ProfilsFavoris)
             {
-                Profils.Add(p);
+                lesProfils.Add(p);
             }
 
             foreach (Profil p in sa.lesProfils)
             {
-                if (!Profils.Contains(p))
-                    Profils.Add(p);
+                if (!lesProfils.Contains(p))
+                    lesProfils.Add(p);
             }
 
             foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
             {
-                if (!Profils.Contains(p))
-                    Profils.Add(p);
+                if (!lesProfils.Contains(p))
+                    lesProfils.Add(p);
             }
+            Profils = lesProfils;
         }
     }
 }
