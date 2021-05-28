@@ -19,9 +19,9 @@ namespace Data
            
             /// Boite de jeu :
 
-            BoiteDeJeu b1 = new BoiteDeJeu("Description de la boite 1", "Magasin boite 1", "Nom de la boite  1", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventure.png");
-            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Magasin boite 2", "Nom de la boite  2", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventureVengeance.png");
-            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Magasin boite 3", "Nom de la boite  3", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuCthulhu.png");
+            BoiteDeJeu b1 = new BoiteDeJeu("La boîte de jeu contient tout le nécessaire pour vous lancer à l’aventure avec vos amis ou votre famille : règles de jeu faciles d’accès et ponctuées de nombreux conseils, aventures prêtes-à-jouer, matériel de jeu luxueux pour assurer le bon déroulement des parties. ", "Amazon.fr", "Initiation au jeu d'aventure", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventure.png");
+            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Amazon.fr", "Nom de la boite 2", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventureVengeance.png");
+            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Amazon.fr", "Nom de la boite 3", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuCthulhu.png");
             stock.AjoutBoite(b1);
             stock.AjoutBoite(b2);
             stock.AjoutBoite(b3);
