@@ -161,7 +161,7 @@
 
 
             <DockPanel.Background>
-                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\MainWindow\fondSerre.png"/>
+                <ImageBrush Stretch="Fill" ImageSource="\Images;Component\MainWindow\FondSerreFinal.png"/>
             </DockPanel.Background>
 
 

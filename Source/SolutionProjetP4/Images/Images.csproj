@@ -26,6 +26,7 @@
     <None Remove="Logo\logo.jpg" />
     <None Remove="Logo\logoA.jpg" />
     <None Remove="MainWindow\fondSerre.png" />
+    <None Remove="MainWindow\FondSerreFinal.png" />
     <None Remove="MainWindow\wallpaperTest1.jpg" />
     <None Remove="profilhybride.jpg" />
     <None Remove="Profil\Arquebusier.PNG" />
@@ -69,6 +70,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="MainWindow\fondSerre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MainWindow\FondSerreFinal.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="MainWindow\wallpaperTest1.jpg">
