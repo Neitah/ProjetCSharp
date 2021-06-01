@@ -113,6 +113,7 @@ namespace Data
             p1.AjoutVoie(v5);
             stock.AjoutProfil(p1);
 
+
             Profil p2 = new Profil("Nom Profil 2", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             p2.AjoutVoie(v2);
             p2.AjoutVoie(v1);
