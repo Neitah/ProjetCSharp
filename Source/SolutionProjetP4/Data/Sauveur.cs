@@ -8,9 +8,9 @@ using System.Text;
 
 namespace Data
 {
-    public class Sauveur
+    public static class Sauveur
     {
-        public void Sauver (string chemin, StockageApp stock)
+        public static void Sauver (string chemin, StockageApp stock)
         {
             Stream stream= File.Open(chemin,FileMode.Create);
             BinaryFormatter formatter = new BinaryFormatter();

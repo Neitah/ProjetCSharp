@@ -21,13 +21,11 @@ namespace WpfApp1
     {
         Profil p;
         Utilisateur utilisateurActuel;
-        MainWindow mw;
-        public AffichProfil(Utilisateur utilisateurActuel, Profil p, MainWindow mw)
+        public AffichProfil(Utilisateur utilisateurActuel, Profil p)
         {
             InitializeComponent();
             this.p = p;
             this.utilisateurActuel = utilisateurActuel;
-            this.mw = mw;
             if (utilisateurActuel == null)
             {
                 BoutAjoutFavori.Visibility = Visibility.Hidden;
@@ -65,7 +63,7 @@ namespace WpfApp1
                 utilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 100;
             }
-           // mw.Update_ListBox();
+            ((MainWindow)((App)App.Current).MainWindow).Update_ListBox(); 
         }
 
         private void voie_MouseDoubleClick(object sender, MouseButtonEventArgs e)

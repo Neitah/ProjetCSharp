@@ -26,8 +26,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        StockageApp sa = new ChargeurFic().Charger("donnees.bin");
-        Sauveur sauveur = new Sauveur();
+        private StockageApp sa = new ChargeurFic().Charger("donnees.bin");
         public Utilisateur UtilisateurActuel { get; set; }
         private ObservableCollection<Profil> Profils { get; set; }
 
@@ -35,7 +34,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            sauveur.Sauver("donnees.bin", sa);
+            Sauveur.Sauver("donnees.bin", sa);
             
             this.DataContext = sa;
             Profils = new ObservableCollection<Profil>(); 
@@ -56,7 +55,7 @@ namespace WpfApp1
         {
             if (UtilisateurActuel == null)
             {
-                Window fenLogin = new PageConnexion(sa, this);
+                Window fenLogin = new PageConnexion(sa);
                 fenLogin.Show();
             }
             else
@@ -74,7 +73,7 @@ namespace WpfApp1
 
         private void BoutConnexion_Click(object sender, RoutedEventArgs e)
         {
-            Window fenLogin = new PageConnexion(sa, this);
+            Window fenLogin = new PageConnexion(sa);
             fenLogin.Show();
         }
 
@@ -87,16 +86,23 @@ namespace WpfApp1
 
         private void LBprofils_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Window fen = new AffichProfil(UtilisateurActuel,(Profil)((ListBox)sender).SelectedItem, this);
+            Window fen = new AffichProfil(UtilisateurActuel,(Profil)((ListBox)sender).SelectedItem);
             fen.Show();       
         }
       
 
         public void Update_ListBox ()
         {
+            Profils.Clear();
             foreach (Profil p in UtilisateurActuel.ProfilsFavoris)
             {
                 Profils.Add(p);
+            }
+
+            foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
+            {
+                if (!Profils.Contains(p))
+                    Profils.Add(p);
             }
 
             foreach (Profil p in sa.lesProfils)
@@ -105,11 +111,6 @@ namespace WpfApp1
                     Profils.Add(p);
             }
 
-            foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
-            {
-                if (!Profils.Contains(p))
-                    Profils.Add(p);
-            }
         }
 
         private void LienBoite1_Click(object sender, RoutedEventArgs e)
