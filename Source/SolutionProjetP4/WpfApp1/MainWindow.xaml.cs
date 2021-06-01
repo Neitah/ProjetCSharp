@@ -24,24 +24,12 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         StockageApp sa = new ChargeurFic().Charger("donnees.bin");
         Sauveur sauveur = new Sauveur();
         public Utilisateur UtilisateurActuel { get; set; }
-        private IList<Profil> profils;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public IList<Profil> Profils 
-        { 
-            get => profils;
-            set
-            {
-                profils = value;
-                OnPropertyChanged();
-            }
-        }
+        private ObservableCollection<Profil> Profils { get; set; }
 
       
         public MainWindow()
@@ -50,22 +38,17 @@ namespace WpfApp1
             sauveur.Sauver("donnees.bin", sa);
             
             this.DataContext = sa;
-            profils = new ObservableCollection<Profil>(); 
+            Profils = new ObservableCollection<Profil>(); 
             UtilisateurActuel = null;
 
             foreach (Profil p in sa.lesProfils)
                 Profils.Add(p);
-            LBprofils.DataContext = this;
+            LBprofils.ItemsSource = Profils;
             Boite1.DataContext = sa.lesBoites[0];
             Boite2.DataContext = sa.lesBoites[1];
             Boite3.DataContext = sa.lesBoites[2];
             
             UtilisateurConnecte.DataContext = UtilisateurActuel;   
-        }
-
-        private void OnPropertyChanged()
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Profils"));
         }
 
 
@@ -111,24 +94,22 @@ namespace WpfApp1
 
         public void Update_ListBox ()
         {
-            IList<Profil> lesProfils = new ObservableCollection<Profil>();
             foreach (Profil p in UtilisateurActuel.ProfilsFavoris)
             {
-                lesProfils.Add(p);
+                Profils.Add(p);
             }
 
             foreach (Profil p in sa.lesProfils)
             {
-                if (!lesProfils.Contains(p))
-                    lesProfils.Add(p);
+                if (!Profils.Contains(p))
+                    Profils.Add(p);
             }
 
             foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
             {
-                if (!lesProfils.Contains(p))
-                    lesProfils.Add(p);
+                if (!Profils.Contains(p))
+                    Profils.Add(p);
             }
-            Profils = lesProfils;
         }
 
         private void LienBoite1_Click(object sender, RoutedEventArgs e)

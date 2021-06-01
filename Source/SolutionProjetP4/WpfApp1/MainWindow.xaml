@@ -85,7 +85,7 @@
 
             <!-- Menu a gauche -->
 
-            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding Path=Profils, UpdateSourceTrigger=PropertyChanged}" MouseDoubleClick="LBprofils_MouseDoubleClick" IsSynchronizedWithCurrentItem="True"
+            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding}" MouseDoubleClick="LBprofils_MouseDoubleClick" IsSynchronizedWithCurrentItem="True"
                      ScrollViewer.CanContentScroll="True">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
@@ -99,8 +99,8 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Height="40">
-                            <TextBlock Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
-                            <Image Source="{Binding Path=Image, UpdateSourceTrigger=PropertyChanged}" Width="80" Height="40"/>
+                            <TextBlock Text="{Binding Path=Nom}" Background="Transparent"  FontSize="15" Height="40" Width="85" TextAlignment="Center" FontFamily="Arial"/>
+                            <Image Source="{Binding Path=Image}" Width="80" Height="40"/>
                         </WrapPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
