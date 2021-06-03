@@ -8,7 +8,7 @@
         Title="Window1" Height="600" Width="1100" Background="White">
     <Window.Resources>
         <!--  Style du bonton -->
-                                
+
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -141,11 +141,17 @@
         <DockPanel DockPanel.Dock="Top"  Background="White" Height="60">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="15*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black"/>
-                <TextBlock Grid.Column="1" x:Name="UtilisateurConnecte" Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="20" HorizontalAlignment="Center" Foreground="#EAB01E"/>
+                <Button x:Name="BouttonSauver" Content="Sauvegarder" Style="{DynamicResource BoutMainWindow}" Click="BouttonSauver_Click" HorizontalAlignment="Left" 
+                        Background="#FF64CCF1"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        FontSize="10"/>
+                <TextBlock Grid.Column="1" Text="Chroniques Oubliées" FontSize="50" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Selawik" Foreground="Black" Width="470"/>
+                <TextBlock Grid.Column="2" x:Name="UtilisateurConnecte" Text="{Binding Path=Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="20" HorizontalAlignment="Center" Foreground="#EAB01E" Width="0"/>
             </Grid>
 
 
@@ -230,5 +236,5 @@
             </Grid>
         </DockPanel>
     </DockPanel>
-    
+
 </Window>

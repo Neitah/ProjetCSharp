@@ -35,7 +35,6 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            Sauveur.Sauver("donnees.bin", sa);
             
             this.DataContext = sa;
             Profils = new ObservableCollection<Profil>(); 
@@ -132,6 +131,11 @@ namespace WpfApp1
         {
             Process processfirefox = new Process();
             processfirefox = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-%C3%89ditions-Chroniques-Oubli%C3%A9es/dp/B07P882X5X/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309R3DAGCHXT8&dchild=1&keywords=chroniques+oubli%C3%A9es&qid=1622192128&sprefix=chroni%2Caps%2C175&sr=8-4");
+        }
+
+        private void BouttonSauver_Click(object sender, RoutedEventArgs e)
+        {
+            Sauveur.Sauver("donnees.bin", sa);
         }
     }
 }
