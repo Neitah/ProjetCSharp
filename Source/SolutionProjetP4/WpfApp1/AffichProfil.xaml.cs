@@ -20,17 +20,15 @@ namespace WpfApp1
     public partial class AffichProfil : Window
     {
         Profil p;
-        Utilisateur utilisateurActuel;
         public AffichProfil(Utilisateur utilisateurActuel, Profil p)
         {
             InitializeComponent();
             this.p = p;
-            this.utilisateurActuel = utilisateurActuel;
-            if (utilisateurActuel == null)
+            if (((MainWindow)((App)App.Current).MainWindow).UtilisateurActuel == null)
             {
                 BoutAjoutFavori.Visibility = Visibility.Hidden;
             }
-            else if (utilisateurActuel.ProfilsFavoris.Contains(p))
+            else if (((MainWindow)((App)App.Current).MainWindow).UtilisateurActuel.ProfilsFavoris.Contains(p))
             {
                 BoutAjoutFavori.Content = "Enlever des favoris";
                 BoutAjoutFavori.Width = 160;
@@ -51,16 +49,16 @@ namespace WpfApp1
 
         private void ClickFavori(object sender, RoutedEventArgs e)
         {
-            if (!utilisateurActuel.ProfilsFavoris.Contains(p))
+            if (!((MainWindow)((App)App.Current).MainWindow).UtilisateurActuel.ProfilsFavoris.Contains(p))
             {
                 ((Button)sender).Content = "Enlever des favoris";
-                utilisateurActuel.AjoutProfilFavori(p);
+                ((MainWindow)((App)App.Current).MainWindow).UtilisateurActuel.AjoutProfilFavori(p);
                 ((Button)sender).Width = 160;
             }
             else
             {
                 ((Button)sender).Content = "Favori";
-                utilisateurActuel.SupprimerProfilFavori(p);
+                ((MainWindow)((App)App.Current).MainWindow).UtilisateurActuel.SupprimerProfilFavori(p);
                 ((Button)sender).Width = 100;
             }
             ((MainWindow)((App)App.Current).MainWindow).Update_ListBox(); 
