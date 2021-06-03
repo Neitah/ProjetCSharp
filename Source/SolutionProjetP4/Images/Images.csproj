@@ -23,6 +23,7 @@
     <None Remove="imagebackground.jpg" />
     <None Remove="logo.jpg" />
     <None Remove="logoA.jpg" />
+    <None Remove="Logo\diquetteLogo.png" />
     <None Remove="Logo\logo.jpg" />
     <None Remove="Logo\logoA.jpg" />
     <None Remove="MainWindow\fondSerre.png" />
@@ -61,6 +62,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="CreationProfilHybride\profilhybride.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Logo\diquetteLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Logo\logo.jpg">
