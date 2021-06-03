@@ -115,6 +115,7 @@
                         Foreground="White"
                         FontFamily="Arial"
                         FontSize="20"
+                        IsDefault="True"
                         Click="BoutValidInscription_Click"/>
             </StackPanel>
         </Grid>

@@ -108,6 +108,7 @@
                         Foreground="White"
                         FontFamily="Arial"
                         FontSize="20"
+                        IsDefault="True"
                         Click="BoutValidConnexion_Click"/>
                 
             </StackPanel>
