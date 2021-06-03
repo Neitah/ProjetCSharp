@@ -329,7 +329,8 @@
                 </Border>
 
                 <StackPanel Margin="10">
-                    <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False" Click="BoutCreationHybride_Click"                           Background="#FF64CCF1"
+                    <Button Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Center" Content="Valider" Name="BoutCreationHybride" Height="40" Width="120" IsEnabled="False" Click="BoutCreationHybride_Click" Background="#FF64CCF1"
+                            IsDefault="True"
                             Foreground="White"
                             FontFamily="Arial"
                             FontSize="20"/>

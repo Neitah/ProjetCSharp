@@ -198,9 +198,9 @@
                                 <Image Source="{Binding Image}"  Width="100" />
                             </Border>
                         </Button>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
                     </StackPanel>
                 </Border>
 
@@ -213,9 +213,9 @@
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
                         </Button>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
                     </StackPanel>
                 </Border>
 
@@ -228,13 +228,12 @@
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
                         </Button>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
-                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="20" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding NomMagasin}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Center"/>
                     </StackPanel>
                 </Border>
             </Grid>
         </DockPanel>
     </DockPanel>
-
 </Window>
