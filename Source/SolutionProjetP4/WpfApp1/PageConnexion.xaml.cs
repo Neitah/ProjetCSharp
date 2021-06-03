@@ -1,6 +1,7 @@
 ﻿using ClassesApp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,8 +35,8 @@ namespace WpfApp1
             }
             else
             {
-                
-                ((MainWindow)((App)App.Current).MainWindow).UtilConnecte(sa.lesUtilisateurs[sa.lesUtilisateurs.IndexOf(utilisateur)]);
+                IEnumerable<Utilisateur> laliste = sa.lesUtilisateurs.Where(value => value.Equals(utilisateur));
+                ((MainWindow)((App)App.Current).MainWindow).UtilConnecte(laliste.First());
                 this.Close();
             }
         }

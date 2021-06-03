@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -94,18 +95,18 @@ namespace WpfApp1
         public void Update_ListBox ()
         {
             Profils.Clear();
-            foreach (Profil p in UtilisateurActuel.ProfilsFavoris)
+            foreach (Profil p in UtilisateurActuel.ProfilsFavoris.OrderBy(profil => profil.Nom))
             {
                 Profils.Add(p);
             }
 
-            foreach (Profil p in UtilisateurActuel.ProfilsHybrides)
+            foreach (Profil p in UtilisateurActuel.ProfilsHybrides.OrderBy(profil => profil.Nom))
             {
                 if (!Profils.Contains(p))
                     Profils.Add(p);
             }
 
-            foreach (Profil p in sa.lesProfils)
+            foreach (Profil p in sa.lesProfils.OrderBy(profil => profil.Nom))
             {
                 if (!Profils.Contains(p))
                     Profils.Add(p);
