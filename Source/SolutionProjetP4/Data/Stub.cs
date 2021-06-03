@@ -19,7 +19,7 @@ namespace Data
            
             /// Boite de jeu :
 
-            BoiteDeJeu b1 = new BoiteDeJeu("La boîte de jeu contient tout le nécessaire pour vous lancer à l’aventure avec vos amis ou votre famille !", "Amazon.fr", "Initiation au jeu d'aventure", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventure.png");
+            BoiteDeJeu b1 = new BoiteDeJeu("La boite de jeu contient tout le nécessaire pour vous lancer à l’aventure avec vos amis ou votre famille !", "Amazon.fr", "Initiation au jeu d'aventure", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventure.png");
             BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Amazon.fr", "Nom de la boite 2", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventureVengeance.png");
             BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Amazon.fr", "Nom de la boite 3", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuCthulhu.png");
             stock.AjoutBoite(b1);
