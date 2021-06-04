@@ -247,7 +247,7 @@
 
                 <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
                     <StackPanel x:Name="Boite1" Margin="10" Background="White" Height="200">
-                        <Button Name="LienBoite1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite1_Click">
+                        <Button Name="LienBoite1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite1_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus" >
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100" />
                             </Border>
@@ -262,7 +262,7 @@
 
                 <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
                     <StackPanel x:Name="Boite2"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                        <Button  Name="LienBoite2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite2_Click">
+                        <Button  Name="LienBoite2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite2_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
@@ -277,7 +277,7 @@
 
                 <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
                     <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="200">
-                        <Button  Name="LienBoite3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite3_Click">
+                        <Button  Name="LienBoite3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite3_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>
                             </Border>
