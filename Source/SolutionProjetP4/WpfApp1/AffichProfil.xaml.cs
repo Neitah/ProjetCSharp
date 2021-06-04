@@ -69,5 +69,19 @@ namespace WpfApp1
             Window fen = new AffichComp((Compétence)((ListBox)sender).SelectedItem);
             fen.Show();
         }
+
+        private void voie_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Return)
+            {
+                Window fen = new AffichComp((Compétence)((ListBox)sender).SelectedItem);
+                fen.Show();
+            }
+        }
+
+        private void voie_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            ((ListBox)sender).SelectedItem = ((ListBox)sender).Items[0];
+        }
     }
 }

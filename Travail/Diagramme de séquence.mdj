@@ -2623,7 +2623,7 @@
 													"containerExtending": false,
 													"left": 824,
 													"top": 471,
-													"width": 311.96240234375,
+													"width": 314.81884765625,
 													"height": 50,
 													"autoResize": false,
 													"guardLabel": {
@@ -2642,7 +2642,7 @@
 											"containerExtending": false,
 											"left": 824,
 											"top": 471,
-											"width": 311.96240234375,
+											"width": 314.81884765625,
 											"height": 50,
 											"autoResize": false
 										}
@@ -2658,7 +2658,7 @@
 									"containerExtending": false,
 									"left": 824,
 									"top": 448,
-									"width": 311.96240234375,
+									"width": 314.81884765625,
 									"height": 81,
 									"autoResize": false,
 									"nameLabel": {

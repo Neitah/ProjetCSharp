@@ -115,8 +115,8 @@ namespace WpfApp1
 
         private void LienBoite1_Click(object sender, RoutedEventArgs e)
         {
-            Process processfirefox = new Process();
-            processfirefox = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-Chroniques-oubliees-Initiation/dp/B076N2MHHM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2AOI1KWPDZJKL&dchild=1&keywords=chroniques+oubliees&qid=1622191520&sprefix=chroniques+oublie%2Caps%2C157&sr=8-1");
+            Process process = new Process();
+            process = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-Chroniques-oubliees-Initiation/dp/B076N2MHHM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2AOI1KWPDZJKL&dchild=1&keywords=chroniques+oubliees&qid=1622191520&sprefix=chroniques+oublie%2Caps%2C157&sr=8-1");
         }
 
         
@@ -124,15 +124,15 @@ namespace WpfApp1
            
         private void LienBoite2_Click(object sender, RoutedEventArgs e)
         {
-            Process processfirefox = new Process();
-            processfirefox = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-Chroniques-Oubli%C3%A9es-Initiation/dp/B089ZYS6R8/ref=bmx_1/258-1357005-3598317?pd_rd_w=AEF1j&pf_rd_p=dd759542-9066-427f-8f01-aa142ea8faac&pf_rd_r=S1GK02T6FJE0J7Z2MJH7&pd_rd_r=f77e1136-a90b-4066-aab1-326f10a0d1cf&pd_rd_wg=gddWJ&pd_rd_i=B089ZYS6R8&psc=1");
+            Process process = new Process();
+            process = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-Chroniques-Oubli%C3%A9es-Initiation/dp/B089ZYS6R8/ref=bmx_1/258-1357005-3598317?pd_rd_w=AEF1j&pf_rd_p=dd759542-9066-427f-8f01-aa142ea8faac&pf_rd_r=S1GK02T6FJE0J7Z2MJH7&pd_rd_r=f77e1136-a90b-4066-aab1-326f10a0d1cf&pd_rd_wg=gddWJ&pd_rd_i=B089ZYS6R8&psc=1");
 
         }
 
         private void LienBoite3_Click(object sender, RoutedEventArgs e)
         {
-            Process processfirefox = new Process();
-            processfirefox = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-%C3%89ditions-Chroniques-Oubli%C3%A9es/dp/B07P882X5X/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309R3DAGCHXT8&dchild=1&keywords=chroniques+oubli%C3%A9es&qid=1622192128&sprefix=chroni%2Caps%2C175&sr=8-4");
+            Process process = new Process();
+            process = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-%C3%89ditions-Chroniques-Oubli%C3%A9es/dp/B07P882X5X/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309R3DAGCHXT8&dchild=1&keywords=chroniques+oubli%C3%A9es&qid=1622192128&sprefix=chroni%2Caps%2C175&sr=8-4");
 
         }
            
@@ -141,6 +141,18 @@ namespace WpfApp1
             Sauveur.Sauver("donnees.bin", sa);
         }
 
-      
+        private void LBprofils_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Window fen = new AffichProfil(UtilisateurActuel, (Profil)((ListBox)sender).SelectedItem);
+                fen.Show();
+            }
+        }
+
+        private void LBprofils_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            LBprofils.SelectedItem = LBprofils.Items[0];
+        }
     }
 }
