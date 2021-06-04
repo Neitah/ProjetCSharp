@@ -25,7 +25,7 @@ namespace Data
                 stream.Close();
             }
 
-            catch (Exception ex)
+            catch
             {
                 stock = new Stub().Charger("");
             }

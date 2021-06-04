@@ -131,7 +131,7 @@
 
             <!-- Menu a gauche -->
 
-            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding}" MouseDoubleClick="LBprofils_MouseDoubleClick" IsSynchronizedWithCurrentItem="True"
+            <ListBox Name="LBprofils" Grid.Row="1" ItemsSource="{Binding}" MouseDoubleClick="LBprofils_MouseDoubleClick" Keyboard.KeyUp="LBprofils_KeyUp" Keyboard.GotKeyboardFocus="LBprofils_GotKeyboardFocus"
                      ScrollViewer.CanContentScroll="True">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.5,-3" StartPoint="0,1">
@@ -191,7 +191,7 @@
                     <ColumnDefinition Width="70*"/>
                     <ColumnDefinition Width="15*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="BouttonSauver" Style="{DynamicResource RoundedButtonStyle}" Click="BouttonSauver_Click" HorizontalAlignment="Left" 
+                <Button x:Name="BouttonSauver" Style="{DynamicResource RoundedButtonStyle}" Click="BouttonSauver_Click" HorizontalAlignment="Left"
                         Background="#FF64CCF1"
                         Foreground="White"
                         FontFamily="Arial"

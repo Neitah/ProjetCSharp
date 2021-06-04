@@ -173,7 +173,7 @@
                 <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="0">
                     <StackPanel >
                         <TextBlock Text="{Binding LesVoies[0].Nom}" FontSize="18" TextAlignment="Center"/>
-                        <ListBox Name="voie1" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True">
+                        <ListBox Name="voie1" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True" Keyboard.KeyUp="voie_KeyUp" Keyboard.GotKeyboardFocus="voie_GotKeyboardFocus">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel>
@@ -190,7 +190,7 @@
                 <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="1">
                     <StackPanel>
                         <TextBlock Text="{Binding LesVoies[1].Nom}" FontSize="18" TextAlignment="Center"/>
-                        <ListBox Name="voie2" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True">
+                        <ListBox Name="voie2" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True" Keyboard.KeyUp="voie_KeyUp" Keyboard.GotKeyboardFocus="voie_GotKeyboardFocus">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel >
@@ -207,7 +207,7 @@
                 <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="2">
                     <StackPanel>
                         <TextBlock Text="{Binding LesVoies[2].Nom}" FontSize="18" TextAlignment="Center"/>
-                        <ListBox Name="voie3" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True">
+                        <ListBox Name="voie3" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True" Keyboard.KeyUp="voie_KeyUp" Keyboard.GotKeyboardFocus="voie_GotKeyboardFocus">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel >
@@ -224,7 +224,7 @@
                 <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="3">
                     <StackPanel>
                         <TextBlock Text="{Binding LesVoies[3].Nom}" FontSize="18" TextAlignment="Center"/>
-                        <ListBox Name="voie4" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True">
+                        <ListBox Name="voie4" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True" Keyboard.KeyUp="voie_KeyUp" Keyboard.GotKeyboardFocus="voie_GotKeyboardFocus">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel >
@@ -241,7 +241,7 @@
                 <Border CornerRadius="10" Background="White" Margin="10" Grid.Column="4">
                     <StackPanel>
                         <TextBlock Text="{Binding LesVoies[4].Nom}" FontSize="18" TextAlignment="Center"/>
-                        <ListBox Name="voie5" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True">
+                        <ListBox Name="voie5" ItemsSource="{Binding}" MouseDoubleClick="voie_MouseDoubleClick" ScrollViewer.CanContentScroll="True" Keyboard.KeyUp="voie_KeyUp" Keyboard.GotKeyboardFocus="voie_GotKeyboardFocus">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel >
