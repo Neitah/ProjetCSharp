@@ -154,5 +154,10 @@ namespace WpfApp1
         {
             LBprofils.SelectedItem = LBprofils.Items[0];
         }
+
+        private void LienBoite_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            
+        }
     }
 }
