@@ -117,7 +117,6 @@ namespace WpfApp1
         {
             Process processfirefox = new Process();
             processfirefox = Process.Start("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.amazon.fr/Black-Book-Chroniques-oubliees-Initiation/dp/B076N2MHHM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2AOI1KWPDZJKL&dchild=1&keywords=chroniques+oubliees&qid=1622191520&sprefix=chroniques+oublie%2Caps%2C157&sr=8-1");
-
         }
 
         

@@ -2840,6 +2840,52 @@
 									},
 									"showProperty": true,
 									"showType": true
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF51mC6dP0vlpA=",
+									"_parent": {
+										"$ref": "AAAAAAF5x4OOTcungTE="
+									},
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffff49",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 8,
+									"top": 280,
+									"width": 82.15625,
+									"height": 142,
+									"autoResize": false,
+									"text": "Pour cette option, l'utilisateur doit être connecté sinon il est rediriger vers la page Connexion",
+									"wordWrap": true
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF51mIm3YRCiF4=",
+									"_parent": {
+										"$ref": "AAAAAAF5x4OOTcungTE="
+									},
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffff49",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 712,
+									"top": 32,
+									"width": 121,
+									"height": 142,
+									"autoResize": false,
+									"text": "Dans un permier temps l'utilisateur doit séléctionner 5 voies différentes. Ensuite il doit remplir au moins les champs obligatoires puis il valide",
+									"wordWrap": true
 								}
 							],
 							"showSequenceNumber": true,
