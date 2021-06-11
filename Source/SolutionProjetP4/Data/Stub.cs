@@ -106,7 +106,7 @@ namespace Data
 
             ///BARDE : 
 
-            p1 = new Profil("Barde", "1d6", "Rapière (DM 1d6, Crit 19-20), dague (DM 1d4), instrument de musique, armure de cuir (DEF +2).", "Le barde sait manier les armes à 1 main. Il peut porter jusqu’à l’armure de cuir renforcée et ne peut pas manier le bouclier.", "Attaque magique : Mod. de CHA", "Le barde est un personnage polyvalent qui utilise la magie et le spectacle pour divertir et parvenir à ses fins. Il est aussi habitué aux ruses qu’à la diplomatie.", "chemin");
+            p1 = new Profil("Barde", "1d6", "Rapière (DM 1d6, Crit 19-20), dague (DM 1d4), instrument de musique, armure de cuir (DEF +2).", "Le barde sait manier les armes à 1 main. Il peut porter jusqu’à l’armure de cuir renforcée et ne peut pas manier le bouclier.", "Attaque magique : Mod. de CHA", "Le barde est un personnage polyvalent qui utilise la magie et le spectacle pour divertir et parvenir à ses fins. Il est aussi habitué aux ruses qu’à la diplomatie.", "\\Images;Component\\Profil\\Barde.png");
 
             c1 = new Compétence("le  barde  peut  utiliser  son   score   d’attaque   à   distance   pour   combattre  au  contact  lorsqu’il  emploie  une arme à une main légère comme une dague, une épée courte ou une rapière", "Précision  ");
             c2 = new Compétence(" le barde  ajoute  son  Mod.  d’INT  en  Ini-tiative et en DEF en plus de son Mod. de DEX", "Intelligence du combat");

@@ -31,6 +31,7 @@
     <None Remove="MainWindow\wallpaperTest1.jpg" />
     <None Remove="profilhybride.jpg" />
     <None Remove="Profil\Arquebusier.PNG" />
+    <None Remove="Profil\Barde.png" />
     <None Remove="testImageFond.jpg" />
     <None Remove="testImageFond2.png" />
     <None Remove="wallpaperTest1.jpg" />
@@ -85,6 +86,7 @@
     <Resource Include="Profil\Arquebusier.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Profil\Barde.png" />
   </ItemGroup>
 
 </Project>
