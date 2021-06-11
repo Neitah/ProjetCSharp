@@ -46,27 +46,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bamalvezin\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Bastien\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "projectUniqueName": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
       "projectName": "TestProfils",
-      "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
-      "packagesPath": "C:\\Users\\bamalvezin\\.nuget\\packages\\",
-      "outputPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
+      "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "packagesPath": "C:\\Users\\Bastien\\.nuget\\packages\\",
+      "outputPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\bamalvezin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Bastien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -77,12 +70,13 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
-              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
+            "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+              "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
             },
-            "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
-              "projectPath": "U:\\COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj"
+            "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
+              "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj"
             }
           }
         }
@@ -95,6 +89,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "imports": [
           "net461",
           "net462",
@@ -105,12 +100,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
