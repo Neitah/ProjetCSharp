@@ -179,6 +179,103 @@ namespace Data
             p1.AjoutVoie(v1);
             stock.AjoutProfil(p1);
 
+            ///BARBARE : 
+
+            p1 = new Profil("Barbare", "1d12", "Hache à 2 mains (DM 2d6),2 javelots(DM 1d6,portée 20 m), dague(DM 1d4), armure de cuir(DEF + 2).", "Le barbare sait manier toutes les armes au contact, toutes les armes à distance (sauf les arbalètes et les armes d’une technologie trop complexe). Il peut porter jusqu’à l’armure de cuir et manier le bouclier.", "", "Le barbare est un combattant sauvage issu d’une culture primitive. Il affronte ses ennemis avec rage sans se cacher derrière une lourde armure.", "\\Images;Component\\Profil\\Barbare.png");
+
+            c1 = new Compétence("le barbare ajoute son Mod.de FOR à son score de PV maximum ainsi qu’à ses tests de CHA et à ceux de ses alliés au contact pour les tests de négociation, de persuasion ou d’intimidation.Allez savoir pourquoi, sa simple présence donne de la force aux arguments de ses alliés…", "Argument de taille");
+            c2 = new Compétence("le barbare peut temporairement décupler ses ressources physiques pour faire usage d’une force prodigieuse.Il peut ainsi soulever une charge incroyable, briser une épée, tordre des barreaux ou défoncer une porte d’un seul coup de poing.Il obtient un bonus de + 10 à son test de FOR, mais cela lui coûte 1d4 PV.", "Tour de force");
+            c3 = new Compétence("le barbare réalise une attaque au contact avec une pénalité de - 2 en attaque et + 1d6 au DM.Au Rang 5 de la voie, il peut choisir une pénalité de - 5 pour obtenir + 2d6 aux DM.", "Attaque brutale");
+            c4 = new Compétence("Les coups critiques du barbare sont terribles et provoquent des handicaps durables.Le barbare obtient un critique sur 19 et 20 au résultat du d20 en attaque au contact. Lorsqu’il obtient un critique, en plus des DM doublés, il inflige une pénalité de - 2 à tous les tests d’attaque, de FOR et de DEX de sa victime.Cette pénalité affecte la cible jusqu’à ce qu’elle soit complètement guérie.", "Briseur d’os");
+            c5 = new Compétence("le barbare augmente sa valeur de FOR de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de FOR lui est demandé et garder le meilleur résultat.", "Force héroïque");
+
+            v1 = new Voie("Voie de la brute");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le barbare est un athlète capable de prouesses physiques extraordinaires, il obtient un bonus de +2 par Rang dans la voie aux tests de course, de saut ou d’escalade.", "Vigueur");
+            c2 = new Compétence("le barbare est particulièrement endurci, il reçoit un bonus de DEF égal à son Mod.de CON", "Peau de pierre");
+            c3 = new Compétence("le barbare possède un tatouage magique qui améliore ses performances physiques.Au choix: taureau(+5 aux tests de FOR), ours (+5 aux tests de CON), panthère(+5 aux tests de DEX) ou chouette(+5 aux tests de SAG).", "Tatouages");
+            c4 = new Compétence("le barbare ne sent plus la douleur et ignore les égratignures, il réduit tous les DM subits de 3 points.Il subit toujours au moins 1 point de DM de chaque attaque reçue.", "Peau d’acier");
+            c5 = new Compétence("le barbare augmente sa valeur de CON de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé et garder le meilleur résultat.", "Constitution héroïque");
+
+            v1 = new Voie("Voie du pagne");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le barbare obtient un bonus de + 1 par Rang dans cette voie à son score d’initiative et à tous les tests de DEX destinés à esquiver (boule de feu, souffle, pièges, etc.).", "Réflexes félins");
+            c2 = new Compétence("le barbare se déplace en ligne droite d’au moins 5 mètres (20 mètres au maximum) et effectue une attaque au contact avec un bonus de + 2 en attaque et + 1d6 aux DM.", "Charge");
+            c3 = new Compétence("chaque fois que le barbare réduit un adversaire à 0 PV avec une attaque de contact, il bénéficie d’une action d’attaque gratuite sur un autre adversaire au contact.", "Enchaînement");
+            c4 = new Compétence("le barbare parcourt 10 mètres en ligne droite en dépassant autant d’ennemis qu’il le souhaite.Il porte une attaque à chaque adversaire sur son passage. Il ne peut terminer son déplacement à un endroit occupé par un ennemi.", "Déchaînement d’acier");
+            c5 = new Compétence("une fois par combat, le barbare tourne sur lui - même en assénant des attaques à toutes les cibles au contact.Il inflige automatiquement des DM correspondant à l’arme utilisée (plus tous les bonus habituels) à toutes les cibles dans un rayon de 5 m autour de lui.", "Attaque tourbillon");
+
+            v1 = new Voie("Voie du pourfendeur");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le barbare obtient un bonus de + 1 par Rang dans la voie aux tests de survie, de discrétion ou d’observation en milieu naturel.", "Proche de la nature");
+            c2 = new Compétence("le barbare obtient un bonus en DEF égal à son Rang dans la voie lorsqu’il ne porte aucune armure.", "Armure de vent");
+            c3 = new Compétence("le barbare possède des sens très affûtés, il est difficile de le surprendre, il gagne un bonus de + 5 à tous les tests pour détecter les pièges(mécaniques ou magiques) ou les embuscades. Il devient immunisé aux Attaques sournoises d’un voleur, à l’Embuscade d’un rôdeur ou à toute capacité similaire d’une créature.", "Vigilance");
+            c4 = new Compétence("le barbare devient capable de résister à la magie.Lorsqu’il est la cible d’un sort, une fois par tour, il peut faire un test d’attaque magique (Mod.de SAG) opposé à celui du sort.En cas de réussite, il n’en subit pas les effets.", "Résistance à la magie");
+            c5 = new Compétence("Le barbare guérit à une vitesse presque surnaturelle.Tant qu’il lui reste au moins 1 PV, il récupère 1d6 PV par heure, de nuit comme de jour.", "Vitalité débordante");
+
+            v1 = new Voie("Voie du primitif");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("une fois par combat, le barbare pousse un hurlement qui effraie ses adversaires. Tout ennemi dont la FOR et les PV maximum sont inférieurs à ceux du barbare subit un malus de - 2 à ses tests d’attaque au contact contre le personnage pour le reste du combat.Cette capacité ne nécessite plus qu’une action de mouvement à partir du rang 4.", "Cri de guerre");
+            c2 = new Compétence("lorsque le barbare subit des DM d’une attaque qui devrait l’amener à 0 PV, il peut réaliser un test de CON difficulté 10.En cas de réussite, il conserve 1 PV.La difficulté augmente de 10 à chaque blessure supplémentaire reçue par la suite. S’il est enragé il obtient un bonus de + 10 à ces tests.", "Défier la mort");
+            c3 = new Compétence("le barbare entre dans une rage berserk pour le reste du combat, ce qui le rend particulièrement dangereux. Il obtient un bonus de + 2 en attaque et + 1d6 aux DM sur toutes ses attaques au contact, mais perd 4 en DEF et ne peut fuir ou attaquer à distance.S’il veut stopper la rage avant d’avoir éliminé tous les ennemis sur le terrain, lebarbare doit réussir un test de SAG difficulté 13(un seul essai par tour).", "Rage du berserk");
+            c4 = new Compétence("lorsqu’il subit un coup critique, cela a pour effet de décupler la rage du barbare.Il peut immédiatement entrer en Rage ou en Furie(action gratuite), et gagne un bonus de + 1d6 aux DM de ses attaques au contact pour les 3 prochains tours.Le joueur note les DM supplémentaires de l’attaque critique à part: le barbare ne perdra ces PV qu’à la fin de la rage.", "Même pas mal");
+            c5 = new Compétence("au lieu de la Rage du berserk, le barbare peut entrer s’il le souhaite en Furie du berserk, qui lui donne + 3 en attaque et + 2d6 aux DM pour une pénalité en DEF de - 6. La difficulté du test de SAG pour sortir prématurément de cet état passe à 16.", "Furie du berserk");
+
+            v1 = new Voie("Voie de la rage");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+
+
+
+            ///
+
+            c1 = new Compétence("", "");
+            c2 = new Compétence("", "");
+            c3 = new Compétence("", "");
+            c4 = new Compétence("", "");
+            c5 = new Compétence("", "");
+
+            v1 = new Voie("");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///
+
             Profil p3 = new Profil("Nom Profil 3", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
             p3.AjoutVoie(v1);
             p3.AjoutVoie(v3);
