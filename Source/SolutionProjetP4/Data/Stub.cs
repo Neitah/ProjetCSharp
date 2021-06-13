@@ -563,7 +563,84 @@ namespace Data
 
             ///GUERRIER: 
 
-            p1 = new Profil("Guerrier", "1d10", "", "", "", "", "\\Images;Component\\Profil\\Guerrier.png");
+            p1 = new Profil("Guerrier", "1d10", "Épée longue (DM 1d8), épée ou hache à 2 mains (DM 2d6), grand bouclier (DEF + 2) et cotte de mailles (DEF + 5).", "Le guerrier sait manier toutes les armes de contact et toutes les armes à distance. Il peut porter jusqu’à l’armure de demi - plaque et manier le bouclier.", "", "Le guerrier est un combattant émérite qui n’a pas peur du danger et qui affronte ses ennemis l’arme à la main.De tous les profils de combattant, il est le plus spécialisé et le plus complet dans l’art du combat au corps à corps.", "\\Images;Component\\Profil\\Guerrier.png");
+
+            ///
+
+            c1 = new Compétence("le guerrier accorde le Mod.de DEF de son bouclier à un compagnon de son choix qui se trouve juste à côté de lui(il conserve ce bonus pour lui - même aussi).Il peut changer de compagnon à chaque tour durant sa phase d’initiative.C’est une action gratuite.", "Protéger un allié");
+            c2 = new Compétence("à son tour, le guerrier fait seulement une action d’attaque ou de déplacement.Par la suite, à tout moment avant son prochain tour, le guerrier peut effectuer un test d’attaque au contact en opposition à un test réussi d’attaque au contact ou à distance d’un adversaire.En cas de réussite, l’attaque adverse est bloquée par le bouclier.", "Absorber un coup");
+            c3 = new Compétence("à son tour, le guerrier fait seulement une action d’attaque ou de déplacement.Par la suite, à tout moment avant son prochain tour, le guerrier peut effectuer un test d’attaque magique(Mod.de SAG) en opposition à un test d’attaque magique qui le visait.En cas de réussite, le sort est absorbé par le bouclier et n’a aucun effet sur le guerrier.", "Absorber un sort");
+            c4 = new Compétence("le guerrier peut porter une Armure de Plaque.Celle - ci lui confère une DEF de + 8 et le protège des attaques critiques(vous subissez des DM normaux au lieu des DM doublés).", "Armure lourde");
+            c5 = new Compétence("le guerrier peut décider de renvoyer un sort qu’il vient d’absorber grâce à sa capacité Absorber un Sort.Au lieu d’être annulé, le sort absorbé le tour précédent est retourné contre son expéditeur: le lanceur du sort subit alors les effets de sa propre attaque!", "Renvoi de sort");
+
+            v1 = new Voie("Voie du bouclier");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le guerrier gagne +3 en Initiative.", "Vivacité");
+            c2 = new Compétence("le guerrier réalise une attaque au contact et sa victime doit faire un test d’attaque opposé.Si le guerrier obtient le plus haut score, l’arme de son adversaire tombe au sol(une action de mouvement doit être employée pour la ramasser).S’il le guerrier réussit son test avec au moins 10 points de plus que son adversaire, il empêche celui - ci de récupérer son arme(en posant le pied dessus, en l’envoyant hors de portée, etc.). Cette capacité est évidemment sans effet sur les armes naturelles(griffes, crocs, épine dorsale, etc.). Les adversaires qui utilisent des armes à 2 mains sont plus difficiles à désarmer, infligeant un malus de - 5 au test.", "Désarmer");
+            c3 = new Compétence("le guerrier peut tenter deux attaques au contact durant ce tour avec un malus de - 2.", "Double attaque");
+            c4 = new Compétence("le guerrier peut tenter une attaque au contact contre chaque adversaire engagé au contact avec lui.", "Attaque circulaire");
+            c5 = new Compétence("le guerrier peut choisir d’utiliser 1d12 en attaque au contact au lieu du d20 habituel(il ajoute normalement son score d’attaque).Si une telle attaque est réussie, il ajoute + 2d6 aux DM.Cette capacité peut être utilisée avec Attaque Double, Attaque Circulaire ou Attaque parfaite par exemple.", "Attaque puissante");
+
+            v1 = new Voie("Voie du combat");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le guerrier choisit une arme de prédilection (par exemple épée longue ou hache à 1 main, arc court, etc.), et gagne + 1 en attaque lorsqu’il l’utilise.", "Arme de prédilection");
+            c2 = new Compétence("le guerrier inflige des critiques sur 19 - 20(18 - 20 lorsqu’il emploie une rapière ou une Vivelame).", "Science du critique");
+            c3 = new Compétence("lorsque le guerrier emploie son arme de prédilection, il gagne un bonus de + 2 aux DM.", "Spécialisation");
+            c4 = new Compétence("lancez deux d20 en attaque au contact et gardez le meilleur résultat, ajoutez + 1d6 aux DM.", "Attaque parfaite");
+            c5 = new Compétence("en plus de ses actions normales, une fois par tour, lorsqu’un adversaire rate une attaque de contact contre le guerrier, le joueur obtient une attaque supplémentaire contre cet adversaire.", "Riposte");
+
+            v1 = new Voie("Voie du maître d’armes");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("en prenant cette capacité, le guerrier gagne 3 PV supplémentaires au Rang 1, puis 3 PV de plus au Rang 3 de cette Voie et enfin 3 PV au Rang 5.", "Robustesse");
+            c2 = new Compétence("le guerrier a endurci son corps.Il bénéficie d’un bonus de + 2 à la DEF.Ce bonus passe à + 4 lorsqu’il atteint le rang 4 de la voie.", "Armure naturelle");
+            c3 = new Compétence("le guerrier peut décider de ne pas attaquer lors du tour de combat pour reprendre son souffle.Il récupère alors[1d10 + niveau + Mod.de CON] PV.Attention : cette capacité ne peut être utilisée qu’une fois par combat.", "Second souffle");
+            c4 = new Compétence("le guerrier reçoit un bonus de + 5 à tous ses tests de CON.De plus, lorsqu’il tombe à 0 PV, il peut continuer à agir pendant un ultime tour avant de tomber inconscient.", "Dur à cuire");
+            c5 = new Compétence("le guerrier augmente sa valeur de CON de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé et conserver le meilleur résultat.", "Constitution héroïque");
+
+            v1 = new Voie("Voie de la résistance");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("au début de votre tour, choisissez d’appliquer jusqu’à - 1 par rang en attaque, en DEF ou aux DM et obtenez l’équivalent en bonus au choix en attaque, en DEF ou aux DM jusqu’à votre prochain tour.", "Posture de combat");
+            c2 = new Compétence("Lorsque vous combattez la même créature qu’un allié, vous gagnez + 1 en attaque et en DEF par allié au contact avec vous et avec la créature.", "Combat en phalange");
+            c3 = new Compétence("le guerrier réussit souvent des exploits physiques hors - norme.Une fois par tour, vous pouvez sacrifier 1d4 PV pour obtenir + 5 sur un test de FOR ou de DEX.Vous pouvez annoncer l’utilisation de cette capacité après avoir pris connaissance du résultat du test de caractéristique.", "Prouesse");
+            c4 = new Compétence("le guerrier effectue uniquement une attaque au contact durant ce tour. En contrepartie, il bénéficie d’une attaque supplémentaire contre tout ennemi qui se déplace à son contact.Un adversaire blessé par cette attaque voit son déplacement stoppé.", "Dernier rempart");
+            c5 = new Compétence("Le guerrier augmente sa valeur de Force de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de FOR lui est demandé et conserver le meilleur résultat.", "Force héroïque");
+
+            v1 = new Voie("Voie du soldat");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///MAGICIEN: 
+
+            p1 = new Profil("Magicien", "1d4", "", "", "", "", "\\Images;Component\\Profil\\Magicien.png");
 
             ///
 
