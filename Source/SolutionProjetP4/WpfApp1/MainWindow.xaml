@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="600" Width="1100" Background="White">
+        Title="Window1" Height="700" Width="1100" Background="White">
     <Window.Resources>
         <!--  Style du bonton -->
 
@@ -245,8 +245,8 @@
 
                 <!-- Boite de jeu 1 -->
 
-                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
-                    <StackPanel x:Name="Boite1" Margin="10" Background="White" Height="250">
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="0">
+                    <StackPanel x:Name="Boite1" Margin="10" Background="White" Height="300">
                         <Button Name="LienBoite1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite1_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus" >
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100" />
@@ -260,8 +260,8 @@
 
                 <!-- Boite de jeu 2 -->
 
-                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
-                    <StackPanel x:Name="Boite2"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="250">
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="1">
+                    <StackPanel x:Name="Boite2"  Margin="10" VerticalAlignment="Bottom" Background="White" Height="300">
                         <Button  Name="LienBoite2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite2_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>
@@ -275,8 +275,8 @@
 
                 <!-- Boite de jeu 3 -->
 
-                <Border CornerRadius="10" Background="White" Margin="30" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
-                    <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="250">
+                <Border CornerRadius="10" Background="White" Margin="20" DockPanel.Dock="Top" VerticalAlignment="Bottom" Grid.Column="2">
+                    <StackPanel x:Name="Boite3" Grid.Column="2" Margin="10" VerticalAlignment="Bottom" Background="White" Height="300">
                         <Button  Name="LienBoite3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Click="LienBoite3_Click" Keyboard.GotKeyboardFocus="LienBoite_GotKeyboardFocus">
                             <Border BorderBrush="Black" BorderThickness="3">
                                 <Image Source="{Binding Image}"  Width="100"/>

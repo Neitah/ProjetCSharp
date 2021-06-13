@@ -270,8 +270,65 @@
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
 
+                            <TextBlock x:Name="txtProfil3"  Grid.Column="2" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste3" Grid.Column="2" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            
+                            <TextBlock x:Name="txtProfil4"  Grid.Column="3" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste4" Grid.Column="3" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
+                            <TextBlock x:Name="txtProfil5"  Grid.Column="4" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste5" Grid.Column="4" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
+                            <TextBlock x:Name="txtProfil6"  Grid.Column="5" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste6" Grid.Column="5" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
+                            <TextBlock x:Name="txtProfil7"  Grid.Column="6" Grid.Row="0" Text="{Binding Nom}" TextAlignment="Center" VerticalAlignment="Center"
+                                Background="#FF64CCF1"
+                                Foreground="White"
+                                FontFamily="Arial"/>
+                            <ComboBox x:Name="liste7" Grid.Column="6" Grid.Row="1" ItemsSource="{Binding}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="{Binding Nom}" Checked="Voie_CheckedChange" Unchecked="Voie_CheckedChange"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
                         </Grid>
                         <TextBlock x:Name="ErreurVoies" FontSize="16" FontStyle="Italic"/>
