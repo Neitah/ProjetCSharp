@@ -181,7 +181,7 @@ namespace Data
 
             ///BARBARE : 
 
-            p1 = new Profil("Barbare", "1d12", "Hache à 2 mains (DM 2d6),2 javelots(DM 1d6,portée 20 m), dague(DM 1d4), armure de cuir(DEF + 2).", "Le barbare sait manier toutes les armes au contact, toutes les armes à distance (sauf les arbalètes et les armes d’une technologie trop complexe). Il peut porter jusqu’à l’armure de cuir et manier le bouclier.", "", "Le barbare est un combattant sauvage issu d’une culture primitive. Il affronte ses ennemis avec rage sans se cacher derrière une lourde armure.", "\\Images;Component\\Profil\\Barbare.png");
+            p1 = new Profil("Barbare", "1d12", "Hache à 2 mains (DM 2d6),2 javelots(DM 1d6,portée 20 m), dague(DM 1d4), armure de cuir(DEF + 2).", "Le barbare sait manier toutes les armes au contact, toutes les armes à distance (sauf les arbalètes et les armes d’une technologie trop complexe). Il peut porter jusqu’à l’armure de cuir et manier le bouclier.", "", "Le barbare est un combattant sauvage issu d’une culture primitive. Il affronte ses ennemis avec rage sans se cacher derrière une lourde armure.", "\\Images;Component\\Profil\\Barbare.png"); 
 
             c1 = new Compétence("le barbare ajoute son Mod.de FOR à son score de PV maximum ainsi qu’à ses tests de CHA et à ceux de ses alliés au contact pour les tests de négociation, de persuasion ou d’intimidation.Allez savoir pourquoi, sa simple présence donne de la force aux arguments de ses alliés…", "Argument de taille");
             c2 = new Compétence("le barbare peut temporairement décupler ses ressources physiques pour faire usage d’une force prodigieuse.Il peut ainsi soulever une charge incroyable, briser une épée, tordre des barreaux ou défoncer une porte d’un seul coup de poing.Il obtient un bonus de + 10 à son test de FOR, mais cela lui coûte 1d4 PV.", "Tour de force");
@@ -254,8 +254,85 @@ namespace Data
             p1.AjoutVoie(v1);
             stock.AjoutProfil(p1);
 
+            ///CHEVALIER: 
+
+            p1 = new Profil("Chevalier", "1d10", "Épée longue (DM 1d8), grand bouclier(DEF + 2), lance de cavalerie(DM 2d6), dague(DM 1d4), armure de demi - plaque(DEF + 6).", "Le chevalier sait manier toutes les armes de contact, mais il dédaigne les armes à distance qu’il considère comme des armes de couard.Il sait manier le bouclier et peut porter toutes les armures jusqu’à l’armure de plaques complète.", "Statistiques de la fidèle monture FOR + 4, DEX + 0, CON + 4 INT - 2, SAG + 0, CHA + 0 Init 10, DEF 13, PV 15 Ruade + 5, DM 1d6 + 4", "Le chevalier est un noble guerrier errant, monté sur un puissant destrier et protégé par une armure lourde.Il parcourt la campagne en quête de torts à redresser et d’occasions de mettre son courage à l’épreuve.", "\\Images;Component\\Profil\\Chevalier.png");
+
+            c1 = new Compétence("le chevalier possède un puissant destrier(voir marge cicontre), c’est un cheval de guerre bien dressé qui comprend les ordres simples. À cheval, il peut ajouter un déplacement de 10 m avant ou après une action normale (par exemple faire 10 m et une action limitée).La monture n’attaque que si elle est elle - même attaquée au contact par une créature.", "Fidèle monture");
+            c2 = new Compétence("lorsqu’il est en selle, le chevalier gagne un bonus de + 2 en attaque au contact, et sa monture obtient une DEF égale à celle du chevalier. Monter ou descendre de cheval est désormais une action gratuite.", "Cavalier émérite");
+            c3 = new Compétence("le chevalier obtient une monture magique, qui peut apparaître et disparaître depuis un autre plan à volonté. Il peut l’invoquer à tout moment (c’est une action limitée) et elle apparaît alors pour se mettre à son service. Lorsqu’il la laisse au moins une heure dans son plan d’origine, elle guérit l’ensemble de ses PV.", "Monture magique");
+            c4 = new Compétence("à cheval, le chevalier peut effectuer un déplacement de 40 m en ligne droite, et une attaque de contact placée au moment son choix. Il doit parcourir au moins 10 m avant d’attaquer, mais peut réaliser le reste du déplacement à sa guise.Le joueur lance deux d20 à son test d’attaque et garde le meilleur résultat, tout en ajoutant + 1d6 aux DM.Une créature située sur la trajectoire de la charge doit réussir un test de FOR difficulté 18 ou être contrainte de céder le passage en subissant 1d6 DM.Si elle réussit ce test, la Charge est bloquée et le tour du chevalier se termine.", "Charge");
+            c5 = new Compétence("le chevalier obtient une monture volante(pégase, griffon, hippogriffe, drake, etc.).Init 15, DEF 16, PV[5 × niveau], Att + 8, DM 1d6+4. Lorsqu’il est en selle, le chevalier peut faire attaquer sa monture une fois par tour(action gratuite), à la même Initiative que lui, avec un score d’attaque égal à son niveau + 3.En vol, la monture couvre une distance de 30 m par action de mouvement.Les capacités de la Monture magique s’appliquent également.", "Monture fantastique");
+
+            v1 = new Voie("Voie du cavalier");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("l’armure du chevalier est parfaitement ajustée, aussi il n’ajoute que la moitié de sa DEF à la difficulté des tests pour lesquels l’armure inflige une pénalité(de même pour les casques).Si vous n’utiliser pas la règle de pénalité des armures, le chevalier obtient un bonus de + 1 en DEF lorsqu’il porte une armure métallique.", "Armure sur mesure");
+            c2 = new Compétence("le chevalier se place de façon à dévier un coup sur son armure.À son tour, il fait seulement une action d’attaque ou une action de mouvement.Par la suite, à tout moment avant son prochain tour, il peut retrancher aux dégâts subits suite à une attaque au contact un total égal au Mod. de DEF de son armure(plus d’éventuels bonus de magie et de bouclier).", "Encaisser un coup");
+            c3 = new Compétence("le chevalier peut effectuer à chaque tour une attaque au bouclier avec un d12 au lieu du d20(action gratuite) qui inflige [1d4 + Mod.de FOR] DM.", "Coup de bouclier");
+            c4 = new Compétence("le chevalier effectue une attaque au contact avec 1d12 au lieu du d20(en ajoutant normalement son score d’attaque).Si l’attaque est réussie, il ajoute + 2d6 aux DM.Il ignore la moitié de la réduction des DM de la créature(RD), si elle possède cette capacité.", "Frappe lourde");
+            c5 = new Compétence("le chevalier augmente sa valeur de FOR de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de FOR lui est demandé et conserver le meilleur résultat.", "Force héroïque");
+
+            v1 = new Voie("Voie de la guerre");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("une fois par combat, le chevalier peut noter à part les DM subit par une attaque.Il n’en subira les effets que lorsque le combat sera terminé.", "Voie du héros");
+            c2 = new Compétence("lorsqu’il porte une armure lourde(demiplaques ou plus), le chevalier réduit les DM subits par les attaques à distances d’un montant égal au rang atteint dans cette voie.", "Piqures d’insecte");
+            c3 = new Compétence("le chevalier met un point d’honneur à combattre le leader ennemi. Lorsqu’il peut aisément être identifié dans un groupe d’au moins 4 créatures, le chevalier lui inflige + 1d6 DM par attaque.", "Laissez-le-moi");
+            c4 = new Compétence("le chevalier sait faire face à de nombreux adversaires, en tentant de profiter d’une éventuelle faille dans leur garde.Chaque fois qu’un des adversaires l’attaque, il bénéficie d’une action d’attaque immédiate contre celui - ci(valable même si la créature l’attaque plusieurs fois).", "Seul contre tous");
+            c5 = new Compétence("le chevalier augmente sa valeur de CHA de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de CHA lui est demandé et conserver le meilleur résultat.", "Charisme héroïque");
+
+            v1 = new Voie("Voie du héros");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le chevalier est immunisé aux attaques de peur et il offre un bonus de[2 + Mod.de CHA] à tous ses alliés contre ce type d’effet.", "Sans peur");
+            c2 = new Compétence("une fois par tour, le chevalier peut encaisser un coup à la place d’un allié à ses cotés. Il utilise sa DEF plutôt que celle de la cible initiale et retranche aux DM son rang dans la voie.", "Intercepter");
+            c3 = new Compétence("une fois par tour, le chevalier permet à un allié qui combat le même adversaire que lui de relancer le d20 d’un test d’attaque, s’il s’agissait d’un d’échec.", "Exemplaire");
+            c4 = new Compétence("le chevalier donne des ordres tactiques pertinents au coeur de la bataille. Une fois par tour, il octroie une action supplémentaire gratuite à un allié en vue(une action de mouvement ou une action d’attaque, mais pas une action limitée).", "Ordre de bataille");
+            c5 = new Compétence("une fois par combat, à l’initiative du chevalier, lui - même et tous ses alliés en vue bénéficient immédiatement d’un déplacement d’un maximum de 20 m en ligne droite, suivi d’une action d’attaque avec un bonus de + 3 au test de réussite et + 1d6 aux dégâts.Résolvez d’abord tous les déplacements en commençant par le chevalier, puis par ordre d’initiative.Ensuite effectuez toutes les attaques dans le même ordre.", "Charge fantastique");
+
+            v1 = new Voie("Voie du meneur d’homme");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le chevalier sait lire et écrire, il gagne + 1 par rang dans la voie à tous les tests d’INT et de CHA.", "Éduqué");
+            c2 = new Compétence("le chevalier obtient un bonus égal à[1 + Mod.de CHA] en Initiative et en DEF.De plus, il bénéficie d’un bonus de + 5 aux tests de CHA réalisés pour donner des ordres ou intimider.", "Autorité naturelle");
+            c3 = new Compétence("le chevalier dispose d’un écuyer à son service(Initiative 14, Défense 14, PV 13, Att + 3, DM 1d8 + 1).Il est absolument loyal à son maître et lui sert de serviteur, il s’occupe de sa monture et de son équipement, prépare le campement, panse les blessures, etc. Grâce à l’écuyer, les armes du chevalier sont parfaitement affûtées et infligent des critiques sur 19 ou 20.De plus, le chevalier, sa monture et jusqu’à[1 + Mod.de CHA] alliés récupèrent 2d6 PV supplémentaires chaque nuit s’ils profitent des services de l’écuyer. Tous les frais sont pris en charge par la capacité. Si l’écuyer vient à mourir, le chevalier en prendra un autre à son service au niveau suivant.", "Écuyer");
+            c4 = new Compétence("le chevalier ajoute +1d6 aux DM contre la piétaille.S’il y a au moins 4 créatures aux statistiques semblables impliquées dans le combat, elles sont assimilées à de la piétaille (même si leur nombre est par la suite réduit à moins de 4 au cours du combat).Les grandes créatures et les cavaliers ne sont jamais considérés comme de la piétaille.", "Massacrer la piétaille");
+            c5 = new Compétence("le chevalier possède les moyens et la culture nécessaire pour obtenir une formation dans n’importe quel domaine qui lui sied.Choisissez une capacité de rang 1 à 3 dans n’importe quel profil issu de la famille(voir page 82, Voies de prestige) des combattants ou des voyageurs.", "Formation d’élite");             v1 = new Voie("Voie de la noblesse");
+            
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
 
 
+
+            ///CHEVALIER: 
+
+            p1 = new Profil("Druide", "1d8", "Bâton ferré (DM 1d6), dague (DM 1d4), arc court(DM 1d6, portée 30 m), armure de cuir (DEF + 2).", "Le druide sait manier la dague, le bâton, l’épieu, le javelot et l’arc court.Il peut porter l’armure de cuir et peut manier le petit bouclier en bois(DEF + 1).", "Panthère FOR + 2, DEX + 4 *, CON + 2, INT - 3, SAG + 2 *, CHA - 2 Init 18, DEF 16, PV[niveau x 4], Attaque au contact[niveau du druide], DM 1d6 + 2 Animal fabuleux FOR + 5, DEX + 4 *, CON + 5, INT - 3, SAG + 2 *, CHA - 2 DEF 18, DM 1d6 + 5", "Le druide est un prêtre de la nature qui défend sa pureté originelle et tire ses pouvoirs de la vie, des animaux et des plantes.", "\\Images;Component\\Profil\\Druide.png");
 
             ///
 
@@ -272,7 +349,7 @@ namespace Data
             v1.AjoutCompétence(c4);
             v1.AjoutCompétence(c5);
             p1.AjoutVoie(v1);
-            stock.AjoutProfil(p1);
+            ///stock.AjoutProfil(p1);
 
             ///
 
