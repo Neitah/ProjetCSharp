@@ -20,8 +20,8 @@ namespace Data
             /// Boite de jeu :
 
             BoiteDeJeu b1 = new BoiteDeJeu("La boite de jeu contient tout le nécessaire pour vous lancer à l’aventure avec vos amis ou votre famille !", "Amazon.fr", "Initiation au jeu d'aventure", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventure.png");
-            BoiteDeJeu b2 = new BoiteDeJeu("Description de la boite 2", "Amazon.fr", "Nom de la boite 2", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventureVengeance.png");
-            BoiteDeJeu b3 = new BoiteDeJeu("Description de la boite 3", "Amazon.fr", "Nom de la boite 3", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuCthulhu.png");
+            BoiteDeJeu b2 = new BoiteDeJeu("Continuez l'aventure ! Grâce à Chroniques Oubliées, partagez des moments inoubliables et découvrez la convivialité unique du jeu de rôle, le plus passionnant de tous les jeux de société ! ", "Amazon.fr", "Initiation au jeu d'aventure extension vengeance", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuInitationAventureVengeance.png");
+            BoiteDeJeu b3 = new BoiteDeJeu("Découvrez le jeu de rôle grâce à Chroniques Oubliées Cthulhu ! Partagez des moments inoubliables dans l'univers de H.P. Lovecraft et découvrez la convivialité unique du jeu de rôle, le plus passionnant de tous les jeux de société !", "Amazon.fr", "Chroniques Oubliées Cthulhu", "\\Images;Component\\BoiteDeJeu\\boiteDeJeuCthulhu.png");
             stock.AjoutBoite(b1);
             stock.AjoutBoite(b2);
             stock.AjoutBoite(b3);
@@ -330,11 +330,244 @@ namespace Data
 
 
 
-            ///CHEVALIER: 
+            ///DRUIDE: 
 
             p1 = new Profil("Druide", "1d8", "Bâton ferré (DM 1d6), dague (DM 1d4), arc court(DM 1d6, portée 30 m), armure de cuir (DEF + 2).", "Le druide sait manier la dague, le bâton, l’épieu, le javelot et l’arc court.Il peut porter l’armure de cuir et peut manier le petit bouclier en bois(DEF + 1).", "Panthère FOR + 2, DEX + 4 *, CON + 2, INT - 3, SAG + 2 *, CHA - 2 Init 18, DEF 16, PV[niveau x 4], Attaque au contact[niveau du druide], DM 1d6 + 2 Animal fabuleux FOR + 5, DEX + 4 *, CON + 5, INT - 3, SAG + 2 *, CHA - 2 DEF 18, DM 1d6 + 5", "Le druide est un prêtre de la nature qui défend sa pureté originelle et tire ses pouvoirs de la vie, des animaux et des plantes.", "\\Images;Component\\Profil\\Druide.png");
 
+            c1 = new Compétence("le druide peut communiquer avec les animaux qui, en général, se comportent avec lui de manière amicale.Il gagne un bonus de + 2 par rang à tous les tests destinés à influencer un animal.La communication reste primitive et limitée à l’intelligence de l’animal et à son point de vue(prédateur, proie, etc.).", "Langage des animaux");
+            c2 = new Compétence("en réussissant un test d’attaque magique (portée 20 m), le druide libère sur sa cible une nuée d’insectes volants qui piquent, aveuglent et la suivent pendant[5 + Mod.de SAG] tours.La victime subit 1 point de DM par tour et un malus de - 2 à toutes ses actions. Les DM de zone détruisent la nuée.", "Nuée d’insectes");
+            c3 = new Compétence("le druide reçoit un oiseau de proie comme compagnon animal.Il possède un lien télépathique avec lui et peut percevoir par ses sens avec un bonus de + 5 aux tests basés sur la perception.Aigle : DEF 15, PV[il les partage avec ceux de son maître].Attaque de contact = [attaque magique du druide], DM 1d4.", "Le guetteur");
+            c4 = new Compétence("lorsqu’il est sous l’effet de ce sort, le druide prend les traits d’un fauve ou d’un loup.Il gagne son Mod.de SAG en Initiative, en attaque et aux DM et peut voir dans la nuit(comme un elfe) pendant[5 + Mod.de SAG] tours.", "Masque du prédateur");
+            c5 = new Compétence("le druide peut prendre la forme d’un animal d’une taille inférieure ou égale à la sienne.Il conserve sa DEF et ses PV, il acquiert les Carac.et les capacités naturelles de la forme choisie(le vol pour un oiseau, la respiration aquatique pour le poisson, etc.).Le druide peut reprendre sa forme humaine lorsqu’il le désire(L).", "Forme animale");
+
+            v1 = new Voie("Voie des animaux");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le druide gagne +1 par rang dans la voie en Initiative et aux tests de course, d’escalade ou de saut.", "Vitesse du félin");
+            c2 = new Compétence("le druide apprivoise une panthère(ou un puma) qui lui obéit au doigt et à l’oeil(voir marge).", "Panthère");
+            c3 = new Compétence("le druide parcourt jusqu’à 30 m et bénéficie d’un bonus de + 5 au test d’attaque et de + 1d6 aux DM contre sa cible.Il doit se déplacer d’au minimum 5 m en ligne droite pour faire cette attaque, qui ne peut par ailleurs être réalisée qu’à son premier tour du combat.", "Attaque bondissante");
+            c4 = new Compétence("la panthère devient un animal fabuleux(voir marge), ou est remplacée par un félin plus grand(tigre, lion).Lorsque le druide atteint le niveau 8, les DM passent à 2d6 + 5.Au niveau 12, le félin peut utiliser Attaque bondissante. Le druide peut également communiquer avec son félin par télépathie, et le guérir à distance en dépensant ses propres PV (-1 PV au druide par PV octroyé au félin).", "Grand félin");
+            c5 = new Compétence("cette capacité ne peut être utilisée que sept fois, et pas plus d’une fois par niveau. Lorsque que les PV du druide tombent à 0 ou qu’il meurt, le druide peut choisir d’ignorer ce qui a provoqué la mort! Le MJ et le joueur doivent se mettre d’accord et trouver une raison plausible(ou pas!) pour expliquer la survie du personnage, et le faire réapparaître immédiatement ou un peu plus tard dans l’aventure si nécessaire.", "Les sept vies du chat");
+
+            v1 = new Voie("Voie du fauve");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);   
+
+            c1 = new Compétence("le druide obtient un bonus de + 2 par rang dans la voie à tous les tests basés sur la survie en milieu naturel(survie, vigilance, discrétion, etc.).", "Maître de la survie");
+            c2 = new Compétence("non seulement le druide ne subit aucune pénalité de déplacement en terrain difficile(neige, boue, broussailles, pente abrupte, etc.) mais en plus, il obtient un bonus de + 2 en attaque et en DEF lors d’un combat dans ces conditions.", "Marche sylvestre");
+            c3 = new Compétence("le druide obtient une réduction de DM égal à son [Rang x 2] contre toutes les sources de dégâts « naturels » : froid, chaleur, chutes, poisons… mais aussi aux DM provoqués par les animaux ou les insectes(même géants).", "Résistant");
+            c4 = new Compétence("le druide combat avec les deux extrémités de son bâton de bois noueux. Lorsqu’il utilise cette capacité, il effectue deux attaques de contact infligeant[1d6 DM + Mod.de FOR ou de DEX](au choix) par attaque.", "Bâton de druide");
+            c5 = new Compétence("le druide augmente sa valeur de CON de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé et conserver le meilleur résultat.", "Constitution héroïque");
+
+            v1 = new Voie("Voie de la nature");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le druide doit se trouver devant un buisson ou un arbre vivant.Son incantation fait pousser[1d6 + Mod.de SAG] fruits qu’il peut cueillir.Chaque fruit offre l’équivalent d’un repas et rend[1d6 + niveau du druide] PV à celui quile consomme.Les effets de ces fruits ne fonctionnent qu’une fois par jour et par personnage.", "Baies magiques");
+            c2 = new Compétence("la forêt s’éveille dans un rayon d’1 km par rang et devient une alliée du druide pendant les 12 prochaines heures. Dans ce périmètre, les ennemis du druide sont désorientés et gênés par les branches et les racines.Ils divisent leur déplacement par deux et subissent une pénalité de - 5 en Initiative et à tous les tests de survie, d’orientation, de perception ou de discrétion.Si deux druides essayent d’influencer la forêt, c’est celui dont le niveau est le plus élevé qui l’emporte.", "Forêt vivante");
+            c3 = new Compétence("la cible touchée par le druide guérit 3 PV par tour pendant[niveau du druide + Mod.de SAG] tours.Ce sort ne peut pas affecter une créature plus d’une fois par jour.", "Régénération");
+            c4 = new Compétence("une fois par combat, le druide peut se transformer en arbre de petite taille(environ 4 m de hauteur) pendant[5 + Mod.de SAG] tours.Il prend les mêmes caractéristiques que l’arbre animé (voir plus loin), mais conserve ses propres PV.Sous cette forme, il ne peut pas parler mais peut utiliser les sorts des voies du protecteur et des végétaux.", "Forme d’arbre");
+            c5 = new Compétence("le druide augmente sa valeur de SAG de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de SAG lui est demandé et conserver le meilleur résultat.", "Sagesse héroïque");
+
+            v1 = new Voie("Voie du protecteur");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("la peau du druide prend la consistance de l’écorce.Il gagne + 1 en DEF par rang dans la voie pendant[5 + Mod.de SAG] tours.", "Peau d’écorce");
+            c2 = new Compétence("le druide peut commander à la végétation de pousser et bloquer ses ennemis(mais pas ses alliés) dans une zone de 10 m de diamètre(portée 20 m) pendant[5 + Mod.de SAG] tours.Entravées, les cibles subissent un malus de - 2 en attaque et en DEF, et ne peuvent pas se déplacer. Chaque tour, une créature peut se libérer avec un test de FOR diffi culté[10 + Mod.de SAG].", "Prison végétale");
+            c3 = new Compétence("une fois par combat, le druide peut animer un arbre en le touchant.Il combat pendant [niveau du druide] tours. Arbre animé: Init 7, DEF 13, PV [rang x 10], attaque de contact = [niveau du druide], DM 1d6 + 3, Déplacement 10 m par action de mouvement.Réduction de DM de 10 sauf contre les armes tranchantes et le feu.", "Animation d’un arbre");
+            c4 = new Compétence("une fois par combat, le druide peut lancer un gland sur une cible(portée 10 m). En cas d’attaque magique réussie, la victime se transforme en statue de bois pendant[2d6 + Mod.de SAG] tours.Sous cette forme elle ne peut agir et ne ressent rien.Sa DEF passe à 10 mais elle gagne une réduction des DM de 10.Le sort s’achève dès que la cible perd plus de 10 PV.", "Gland de pouvoir");
+            c5 = new Compétence("une fois par jour, le druide peut pénétrer dans le tronc d’un gros arbre et sortir de celui d’un autre arbre appartenant à la même forêt et situé à une distance maximum de [Mod.de SAG] x 10 km. 4 41", "Porte végétale");
+
+            v1 = new Voie("Voie des végétaux");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+
+            ///ENSORCELEUR: 
+
+            p1 = new Profil("Ensorceleur", "1d4", "Bâton ferré (DM 1d6), dague (DM 1d4), potion de soins (guérit 1d8 PV).", "L’ensorceleur sait manier la dague et le bâton.Il ne peut porter aucune armure(sauf si elle est faite de tissu) et ne peut pas manier le bouclier.", "", "L’ensorceleur tire son pouvoir d’un talent inné pour la magie.Il pratique une magie subtile à base de tromperie et de contrôle, et possède peu de sorts de destruction massive.", "\\Images;Component\\Profil\\Ensorceleur.png");
+
             ///
+
+            c1 = new Compétence("l’ensorceleur chuchote un message d’une dizaine de mots qui voyage jusqu’à son destinataire.Il peut entendre sa réponse immédiatement.La portée est de 100 m par Rang dans la voie et le personnage doit connaître la cible ou la voir.", "Murmures dans le vent");
+            c2 = new Compétence("l’ensorceleur se charge d’énergie électrique pour[5 + Mod.de CHA] tours.Toute créature qui le blesse ou le touche reçoit une décharge infligeant 1d6 DM.Il peut également délivrer une décharge électrique (attaque magique, portée 10 m) infligeant[1d6 + Mod.de CHA] DM.", "Sous tension");
+            c3 = new Compétence("l’ensorceleur peut déplacer dans les airs un objet inerte ou une cible volontaire(par exemple luimême) dont le poids n’excède pas 50 kg par Rang, à une portée de 20 m et pendant [5 + Mod.de CHA] tours.L’objet peut être déplacé de 10 m par tour au prix d’une action de mouvement.Il est possible de faire tomber un objet sur une cible surprise(DM 1d6 tous les 50 kg).", "Télékinésie");
+            c4 = new Compétence("l’ensorceleur produit un éclair sur une ligne de 10 mètres.Toutes les créatures sur la trajectoire sont soumises à un test d’attaque magique et subissent[4d6 + Mod.de CHA] DM en cas de réussite. Les victimes peuvent tenter un test de DEX difficulté[12 + Mod.de DEX] pour ne subir que la moitié des DM.", "Foudre");
+            c5 = new Compétence("l’ensorceleur et tout son équipement deviennent translucides et intangibles pendant[5 + Mod.de CHA] tours.Sous cette forme, il peut passer à travers murs et obstacles, et ne peut subir aucun DM physiques.", "Forme éthérée");
+
+            v1 = new Voie("Voie de l’air");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("l’ensorceleur sait toujours légèrement en avance ce qui va arriver.Il gagne un bonus de + 1 par Rang dans la voie en Initiative et en DEF, ainsi qu’un bonus de + 2 par Rang à tous les tests pour éviter d’être surpris.", "6ème sens");
+            c2 = new Compétence("pendant [5 + Mod. de CHA] tours, l’ensorceleur détecte les créatures invisiblesou cachées à moins de 30 mètres et détecter si un sort de Clairvoyance affecte l’endroit.Aveuglé, ce sort lui permet de voir normalement.", "Détection de l’invisible");
+            c3 = new Compétence("l’ensorceleur peut voir et entendre à distance ce qui se passe dans un lieu qu’il connait, tant qu’il reste concentré(action limitée à chaque tour).Les créatures présentes ont droit à un test de SAG difficulté[12 + Mod.de CHA] : en cas de réussite, elles se sentent observées.", "Clairvoyance");
+            c4 = new Compétence("une fois par combat, à la fin d’un tour, le joueur peut décider que tout ce qui c’est passé durant ce tour n’était que la vision d’un futur possible. On rejoue alors le tour depuis le début: les autres personnages ne peuvent pas changer leurs actions, contrairement à l’ensorceleur qui bénéficie d’un bonus de + 10 en Initiative et en DEF.", "Prescience");
+            c5 = new Compétence("l’ensorceleur augmente ses valeurs de SAG et d’INT de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de SAG ou d’INT lui est demandé et garder le meilleur résultat.", "Hyperconscience");
+
+            v1 = new Voie("Voie de la divination");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("l’ensorceleur donne un ordre simple(mais pas dangereux pour elle) que la victime doit pouvoir comprendre.Il doit réussir un test d’attaque magique opposé avec la cible (contre attaque au contact si la créature n’en a pas) à une portée de 20 mètres. En cas d’échec, la cible doit exécuter l’ordre pendant son prochain tour.", "Injonction");
+            c2 = new Compétence("[1d6 + Mod. de CHA] cibles vivantes dans une zone de 10 m de diamètre(portée 20 m) et dont le score max de PV ne dépasse pas le score d’attaque magique de l’ensorceleur * sombrent dans l’inconscience pendant[5 + Mod.de CHA] minutes.Il est possible de les réveiller en les giflant(action d’attaque).", "Sommeil");
+            c3 = new Compétence("en réussissant un test d’attaque magique(portée 20 m), l’ensorceleur désoriente sa cible pendant [3 + Mod.de CHA] tours.Chaque tour, lancer 1d6 : 1-3 la victime n’agit pas, 4 - 6 elle attaque la créature la plus proche(au hasard).Chaque fin de tour, elle fait un test de SAG difficulté [10 + Mod.de CHA] pour mettre fin au sort.", "Confusion");
+            c4 = new Compétence("si l’ensorceleur réussit un test d’attaque magique (portée 10 m) contre le score max de PV d’une cible humanoïde, celle - ci se comporte comme un ami de longue date tant qu’elle n’est pas attaquée. Elle peut résister au sort avec un test de SAG difficulté[12 + Mod.de CHA], renouvelable une fois par jour.", "Amitié");
+            c5 = new Compétence("en réussissant un test d’attaque magique(portée 20 m) en opposition contre un test d’attaque magique de la cible(ou d’attaque au contact si la créature n’en a pas), l’ensorceleur prend contrôle de son esprit pendant[1d4 + Mod.CHA] minutes.Son propre corps devient inactif.La victime peut résister au sort avec un test de SAG difficulté[10 + Mod.de CHA] à chaque fois qu’elle subit des DM.Si la créature meurt pendant la domination, l’ensorceleur réintègre son corps et subit 1d6 DM.", "Domination");
+
+            v1 = new Voie("Voie de l’envoûteur");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("pendant [5 + Mod.de CHA] tours, lorsqu’une attaque le touche, l’ensorceleur lance 1d6 : sur 5 - 6, il ne subit pas les DM.", "Image décalée");
+            c2 = new Compétence("l’ensorceleur crée une illusion visuelle et sonore immobile d’une durée de[5 + Mod.de CHA] minutes (ou tours si l’illusion est animée). Le volume maximum de l’illusion est de 10 m de coté par rang dans la voie (portée 500 m).Divisez ces paramètres par 10 si l’illusion est animée.Interagir avec l’illusion la fait disparaître.", "Mirage");
+            c3 = new Compétence("l’ensorceleur peut prendre l’apparence d’une créature de taille proche(+ou - 50 cm) qu’il voit au moment de l’incantation. Durée[5 + Mod.de CHA] minutes.Toucher l’ensorceleur(une attaque ou non) met fi n au sort.", "Imitation");
+            c4 = new Compétence("sur une attaque magique réussie(portée 20 m), l’ensorceleur crée un double translucide de la cible pendant[5 + Mod.de CHA] tours.Le double est sous le contrôle de l’ensorceleur.Il possède les mêmes caractéristiques que l’original mais seulement la moitié de ses PV et tous les DM qu’il inflige sont divisés par deux.Il disparaît si ses PV tombent à 0.Une créature ne peut être dédoublée qu’une fois par combat.", "Dédoublement");
+            c5 = new Compétence("ce sort invoque les pires terreurs d’une créature vivante et lui fait croire à sa propre mort.L’ensorceleur doit réussir un test d’attaque magique(portée 20 m) en opposition à un test d’attaque magique de la cible(ou attaque au contact si la créature n’en a pas).La victime fait un test de SAG difficulté[10 + Mod.de CHA] pour résister.En cas d’échec, elle tombe à 0 PV.En cas de succès, elle perd l’équilibre et tombe par terre.Une créature ne peut être la cible de ce sort qu’une fois par jour, et l’ensorceleur ne peut pas affecter un personnage ou une créature de niveau supérieur au sien.", "Tueur fantasmagorique");
+
+            v1 = new Voie("Voie des illusions");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("l’ensorceleur choisit un petit animal(corbeau, chat, furet, serpent…).Il peut utiliser les sens de son familier et communiquer avec lui à distance illimitée.Il gagne de plus + 2 en Initiative lorsque son familier est en vue.Familier : DEF[ensorceleur], Init[ensorceleur], PV[il les partage avec ceux de son maître], ils forment une cible unique pour les attaques de zone.FOR - 4, DEX + 3, CON 0, INT - 2, SAG + 1, CHA - 2.", "Familier");
+            c2 = new Compétence("ce sort crée une force invisible pendant [5 + Mod.de CHA] minutes.Le serviteur peut effectuer à distance des tâches simples ne nécessitant pas de test de réussite et aucun score de caractéristique supérieur à 10 (portée 20 m).", "Serviteur invisible");
+            c3 = new Compétence("l’ensorceleur crée un mur de force indestructible (portée 10 m, maximum 5 m de haut et 10 m de long), ou bien un hémisphère de 3 m de rayon centré sur lui - même.Le sort dure pendant[5 + Mod.de CHA] tours.", "Mur de force");
+            c4 = new Compétence("le sort crée une lame d’énergie lumineuse pendant[5 + Mod.de CHA] tours. Dès le premier tour, l’ensorceleur peut lui ordonner d’attaquer une cible de son choix(action gratuite, portée 20 m).L’attaque magique de la lame = attaque magique de l’ensorceleur, [1d8 + Mod de CHA] DM.", "Arme dansante");
+            c5 = new Compétence("l’ensorceleur augmente sa valeur de conserver meilleur résultat.CHA de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de CHA lui est demandé et conserver le meilleur résultat.", "Charisme héroïque");
+
+            v1 = new Voie("Voie de l’invocation");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+
+            ///FORGESORT: 
+
+            p1 = new Profil("Forgesort", "1d6", "Dague (DM 1d4), bâton ferré (DM 1d6), marteau.", "Le forgesort sait manier la dague, le bâton, le marteau et l’arbalète légère.Il peut porter une armure de cuir simple seulement et ne peut pas manier de bouclier.", "Science, pas science ? Ce profil est particulièrement adapté aux univers où le développement technologique n’est pas en reste (tendance Steampunk, Les Royaumes d’Acier ou Eberron par exemple).Dans ce genre d’univers, vous pouvez le typer plus fortement en renommant la voie du Golem en voie du Méca et plutôt que des sorts, tous les effets sont obtenus par de nombreux objets étranges portés, ingérés ou greffés…", "À la fois artisan et enchanteur, artiste et magicien, le forgesort lie les énergies occultes à la matière qu’il façonne pour créer des artefacts magiques ou des breuvages aux propriétés fantastiques.", "\\Images;Component\\Profil\\Forgesort.png");
+
+            ///
+
+            c1 = new Compétence("le forgesort crée un grand bâton magique.Avec cette arme à deux mains, il gagne un bonus de + 1 aux tests d’attaque au contact et inflige[1d6 + Mod.d’INT] DM magiques. A partir du rang 3, au prix d’une action limitée, il peut utiliser son score d’attaque magique pour une attaque au contact et infliger[2d6 + Mod.d’INT] DM dans un éclair d’énergie!", "Bâton de mage");
+            c2 = new Compétence("le forgesort scelle une porte ou un coffre pour une durée en minutes égale à sa valeur d’INT. Seul un mot de commande qu’il choisit permet d’ouvrir l’objet.Celui - ci peut toujours être brisé par la force, mais il bénéficie d’un bonus de + 5 en solidité et en RD(réduction des DM) pour toute la durée du sort.", "Blocage");
+            c3 = new Compétence("le forgesort possède un sac dans lequel il peut entreposer 50 kg de matériel par rang dans la voie, tandis que le sac semble toujours ne peser qu’un kilo.Le sac ne fonctionne pas si on tente d’y mettre une créature vivante. Le sac est de plus capable de fournir au forgesort les objets qu’il désire.Il peut en retirer une pelle, une corde, une épée outout objet dont la valeur ne dépasse pas 20 pa, le poids 50 kg, la circonférence 1 m et le volume 1 m3.Ces objets ont hélas la propriété de disparaître au bout d’une heure.De ce fait, la nourriture magique retirée du sac ne nourrit pas vraiment celui qui la consomme.", "Sac sans fond");
+            c4 = new Compétence("le forgesort frappe le sol de son bâton et provoque une onde dévastatrice dans un rayon de 10 m autour de lui.Toutes les créatures dans la zone subissent automatiquement [2d6 + Mod.d’INT] DM et doivent réussir un test de FOR difficulté[10 + Mod. d’INT] pour ne pas tomber au sol.", "Frappe des arcanes");
+            c5 = new Compétence("le forgesort peut enchanter des objets.Il peut créer une arme qui donne un bonus de + 1 aux tests d’attaque et aux DM ou une armure qui donne un bonus de + 1 en DEF et réduit le malus d’encombrement d’autant.Le bonus passe à + 2 lorsque le personnage atteint le niveau 8 puis augmente de + 1 tous les 3 niveaux(+5 au niveau 17).Il faut un mois de travail et la dépense de 100 po par point de bonus pour créer l’objet.A la fin, le forgesort doit réaliser un test d’INT difficulté[10 + 3 x bonus de l’objet] avec un bonus égal au rang atteint dans la voie du métal.En cas d’échec, l’objet n’est pas enchanté et il faut recommencer(l’argent est perdu!). En cas de succès, le forgesort doit insuffler un peu d’énergie vitale dans l’objet: il sacrifie 1 PV qu’il perd définitivement sur son score de PV maximum.", "Artéfact majeur");
+
+            v1 = new Voie("Voie des artefacts");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("un breuvage étrange qui guérit[1d4 + rang] PV et permet de gagner un bonus de + 3 aux[rang + 1] prochains tests de réussite effectués(dans une limite de temps de 12 heures).", "Fortifiant");
+            c2 = new Compétence("le forgesort lance la fiole à une distance maximum de 10 m, grâce à une action d’attaque(réussite automatique).Le contenu explose dans un rayon de 3 m en infligeant 1d6 DM par rang dans la voie.Un test de DEX difficulté [10 + Mod.d’INT] réussi permet aux victimes de diviser les DM par 2.", "Feu grégeois");
+            c3 = new Compétence("le forgesort peut préparer un élixir qui soigne[3d6 + Mod.d’INT] PV ou un empoisonnement.", "Élixir de guérison");
+            c4 = new Compétence("le forgesort peut préparer une potion d’Agrandissement, de Forme gazeuse, de Protection contre les éléments, d’Armure de mage ou de Chute ralentie(voir les voies de magicien).", "Potion magique");
+            c5 = new Compétence("le forgesort peut préparer une potion d’Invisibilité, de Vol, de Respiration aquatique, de Flou ou de Hâte.", "Élixirs magique");
+
+            v1 = new Voie("Voie des élixirs");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le forgesort obtient un bonus de + 2 par rang dans la voie aux tests d’orfèvrerie ou de forge. Au prix d’une action de mouvement, il peut enflammer son marteau ou son bâton pour une durée de[5 + Mod.d’INT] tours et gagne alors un bonus aux DM de + 1 par rang dans la voie avec cette arme(DM de feu).", "Forgeron");
+            c2 = new Compétence("le forgesort doit réussir un test d’attaque magique(portée 20 m) pour faire chauffer un objet métallique que sa cible transporte pendant[5 + Mod. d’INT] tours.S’il s’agit d’une arme, elle inflige 1 point de DM par tour à son porteur et un malus de - 2 aux tests d’attaque.S’il s’agit d’une armure, elle inflige 1d4 DM par tour à son porteur.La victime peut se débarrasser précipitamment de son armure au prix d’une action limitée.", "Métal brûlant");
+            c3 = new Compétence("le forgesort contrôle le magnétisme autour de lui pendant[3 + Mod.d’INT] tours.Il gagne un bonus de + 5 en DEF et divise par 2 les DM de toutes les armes ou projectiles métalliques.", "Magnétisme");
+            c4 = new Compétence("sur un test d’attaque magique réussi, le forgesort déforme une pièce d’équipement métallique portée par sa cible.Une arme devient inutilisable et bonne pour le rebut, une armure inflige une pénalité de - 5 à tous les tests de son porteur. La victime peut se débarrasser de son armure au prix d’une action limitée.Si l’objet est magique, le sort ne fait effet que 1d4 tours et ne peut viser à nouveau l’objet pour 24 heures.Appliqué à une structure(par exemple une porte blindée), ce sort inflige 4d6 DM en divisant par 2 sa RD(réduction des DM).", "Métal hurlant");
+            c5 = new Compétence("le forgesort est habitué aux travaux et à la chaleur de la forge. Il réduit tous les DM de feu subits de 5 points et augmente sa valeur de CON de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé, en gardant le meilleur résultat.", "Endurer");
+
+            v1 = new Voie("Voie du métal");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le forgesort remplace la force brutale par un peu de réflexion. Il peut effectuer un test d’INT au lieu d’un test de FOR (exemple : il utilise un levier pour déplacer une lourde charge).Il obtient un bonus de +2 par rang dans la voie à tous les tests de bricolage ou de science.", "Grosse tête");
+            c2 = new Compétence("le golem est une créature humanoïde fabriquée par le forgesort pour lui servir de serviteur et de garde du corps. Créature non - vivante, Init[forgesort], DEF 14, PV[4 x niveau], Attaque[niveau + Mod. de FOR], DM 1d8 + 1.FOR + 1, DEX - 1, CON + 10, INT - 4, SAG - 3, CHA - 4.Le forgesort peut réparer le golem au rythme de[1d6 par rang + Mod. d’INT] PV par heure.", "Golem");
+            c3 = new Compétence("une fois par tour, s’il est au contact d’un personnage, le golem peut s’interposer et subir les DM d’une attaque à sa place.", "Protecteur");
+            c4 = new Compétence("le forgesort peut améliorer son golem en choisissant une option parmi: Armure : +5 en DEF ; Félin: +3 Mod. de DEX; Baliste: portée 20 m, 2d6 DM; Taille: +10 PV et +1 Mod.de FOR; Vol: des « sauts » de 40 m en action limitée; Cerveau amélioré : +2 Mod.d’INT, SAG, CHA, doué de parole; Puissant: +2 Mod.de FOR; Arme à deux mains : +1d8 aux DM au contact. Le joueur peut choisir une option de plus lorsque son personnage atteint les niveaux 9, 13 et 17.Les options peuvent êtres", "Golem supérieur");
+            c5 = new Compétence("le forgesort augmente sa valeur d’INT de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test d’INT lui est demandé et garder le meilleur résultat.", "Intelligence héroïque");
+
+            v1 = new Voie("Voie du golem");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le forgesort inscrit des runes de protection sur l’ensemble de son équipementet parfois jusque sur sa peau.Il obtient un bonus de + 1 en DEF par rang dans la voie.", "Runes de défense");
+            c2 = new Compétence("en réalisant un rituel de 5 minutes, le forgesort enchante un bijou pour 24 h.Celui - ci permet de relancer un d20 une fois par combat sur un test d’attaque, de FOR, DEX ou CON. Un seul bijou de ce type peut être porté.", "Rune d’énergie");
+            c3 = new Compétence("en réalisant un rituel de 5 minutes, le forgesort enchante une armure pour 24 h.Celle - ci permet d’ignorer les DM d’une attaque une fois par combat.", "Rune de protection");
+            c4 = new Compétence("en réalisant un rituel de 5 minutes, le forgesort enchante une arme pour 24 h.Celle - ci permet d’infliger les DM maximum une fois par combat.", "Rune de puissance");
+            c5 = new Compétence("le forgesort peut lier un sort à un objet par une inscription runique.S’il ne connaît pas lui - même le sort, il doit se faire aider par un personnage qui sait le lancer.Le sort ainsi lié peut être utilisé trois fois par jour.Le processus estle même que pour fabriquer une arme ou une armure magique, remplacez le bonus par le rang du sort à lier.Il peut aussi lier certains sorts à une potion (en général les sorts dont le personnage lui - même est la cible), mais pas au - delà de son rang dans la voie des élixirs, au prix de un jour de travail et 10 pa par rang du sort.Le PV perdu pour la création d’une potion est récupéré dès que la potion est consommée ou au plus tard après 1 an.", "Rune de pouvoir");
+
+            v1 = new Voie("Voie des runes");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///GUERRIER: 
+
+            p1 = new Profil("Guerrier", "1d10", "", "", "", "", "\\Images;Component\\Profil\\Guerrier.png");
+
+            ///
+
+            /// ///
 
             c1 = new Compétence("", "");
             c2 = new Compétence("", "");

@@ -34,8 +34,24 @@ namespace WpfApp1
             lesVoies = new List<Voie>();
             txtProfil1.DataContext = sa.lesProfils[0];
             liste1.ItemsSource = sa.lesProfils[0].LesVoies;
+
             txtProfil2.DataContext = sa.lesProfils[1];
             liste2.ItemsSource = sa.lesProfils[1].LesVoies;
+
+            txtProfil3.DataContext = sa.lesProfils[2];
+            liste3.ItemsSource = sa.lesProfils[2].LesVoies;
+
+            txtProfil4.DataContext = sa.lesProfils[3];
+            liste4.ItemsSource = sa.lesProfils[3].LesVoies;
+
+            txtProfil5.DataContext = sa.lesProfils[4];
+            liste5.ItemsSource = sa.lesProfils[4].LesVoies;
+
+            txtProfil6.DataContext = sa.lesProfils[5];
+            liste6.ItemsSource = sa.lesProfils[5].LesVoies;
+
+            txtProfil7.DataContext = sa.lesProfils[6];
+            liste7.ItemsSource = sa.lesProfils[6].LesVoies;
         }
 
 
