@@ -31,7 +31,19 @@
     <None Remove="MainWindow\wallpaperTest1.jpg" />
     <None Remove="profilhybride.jpg" />
     <None Remove="Profil\Arquebusier.PNG" />
+    <None Remove="Profil\Barbare.png" />
     <None Remove="Profil\Barde.png" />
+    <None Remove="Profil\Chevalier.png" />
+    <None Remove="Profil\Druide.png" />
+    <None Remove="Profil\Ensorceleur.png" />
+    <None Remove="Profil\Forgesort.png" />
+    <None Remove="Profil\Guerrier.png" />
+    <None Remove="Profil\Magicien.png" />
+    <None Remove="Profil\Moine.png" />
+    <None Remove="Profil\Nécromancien.png" />
+    <None Remove="Profil\Prêtre.png" />
+    <None Remove="Profil\Rôdeur.png" />
+    <None Remove="Profil\Voleur.png" />
     <None Remove="testImageFond.jpg" />
     <None Remove="testImageFond2.png" />
     <None Remove="wallpaperTest1.jpg" />
@@ -86,7 +98,45 @@
     <Resource Include="Profil\Arquebusier.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Profil\Barde.png" />
+    <Resource Include="Profil\Barbare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Barde.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Chevalier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Druide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Ensorceleur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Forgesort.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Guerrier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Magicien.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Moine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Nécromancien.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Prêtre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Rôdeur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Profil\Voleur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

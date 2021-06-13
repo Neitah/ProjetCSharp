@@ -46,27 +46,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mamaulus1\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
       "projectName": "TestProfils",
-      "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
-      "packagesPath": "C:\\Users\\mamaulus1\\.nuget\\packages\\",
-      "outputPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
+      "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+      "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mamaulus1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -77,12 +70,13 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
-              "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
+            "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+              "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
             },
-            "U:\\Projet P4\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
-              "projectPath": "U:\\Projet P4\\Source\\SolutionProjetP4\\Data\\Data.csproj"
+            "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj"
             }
           }
         }
@@ -95,6 +89,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "imports": [
           "net461",
           "net462",
@@ -105,12 +100,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
