@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj": {}
+    "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+    "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj",
+        "projectUniqueName": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj",
         "projectName": "ClassesApp",
-        "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj",
-        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\obj\\",
+        "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj",
+        "packagesPath": "C:\\Users\\Bastien\\.nuget\\packages\\",
+        "outputPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bastien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,21 +57,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
+    "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\obj\\",
+        "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Bastien\\.nuget\\packages\\",
+        "outputPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bastien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,8 +85,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
-                "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
+              "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+                "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
               }
             }
           }
@@ -118,21 +118,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj": {
+    "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+        "projectUniqueName": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
         "projectName": "TestProfils",
-        "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
-        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
+        "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+        "packagesPath": "C:\\Users\\Bastien\\.nuget\\packages\\",
+        "outputPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bastien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,11 +146,11 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
-                "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
+              "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj": {
+                "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\ClassesApp\\ClassesApp.csproj"
               },
-              "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\Data\\Data.csproj"
+              "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj": {
+                "projectPath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\Data\\Data.csproj"
               }
             }
           }
@@ -197,7 +197,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
