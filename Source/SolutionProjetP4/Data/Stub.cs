@@ -640,59 +640,476 @@ namespace Data
 
             ///MAGICIEN: 
 
-            p1 = new Profil("Magicien", "1d4", "", "", "", "", "\\Images;Component\\Profil\\Magicien.png");
+            p1 = new Profil("Magicien", "1d4", "Bâton ferré (DM 1d6), dague (DM 1d4), grimoire, potion des soins(guérit 1d8 PV).", "Le magicien sait manier la dague et le bâton et ne porte que des vêtements en tissu, donc aucune armure.", "Le magicien utilise son Mod. d’INT pour calculer son score d’attaque magique.", "Le magicien n’est pas qu’un rat de bibliothèque. Il fait aussi appel à ses sorts pour se débarrasser de ses ennemis et pour aider ses compagnons.", "\\Images;Component\\Profil\\Magicien.png");
 
             ///
 
-            /// ///
+            c1 = new Compétence("le magicien ou une cible volontaire(au contact) voit sa taille augmenter de 50 % pendant[5 + Mod.d’INT] tours. Il gagne + 2 aux DM au contact et aux tests de FOR.Pataud, il subit un malus de - 2 aux tests de DEX.", "Agrandissement");
+            c2 = new Compétence("le magicien prend la consistance d’un gaz.Il se déplace au ras du sol(s’il chute, il le fait au ralenti) à une vitesse de 10 m par tour.Il peut s’introduire par les plus petits interstices(comme sous une porte) mais ne peut utiliser aucune capacité sous cette forme.Il ne subit pas non plus de DM, à l’exception des sorts de zone occasionnant des DM(comme Boule de feu).Le sort a une durée de [1d4 + Mod.d’INT] tours.", "Forme gazeuse");
+            c3 = new Compétence("pendant [1d6 + Mod. d’INT] tours, le magicien voit son métabolisme s’accélérer.À partir du tour suivant, il obtient une action supplémentaire par tour: soit une attaque normale, soit une action de mouvement. En revanche, il ne peut toujours accomplir qu’une seule action limitée par tour.", "Hâte");
+            c4 = new Compétence("le magicien disparaît et réapparaît à un autre endroit situé à moins de[INT x 10] mètres.Le lieu d’arrivée doit être soit en ligne de vue, soit parfaitement connu par le magicien.", "Téléportation");
+            c5 = new Compétence("le magicien projette un rayon mortel dont la portée est de 20 mètres et qui annule la cohésion de la matière, ne laissant derrière lui qu’un amas de poussière. Un test d’attaque magique réussi permet de toucher une créature et d’infliger [5d6 + Mod.d’INT] DM.Si le magicien vise un objet porté par une créature, le jet d’attaque subit un malus de - 5.Les objets magiques sont insensibles à ce sort, les objets normaux sont réduits en poussière.Aucun objet de plus de 50 kg ne peut être affecté par ce sort: inutile donc de tenter de creuser un tunnel par ce biais.En revanche, vous pourrez ainsi désintégrer une porte(ou même une pierre dans un mur).", "Désintégration");
 
-            c1 = new Compétence("", "");
-            c2 = new Compétence("", "");
-            c3 = new Compétence("", "");
-            c4 = new Compétence("", "");
-            c5 = new Compétence("", "");
-
-            v1 = new Voie("");
+            v1 = new Voie("Voie de la magie des arcanes");
             v1.AjoutCompétence(c1);
             v1.AjoutCompétence(c2);
             v1.AjoutCompétence(c3);
             v1.AjoutCompétence(c4);
             v1.AjoutCompétence(c5);
             p1.AjoutVoie(v1);
-            ///stock.AjoutProfil(p1);
+
+            c1 = new Compétence("le magicien choisit une cible visible située à moins de 50 mètres.Elle encaisse automatiquement 1d4 points de dégâts(pas de test d’attaque nécessaire).À partir du Rang 4 dans cette Voie, les DM passent à 1d6.", "Projectile magique");
+            c2 = new Compétence("le magicien choisit une cible située à moins de 10 mètres.Si son attaque magique réussit, le rayon affecte la cible qui subit un malus de - 2 à ses tests de FOR, d’attaque au contact et de dégâts, pendant [1d6 + Mod.d’INT] tours.", "Rayon affaiblissant");
+            c3 = new Compétence("le magicien choisit une cible située à moins de 30 mètres.Si son attaque magique réussit, la cible encaisse[1d6 + Mod. d’INT] DM et la flèche enflamme ses vêtements.Chaque tour de combat suivant, le feu inflige 1d6 dégâts supplémentaires. Sur un résultat de 1 à 2, les flammes s’éteignent et le sort prend fin.", "Flèche enflammée");
+            c4 = new Compétence("le magicien choisit une cible située à moins de 30 mètres.Il fait un test d’attaque magique et le compare à la DEF de tous les personnages(y compris le magicien et ses compagnons) se trouvant dans un rayon de 6 mètres autour de la cible.Chaque victime pour laquelle le test est un succès encaisse[4d6 + Mod. d’INT] de DM et doit effectuer un test de DEX difficulté 10 + Mod.d’INT du magicien pour ne subir que la moitié des DM.Quand le test d’attaque est un échec, la cible subit automatiquement la moitié des DM(pas besoin de faire le test de DEX).", "Boule de feu");
+            c5 = new Compétence("sur une attaque magique, le magicien peut utiliser un d12 en attaque au lieu du d20 habituel.Si l’attaque est réussie, il ajoute 2d6 aux DM.Cette capacité s’utilise uniquement avec les sorts nécessitant un test d’attaque et infligeant des DM.Si les DM sont répartis sur plusieurs tours, seuls les DM initiaux sont modifiés.", "Rituel de puissance");
+
+            v1 = new Voie("Voie de la magie destructrice");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("si le magicien réussit son test d’attaque magique (avec une portée de 20 m), la créature ciblée est privée d’air.La victime étouffe progressivement et subit 1d6 DM par tour pendant [1 + Mod.d’INT] tours.", "Asphyxie");
+            c2 = new Compétence("pendant [5 + Mod. d’INT] tours, le magicien retranche à tous les DM de feu, de froid, d’électricité ou d’acide subis un montant égal à 2 fois son Rang dans cette Voie.", "Protection contre les éléments");
+            c3 = new Compétence("le magicien peut enflammer une arme pour[5 + Mod.d’INT] tours. Celle - ci inflige + 1D6 DM de feu.", "Arme enflammée");
+            c4 = new Compétence("le magicien peut respirer sous l’eau pendant 10 minutes.Cette capacité peut être étendue à un compagnon par point de Mod.d’INT.", "Respiration aquatique");
+            c5 = new Compétence("le magicien obtient une réduction des DM égale à[5 + Mod.d’INT] pendant [5 + Mod.d’INT] tours ou jusqu’à ce que le sort ait absorbé 40 points de dégâts.", "Peau de pierre");
+
+            v1 = new Voie("Voie de la magie élémentaire");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le magicien fait apparaître un nuage magique argenté qui le protège contre les attaques adverses.Il bénéficie d’un bonus de + 4 à la DEF pour le reste du combat.", "Armure du mage");
+            c2 = new Compétence("le magicien affecte une cible à moins de 10 mètre avec ce sort.La cible peut chuter de 6 mètres par rang dans la Voie sans subir de dégâts.Si la chute est supérieure à cette hauteur, elle est réduite d’autant.", "Chute ralentie");
+            c3 = new Compétence("pendant [1d4 + Mod.d’INT] tours, le corps du magicien devient flou et tous les DM des attaques de contact ou à distance qu’il encaisse sont divisés par 2.", "Flou");
+            c4 = new Compétence("le magicien peut tracer un cercle sur le sol pouvant contenir 3 personnes.Une fois par tour, lorsqu’un sort prend pour cible un personnage situé dans le cercle (par un test d’attaque magique), le magicien fait un test d’attaque magique en opposition à celui de l’adversaire.Si le test est réussi, le sort adverse est annulé et n’a aucun effet.", "Cercle de protection");
+            c5 = new Compétence("le magicien arrête le temps pendant [1d6 + Mod.d’INT] tours. Seul le magicien peut agir à sa guise pendant cette période, lancer des sorts sur lui - même, se déplacer et déplacer des objets, tant qu’il ne touche pas un être vivant ou n’interagit pas avec lui(en lui lançant un sort par exemple). Dans le cas d’un contact(même magique), le temps reprend instantanément son cours normal.", "Arrêt du temps");
+
+            v1 = new Voie("Voie de la magie protectrice");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le magicien désigne un objet, lequel produit dès lors de la lumière dans un rayon de 20 mètres.Cette source de lumière n’émet pas de chaleur et s’éteint après 10 minutes ou lorsque le magicien le décide.Ce sort permet d’annuler un sort de Ténèbres lancé par un nécromancien de niveau inférieur.", "Lumière");
+            c2 = new Compétence("le magicien se concentre et détecte la présence de toute inscription et de tout objet magique situé dans la pièce où il se trouve(ou dans les 15 mètres autour de lui).Ce sort permet aussi d’analyser les propriétés d’un objet magique au prix de 2 heures d’étude et de 100 pa de poudre d’argent.", "Détection de la magie");
+            c3 = new Compétence("le magicien se rend invisible pendant[1d6 + Mod.d’INT] minutes.Une fois invisible, personne ne peut plus détecter sa présence ou lui porter d’attaque.Si le magicien attaque ou utilise une capacité limitée, il redevient visible.", "Invisibilité");
+            c4 = new Compétence("le magicien peut voler pendant[1d6 + Mod.d’INT] minutes.Sa vitesse de déplacement est la même qu’au sol.", "Vol");
+            c5 = new Compétence("le magicien augmente sa valeur d’INT de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test d’INT lui est demandé et conserver le meilleur résultat.", "Intelligence héroïque");
+
+            v1 = new Voie("Voie de la magie universelle");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+
+            ///MOINE: 
+
+            p1 = new Profil("Moine", "1d8", "Bâton (DM 1d6).", "Le moine ne peut pas porter d’armure.Il sait manier toutes les armes(sauf les armes à poudre), y compris celles à 2 mains, mais la plupart des moines n’y font pas appel et sont plus efficaces à mains nues.", "Bien que d’inspiration asiatique, ce moine est un moine - guerrier qui peut être adapté à de nombreux mondes fantastiques.Si cela ne colle pas avec votre univers, vous pouvez facilement transposer les capacités de combat à mains nues avec une arme(l’épée par exemple) afin d’occidentaliser ce profil.", "Le moine combat à mains nues et utilise le contrôle qu’il a sur son esprit et son corps pour transformer ce dernier en arme de chair.", "\\Images;Component\\Profil\\Moine.png");
 
             ///
 
-            Profil p3 = new Profil("Nom Profil 3", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
-            p3.AjoutVoie(v1);
-            p3.AjoutVoie(v3);
-            p3.AjoutVoie(v5);
-            stock.AjoutProfil(p3);
+            c1 = new Compétence("par un effort de concentration, le moine peut rendre ses mains intangibles, à ce tour, il peut faire une attaque simple avec un bonus + 2 en attaque, +5 si la cible porte une armure.De plus, toutes les attaques à mains nues du moine sont considérées comme magiques (même lorsqu’il n’utilise pas Mains d’énergie).", "Mains d’énergie");
+            c2 = new Compétence("le moine frappe les points par lesquels circule l’énergie vitale d’une créature vivante. En touchant un point précis, il libère ensuite des effets dévastateurs. Lorsqu’il combat à mains nues, le joueur peut choisir de ne pas infliger immédiatement les DM de ses attaques.À tout moment dans l’heure qui suit, il peut annoncer une « Pression Mortelle ». Il doit alors réussir un test d’attaque contre la cible, ce qui libère instantanément la totalité des DM infligés jusqu’alors + 1d6 DM supplémentaires.", "Pression mortelle");
+            c3 = new Compétence("le Moine ne reçoit que la moitié des DM de toutes les sources « élémentaires » : feu, froid, foudre, acide… Il ne subit aucun DM des poisons ou des maladies.", "Invulnérable");
+            c4 = new Compétence("le moine projette une vague de force avec son corps et son esprit à une distance maximum de 20 mètres.Un test d’attaque magique réussi(Mod.de SAG) lui permet d’infliger[2d6 + Mod.de SAG] de DM.", "Projection du ki");
+            c5 = new Compétence("le moine peut subsister sans nourriture, sans eau et sans sommeil pendant[5 + Mod.SAG] jour.Il ne subit aucune pénalité durant cette période.De plus, il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé et conserver le meilleur résultat.", "Ascétisme");
 
-            Profil p4 = new Profil("Nom Profil 4", "dé de Vie", "équipement", "armes et armures", "divers", "description", "chemin");
-            p4.AjoutVoie(v2);
-            p4.AjoutVoie(v3);
-            p4.AjoutVoie(v4);
-            stock.AjoutProfil(p4);
+            v1 = new Voie("Voie de l’énergie vitale");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("pour chaque Rang dans cette Voie, le moine gagne + 1 en DEF et à tous ses tests de DEX pour effectuer des acrobaties.", "Esquive du singe");
+            c2 = new Compétence("le moine obtient des DM critiques(multipliés par 2) sur un résultat de 19 à 20 au d20 du test d’attaque à mains nues ou avec une arme de contact, et sur des résultats de 18 et 20 avec une rapière ou une Vivelame.", "Morsure du serpent");
+            c3 = new Compétence("les DM des attaques à mains nues du moine sont désormais des jets sans limite: s’il obtient les DM maximum sur son dé, le joueur le relance et ajoute le nouveau résultat à ses DM.Tant que le dé donne le meilleur résultat possible, il est relancé et son score comptabilisé. Les dés en bonus(Puissance du Ki par exemple) ne sont jamais relancés, seulement ceux des DM à mains nues.", "Griffes du tigre");
+            c4 = new Compétence("une fois par combat, le moine peut effectuer une attaque tournoyante qui inflige automatiquement[2d6 + Mod.de FOR] de DM à tous les adversaires au contact et oblige ceux - ci à réussir un test de FOR difficulté 10 pour ne pas tomber au sol.", "Fureur du dragon");
+            c5 = new Compétence("une fois par combat, le moine peut choisir de réussir toutes ses attaques automatiquement et d’esquiver toutes celles qui le prennent pour cible pendant un tour.Tout semble aller au ralenti autour de lui…", "Moment de perfection");
+
+            v1 = new Voie("Voie de la maîtrise");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("tant que le moine n’a réalisé aucune action offensive dans un combat, il bénéficie d’un bonus en DEF de + 5.", "Pacifisme");
+            c2 = new Compétence("une fois après chaque combat, le moine peut méditer pendant 10 minutes et récupérer ainsi[niveau + Mod de SAG] PV.", "Transe de guérison");
+            c3 = new Compétence("le moine utilise son intuition et son empathie avec le monde pour augmenter son efficacité en combat.Il ajoute son Mod.de SAG à son Initiative et sa DEF.", "Maîtrise du ki");
+            c4 = new Compétence("le moine entre en méditation et projette son esprit hors de son corps. Celui - ci ressemble à un ectoplasme de couleur blanche qui se déplace en volant à la vitesse de 10 m par tour.Il peut passer au travers des murs, mais pas des êtres vivants, et il reste relié à son corps d’origine par un long filin argenté.La durée maximum de la projection est de[valeur de SAG] tours.Le moine ne perçoit le monde que via sa projection mentale mais ressent si des DM sont infligés à son corps.", "Projection mentale");            
+            c5 = new Compétence("le moine augmente sa valeur de SAG de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de SAG lui est demandé et conserver le meilleur résultat.", "Sagesse héroïque");
+
+            v1 = new Voie("Voie de la méditation");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("lorsqu’il combat à mains nues, le moine peut (s’il le souhaite) utiliser son score d’attaque à distance au lieu de celui d’attaque au contact.Au rang 1 de cette voie, il inflige[1d6 + Mod.de FOR] DM létaux(cf.DM temporaires page 72).Ces DM passent à 1d8 au Rang 3 et à 1d10 au rang 5.", "Poings de fer");
+            c2 = new Compétence("le moine peut dévier un projectile (flèche, javelot,…) une fois par tour de combat(sauf si le test d’attaque est un critique ou si l’attaque vient d’une arme à poudre)...", "Parade de projectiles");
+            c3 = new Compétence("le moine gagne un bonus de + 2 en DEF.", "Peau de fer");
+            c4 = new Compétence("à son tour, le moine peut effectuer 2 attaques à mains nues sur des cibles de son choix ou 2 attaques avec une arme.Alternativement, il peut choisir de faire 3 attaques en utilisant un d12 en attaque pour chacune d’elle(au lieu d’un d20).", "Déluge de coups");
+            c5 = new Compétence("le moine peut choisir d’utiliser 1d12 en attaque au lieu du d20 habituel(et il ajoute normalement son score d’attaque).Si l’attaque est réussie, il ajoute 2d6 aux DM.Cette capacité peut être utilisée avec « Déluge de coups » ou « Projection du ki » par exemple.", "Puissance du ki");
+
+            v1 = new Voie("Voie du poing");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le moine peut se déplacer avant et après avoir attaqué (mais il couvre toujours une distance normale). De plus, il gagne + 1 par rang dans la Voie en Initiative.", "Pas du vent");
+            c2 = new Compétence("le moine se déplace à une vitesse surhumaine. Il couvre une distance de 40 mètres par action de mouvement (la distance normale est de 20 mètres) et se relever est pour lui une action gratuite.", "Course du vent");
+            c3 = new Compétence("le moine défie les lois de la pesanteur et peut se déplacer sur des surfaces qui ne pas supporter son poids.Il peut se déplacer sur l’eau, la neige, le feuillage des arbres ou courir sur un mur vertical. Il doit commencer et terminer son déplacement sur une surface normale.", "Course des airs");
+            c4 = new Compétence("en se concentrant, le moine peut « léviter » à une vitesse de 10 m par tour.", "Lévitation");
+            c5 = new Compétence("le moine peut rendre son corps intangible le temps de passer au travers d’un mur d’une épaisseur maximum de[Mod.de SAG] mètres.Il ne peut rester immatériel qu’un court instant et reprend corps dès qu’il émerge du mur.Il est insensible aux attaques tant qu’il est entièrement dans le mur, sauf si le mur est détruit.", "Passe-muraille");
+
+            v1 = new Voie("Voie du vent");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///NECROMANCIEN: 
+
+            p1 = new Profil("Nécromancien", "1d4", "Bâton ferré (DM 1d6), dague (DM 1d4), potion de soins (guérit 1d8 PV).", "Le nécromancien sait manier la dague et le bâton.Il ne peut porter aucune armure (sauf si celle - ci est faite de tissu) et ne peut pas manier le bouclier.", "Démon FOR + 5 *, DEX + 2, CON + 4 *, INT + 2, SAG + 2, CHA + 0 Init 16, DEF 17, PV[niveau x 5] Attaque au contact = [niveau du nécromancien], DM 1d8 + 5", "Le nécromancien est un lanceur de sort qui s’intéresse aux forces obscures et au pouvoir de la mort. Les nécromanciens sont généralement considérés comme maléfiques et sont peu appréciés. Interprétez - le de façon subtile afin d’en faire un personnage plutôt sombre ou désespéré, mais pas forcément mauvais !", "\\Images;Component\\Profil\\Nécromancien.png");
+
+            ///
+
+            c1 = new Compétence("effectuez un test d’attaque magique contre une cible à moins de 20 mètres.En cas de succès, la victime réalise tous ses tests avec deux d20 et garde le résultat le plus faible.Le sort prend fin dès qu’elle aura raté trois tests(il n’y a sinon aucune de limite de temps).Si la cible possède une capacité lui permettant de lancer deux dés et de garder le meilleur, elle ne lance plus qu’un seul dé.", "Malédiction");
+            c2 = new Compétence("le nécromancien acquiert une beauté fascinante pour[5 + Mod.d’ INT] tours.Il gagne un bonus de + 5 aux tests de CHA ainsi qu’une attaque de contact nécessitant un test d’attaque magique et qui inflige[1d4 + Mod. de CHA] DM.Ces DM sont transformés en PV, au bénéfice du nécromancien(sans dépasser son score max de PV).", "Aspect de la succube");
+            c3 = new Compétence("par une action gratuite, le nécromancien sacrifie 1d4 PV et gagne immédiatement + 3 sur un jet de d20 de son choix ou en DEF contre une attaque.À partir du Rang 5 dans la voie, il peut sacrifier 2d4 PV pour faire passer ce bonus à + 5.", "Pacte sanglant");
+            c4 = new Compétence("le nécromancien prend l’apparence d’un démon pendant[5 + Mod.d’INT] tours.Il gagne + 2 en attaque au contact, en DEF et à tous les tests physiques(FOR, DEX, CON).Il peut faire deux attaques de griffe à 1d6 + 4 DM à chaque tour, en action limitée (une seule en action d’attaque).Ne se cumule pas avec l’aspect de la succube.", "Aspect du démon");
+            c5 = new Compétence("une fois par combat, en sacrifiant 1d6 PV, le nécromancien invoque un démon à son service pour[5 + Mod.d’INT] tours. Ce démon possède l’apparence d’un Balor en plus petit(environ 2, 30 m). Le démon(voir marge) divise par deux tous les DM non magiques subis, les sorts et les armes magiques lui infligent des DM normaux.Il est capable de voler à une vitesse équivalente à un déplacement normal.Lorsque le nécromancien atteint le niveau 10, le démon devient capable d’attaquer deux fois par tour, au prix d’une action limitée.", "Invocation d’un démon");
+
+            v1 = new Voie("Voie du démon");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("chaque fois qu’une créature meurt à moins de 20 m du nécromancien, il récupère 1d6 PV.", "Siphon des âmes");
+            c2 = new Compétence("pendant [5 + Mod.d’INT] tours, le nécromancien prend l’apparence de la mort.Il est immunisé aux attaques qui n’affectent que les vivants et à la plupart des pouvoirs des mort - vivants(de plus, ceux - ci le prennent pour l’un des leurs).Il retranche 2 points à tous les DM physiques subits et divise par deux tous les DM de froid.", "Masque mortuaire");
+            c3 = new Compétence("ce sort nécessite la réussite d’un test d’attaque magique(portée 50 m).La cible subit [1d8 + Mod.d’INT] DM et le nécromancien récupère autant de PV(sans dépasser son score max de PV).", "Baiser du vampire");
+            c4 = new Compétence("le nécromancien fait mine de broyer le coeur de sa victime.Il doit réussir une attaque magique(portée 20 m) et inflige[5d6 + Mod.d’INT] DM.La victime divise les DM par deux si elle réussit un test de CON diffi culté[10 + Mod.d’INT].", "Briser les coeurs");
+            c5 = new Compétence("le nécromancien doit réussir un test d’attaque magique contre le score max de PV de sa cible(portée 10 m).La victime doit réussir un test de CON diffi culté[10 + Mod.d’INT] ou tomber à 0 PV.", "Mot de mort");
+
+            v1 = new Voie("Voie de la mort");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le nécromancien effectue un test d’attaque magique contre une cible(portée 20 m).Celle - ci doit réussir un test de FOR ou de SAG(au choix) diffi culté[10 + Mod.d’INT] ou fuir pendant[1d4 + rang] tours(le MJ peut garder cette durée secrète).Une créature ne peut subir les effets de ce sort qu’une fois par combat.", "Peur");
+            c2 = new Compétence("le nécromancien anime le cadavre d’un humanoïde de taille moyenne, décédé depuis moins d’une heure.Le zombi comprend les ordres « Attaquer », « Suivre », « Garder » et « Pas bouger ». Zombie : Init 8, DEF 10, PV 12, Att +3, DM 1d6 + 1, se déplace à 50 % de la vitesse normale.Le zombi se dégrade et perd 1PV par minute.Le nécromancien peut contrôler un zombi par rang.Un zombi détruit tombe en poussière.", "Animation des morts");
+            c3 = new Compétence("en réussissant un test d’attaque magique(portée 10 m), le nécromancien fait pourrir les chairs de sa victime, infligeant[1d6 + Mod.d’INT] DM.La victime subit un malus de - 2 à tous ses tests pour le reste du combat, à moins de réussir un test de CON diffi culté[12 + Mod.d’INT].", "Putréfaction");
+            c4 = new Compétence("une fois par combat, si le nécromancien réussit un test d’attaque magique (portée 20 m), le sol s’ouvre sous les pieds d’une cible de taille moyenne et l’enterre vivante.Tant qu’elle est ensevelie, elle subit 2d6 DM par tour, ne peut agir ni être la cible d’attaques extérieures.À son tour, elle peut tenter de sortir de terre en réussissant un test de FOR ou de DEX(au choix) diffi culté[13 + Mod.d’INT].Si elle tombe à 0 PV, elle reste enterrée et décède au tour suivant.Chaque personne qui creuse pour l’aider lui octroie un bonus de + 2 sur son test.", "Ensevelissement");
+            c5 = new Compétence("une fois par jour, le nécromancien peut invoquer d’innombrables squelettes émergeant du sol pour attaquer ses ennemis pendant [niveau du nécromancien] tours. Les cibles situées dans un rayon de 20 m autour du nécromancien subissent automatiquement 3d6 DM par tour, à moins qu’elles n’utilisent une action limitée pour s’opposer aux squelettes(ce qui réduit les DM à 1d6).Les squelettes restent autour du nécromancien et se déplacent en même temps que lui dans une zone de 20 m de rayon.Tous les déplacements dans cette zone(même ceux des alliés) sont divisés par deux.", "Armée des morts");
+
+            v1 = new Voie("Voie de l’outre-tombe");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le nécromancien doit réussir un test d’attaque magique (portée 10 m).Du sang s’écoule de la bouche, du nez, des oreilles et même des yeux de la victime, qui subit 1d6 DM par tour pendant[rang] tours.", "Saignements");
+            c2 = new Compétence("pendant [5 + Mod.d’INT] tours, le sang du nécromancien se transforme en un acide qui gicle lorsqu’il subit une blessure.Chaque fois qu’un ennemi au contact le blesse, ce dernier subit 1d6 DM d’acide.", "Sang mordant");
+            c3 = new Compétence("lorsque le nécromant tombe à 0 PV, il peut continuer à agir mais avec un malus de - 2 à tous ses tests.Une nouvelle attaque réussie infl igeant au moins 1 point de DM fi nira par l’achever!", "Exsangue");
+            c4 = new Compétence("si le nécromancien réussit un test d’attaque magique (portée 10 m), la victime saigne à la moindre blessure.Tous les DM des armes blanches infl igées à la cible augmentent de 1d6 pendant[5 + Mod.d’INT] tours.", "Hémorragie");
+            c5 = new Compétence("en réussissant un test d’attaque magique(portée 20 m), le nécromancien tisse un lien avec sa victime.Pendant[5 + Mod.de d’INT] tours, la moitié des DM reçus par le nécromancien sont également subis par la cible et le nécromancien peut lui lancer un sort sans la voir.", "Lien de sang");
+
+            v1 = new Voie("Voie du sang");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le nécromancien invoque une zone fixe de ténèbres magiques, de 10 m de diamètre, pour une durée de[5 + Mod.d’INT] tours.Même les créatures capables de voir dans le noir sont aveuglées dans cette zone.", "Ténèbres");
+            c2 = new Compétence("le nécromancien peut se déplacer de 10 m par action de mouvement sur les murs et les plafonds pendant[5 + Mod. d’INT] tours.S’il reste immobile, il peut lancer des sorts.", "Pattes d’araignée");
+            c3 = new Compétence("en réussissant un test d’attaque magique (portée 20 m), le nécromancien étouffe + Mod.d’INT] DM par tour pendant [rang] tours pourvu qu’il maintienne sa concentration par une action limitée.La victime subit un malus égal au nombre de tours d’effet de la Strangulation(-1 au premier tour, -2 au second, etc.) à tous ses tests. Si la victime sort du champ de vision du nécromancien, le sort prend fin.", "Strangulation");
+            c4 = new Compétence("l’ombre de la cible du nécromancien attaque son propriétaire pendant [3 + Mod.d’INT] tours(portée 20 m).L’ombre poursuit sa cible partout où elle se réfugie.Ombre : 1 attaque par tour, att = att de la cible, DM = DM de la cible divisés par 2.", "Ombre mortelle");
+            c5 = new Compétence("le nécromancien augmente sa valeur d’INT de + 2.Il peut désormais lancer deux d20 à chaque fois qu’un test d’INT lui est demandé conserver le meilleur résultat.", "Intelligence héroïque");
+
+            v1 = new Voie("Voie de la sombre magie");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///PRETRE: 
+           
+            p1 = new Profil("Prêtre", "1d8", "Masse ou marteau de guerre (DM 1d6), petit bouclier (DEF + 1), chemise de maille (DEF + 4).", "Le prêtre sait manier les armes contondantes à une main(marteau, masse) plus une arme sacrée qui dépend de son dieu.Il peut porter jusqu'à une chemise de mailles et manier le petit ou le grand bouclier(au choix du MJ en fonction de la divinité).", "Démon FOR + 5 *, DEX + 2, CON + 4 *, INT + 2, SAG + 2, CHA + 0 Init 16, DEF 17, PV[niveau x 5] Attaque au contact = [niveau du nécromancien], DM 1d8 + 5", "", "\\Images;Component\\Profil\\Pretre.png");
+
+            ///
+
+            c1 = new Compétence("pour chaque rang dans cette Voie, le prêtre obtient un de + 2 aux tests de CHA visant à convaincre ou convertir son auditoire.", "Parole divine");
+            c2 = new Compétence("ce miracle crée pour la durée du combat une arme d’argent et de lumière que seul le Prêtre peut utiliser.Cette arme inflige[1d6 + Mod.de SAG] de DM. Contre les démons et les mort - vivants, elle offre un bonus de + 2 en attaque et ajoute + 1d6 aux DM.", "Arme d’argent");
+            c3 = new Compétence("des ailes divines poussent dans le dos du prêtre, qui peut voler à une vitesse équivalente à deux fois son déplacement normal pendant[5 + Mod.de SAG] tours.Rester en vol stationnaire avec les ailes céleste est une action de mouvement.", "Ailes célestes");
+            c4 = new Compétence("la foudre frappe toutes les créatures désignées dans un rayon de 10 mètres autour du prêtre et leur inflige[1d6 + Mod.de SAG] de DM.Le prêtre compare son test d’attaque magique à la DEF de chaque cible", "Foudres divines");
+            c5 = new Compétence("le prêtre augmente sa valeur de CHA de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de CHA lui est demandé et conserver le meilleur résultat.", "Charisme héroïque");
+
+            v1 = new Voie("Voie de la foi");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le prêtre bénit son arme sacrée.S’il obtient un résultat de « 1 » sur son dé de DM, il relance le dé et garde le second résultat.Les DM de l’arme sont considérés comme magiques.", "Arme bénie");
+            c2 = new Compétence("le prêtre porte le symbole de sa foi sur son bouclier, ce qui lui confère un bonus supplémentaire de + 1 en DEF.Ce bonus passe à + 2 au Rang 4 de la Voie.", "Bouclier de la foi");
+            c3 = new Compétence("le prêtre effectue une attaque magique avec une portée de 30 mètres.Un projectile d’énergie prenant la forme de l’arme du prêtre va percuter la cible, lui infligeant[1d8 + Mod.de SAG] de DM.", "Marteau spirituel");
+            c4 = new Compétence("le prêtre effectue une attaque de contact avec un bonus en attaque et aux dégâts égal à son Mod.de SAG.", "Châtiment divin");
+            c5 = new Compétence("une fois par combat, le prêtre peut prononcer un mot avec la voix de son dieu.Cela dépasse l’entendement des mortels et ses ennemis à portée de vue sont paralysés de terreur pendant 1 tour tandis que tous ses alliés en vue bénéficient d’un bonus de + 5 en attaque pendant cette période.", "Mot de pouvoir");
+
+            v1 = new Voie("Voie de la guerre sainte");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le prêtre entonne un chant pour encourager ses compagnons en vue.Lui et ses alliés bénéficient d’un bonus de + 1 à tous leurs tests de caractéristique et d’attaque pendant[3 + Mod.de SAG] tours.", "Bénédiction");
+            c2 = new Compétence("le prêtre peut faire un test de SAG difficulté 13.S’il réussit, tous les morts - vivants en vue subissent 2d6 points de DM. Ces DM passent à 3d6 au rang 4 de la Voie.", "Destruction des morts-vivants");
+            c3 = new Compétence("quand le prêtre lance ce sort, tous les adversaires qui veulent l’attaquer doivent d’abord réussir un test de SAG difficulté 15.S’ils échouent, ils ne peuvent pas l’attaquer. Les effets de ce sort durent[5 + Mod de SAG] tours, mais s’il tente la moindre attaque, le sort prend fin immédiatement.", "Sanctuaire");
+            c4 = new Compétence("le prêtre fait appel à son dieu pour changer le cours des événements.Une fois par combat, il peut décider qu’un test du MJ ou des joueurs est une réussite ou un échec, même après que les dés aient révélé leur résultat.", "Intervention divine");
+            c5 = new Compétence("le prêtre augmente sa valeur de SAG de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de SAG lui est demandé et conserver le meilleur résultat.", "Sagesse héroïque");
+
+            v1 = new Voie("Voie de la prière");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le prêtre peut toucher une cible, qui récupère alors[1d8 + niveau du prêtre] PV perdus.Le prêtre peut utiliser ce sort sur lui - même.", "Soins légers");
+            c2 = new Compétence("le prêtre peut toucher une cible, qui récupère alors[2d8 + niveau du prêtre] PV perdus.Le prêtre peut utiliser ce sort sur lui - même.", "Soins modérés");
+            c3 = new Compétence("une fois par combat, le prêtre peut libérer une décharge d’énergie bienfaitrice : tous ses compagnons en vue et lui récupèrent[1d8 + niveau du prêtre] PV perdus.", "Soins de groupe");
+            c4 = new Compétence("une fois par jour, le prêtre peut toucher une cible, qui récupère alors tous ses PV perdus et se trouve guérie des poisons, maladies et affaiblissements de caractéristiques.", "Guérison");
+            c5 = new Compétence("une fois par jour, le prêtre peut rappeler à la vie un personnage décédé depuis moins de[Mod.de SAG du prêtre] heures par un rituel de 10 minutes.Il doit connaître personnellement la personne rappelée et posséder une relique lui appartenant. Le personnage revient à la conscience avec 1d6 PV.", "Rappel à la vie");
+
+            v1 = new Voie("Voie des soins");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("la tenue religieuse traditionnelle du prêtre remplace une armure et a été bénie à cet effet: il obtient un bonus en DEF égal à + 1 pour chaque Rang dans cette Voie(lorsqu’il ne porte aucune armure).", "Vêtements sacrés");
+            c2 = new Compétence("le prêtre peut lancer ce sort sur lui ou sur tout allié(portée : contact) pour la durée d’un combat.La cible obtient alors un bonus de + 2 en DEF et pour tous les tests de résistance contre les attaques des mort - vivants, des démons, des élémentaires et des créatures conjurées (appelées d’un autre plan par magie).", "Protection contre le mal");
+            c3 = new Compétence("en touchant sa cible, le prêtre annule les pénalités infligées par les sorts, les malédictions et les capacités spéciales d’autres personnages ou de créatures(douleur, mutilation, poisons, pétrification, etc.).", "Délivrance");
+            c4 = new Compétence("une fois par jour et pour une durée maximale de[3 + Mod.de SAG] tours, le prêtre peut passer dans une dimension entre les plans d’existence où le temps et l’espace sont déformés.Il se déplace dans une sorte de brouillard gris où le paysage défile à toute vitesse.Pour chaque tour de « Marche des Plans », il se déplace en réalité de 10 km. Le lieu de sortie n’est cependant pas très précis et le MJ doit déterminer une position au hasard autour du point visé(à 1d6 km près).", "Marche des plans");
+            c5 = new Compétence("une fois par aventure, le prêtre entre directement en contact avec la puissance divine et réalise un miracle. Il s’agit d’un pouvoir extraordinaire que le MJ accorde au joueur et qui permet des actes légendaires comme écarter les eaux, téléporter tout son groupe ou invoquer des nuées mortelles...", "Messie");
+
+            v1 = new Voie("Voie de la spiritualité");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///RODEUR: 
+
+            p1 = new Profil("Rôdeur", "1d8", "Arc court (DM 1d6, portée 20m), carquois, épée longue (DM 1d8), dague(DM 1d4), armure de cuir renforcée (DEF +3).", "Le rôdeur sait manier les armes de contact à une main et toutes les armes à distance, il peut porter toutes les armures à base de cuir mais ne manie pas de bouclier.", "Compagnon animal Si vous jouez dans un monde moins fantastique ou plus exotique, vous pouvez remplacer le loup par un chien ou par tout autre animal adapté à vos aventures (hyène, panthère, chacal…). Si le joueur la choisit, la Voie du montreur d’ours supprime et remplace la Voie du compagnon animal.Un profil ne peut avoir plus de 5 Voies.", "Le rôdeur est à l’aise dans les forêts ténébreuses, où il traque les animaux dangereux et les créatures monstrueuses ou, au contraire, se fait l’ami des bêtes et le protecteur des lieux sauvages.", "\\Images;Component\\Profil\\Rôdeur.png");
+
+            ///
+
+            c1 = new Compétence("pour chaque Rang dans cette Voie, le rôdeur gagne un bonus de + 2 à tous ses tests de SAG destinés à simuler la perception(vue, ouïe, vigilance, etc.).De plus, il ajoute son Mod.de SAG aux dégâts qu’il inflige à l’arc et à son Initiative.", "Sens affutés");
+            c2 = new Compétence("le rôdeur peut attaquer à distance un ennemi qu'il ne voit pas(par exemple invisible ou plongé dans le noir total), mais dont il connaît la direction approximative, comme s'il le voyait, donc sans le malus causé par le fait qu'il ne la voit pas .", "Tir aveugle");
+            c3 = new Compétence("le rôdeur peut faire 2 attaques à distance pendant ce tour.", "Tir rapide");
+            c4 = new Compétence("le rôdeur lance deux d20 pour son attaque et conserve le meilleur résultat.Les dégâts de la flèche sont doublés.", "Flèche de mort");
+            c5 = new Compétence("pour une attaque à distance, le rôdeur peut choisir d’utiliser 1d12 en attaque au lieu du d20 habituel (et il ajoute normalement son score d’attaque à distance).Si l’attaque est réussie, il ajoute 2d6 aux DM.Cette capacité peut être utilisée avec Tir Rapide ou Flèche de Mort(le bonus de 2d6 aux DM n’est pas doublé) par exemple.", "Dans le mille");
+
+            v1 = new Voie("Voie de l’archer");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le loup du rôdeur détecte les odeurs des animaux et des créatures là où ils sont passés.Le rôdeur obtient un bonus de + 5 aux tests de SAG pour pister et suivre des traces.", "Odorat");
+            c2 = new Compétence("le loup est constamment sur ses gardes.Le rôdeur a donc un temps d’avance quand des ennemis essaient de l’attaquer par surprise, il obtient un bonus de + 5 aux tests de surprise (SAG) et en Initiative.Lorsqu’il est surpris, il peut faire une attaque simple à distance AVANT que ne débute le premier tour de combat.", "Surveillance");
+            c3 = new Compétence("le loup du rôdeur peut désormais se battre comme un véritable personnage.Il attaque en même temps que le rôdeur. Loup : Init 13, DEF 14, PV[niveau x 4], attaque au contact = [niveau du rôdeur], DM 1d6 + 1, FOR + 1, DEX + 1, CON * +1, INT - 3, SAG * +2, CHA - 2", "Combat");
+            c4 = new Compétence("le rôdeur peut parler aux animaux.Il peut également communiquer avec son loup par télépathie et le guérir à distance en dépensant ses propres PV(1 PV du rôdeur pour 1 PV octroyé au loup).", "Empathie animale");
+            c5 = new Compétence("le loup du Rôdeur devient un spécimen particulièrement puissant. Mâle alpha: Init 13, DEF 16, PV[niveau x 4], attaque au contact = [niveau du rôdeur + 2], DM 1d6 + 3, FOR + 3, DEX + 1, CON * +3, INT - 3, SAG * +2, CHA - 2", "Animal fabuleux");
+
+            v1 = new Voie("Voie du compagnon animal");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le rôdeur obtient un bonus de + 2 en attaque et aux DM lorsqu’il combat des animaux et un bonus de + 2 par Rang dans cette Voie pour pister ou retrouver des traces.", "Chasseur émérite");
+            c2 = new Compétence("le rôdeur gagne un bonus de + 2 en attaque et + 2d6 aux DM sur sa première attaque contre une créature s’il possède un meilleur score d’initiative.", "Traquenard");
+            c3 = new Compétence("le rôdeur peut effectuer une attaque au contact très percutante.Il ajoute son Mod.de DEX en attaque et aux DM pour cette offensive.", "Attaque éclair");
+            c4 = new Compétence("le rôdeur se déplace de 40 m en forêt en s’éloignant de ses ennemis.Le joueur fait un test de DEX difficulté 10, en cas de succès, il disparaît de la vue de ses poursuivants.Il peut s’éloigner ou rester caché sans risque d’être retrouvé ou rattrapé.", "Repli");
+            c5 = new Compétence("le rôdeur augmente sa valeur de DEX de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de DEX lui est demandé et conserver le meilleur résultat.", "Dextérité héroïque");
+
+            v1 = new Voie("Voie de l’escarmouche");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("pour chaque Rang dans cette Voie, le rôdeur obtient un bonus de + 2 sur tous ses tests de CON destinés à résister à la fatigue, aux intempéries et liés de manière générale à la survie en milieu naturel.", "Endurant");
+            c2 = new Compétence("si le rôdeur passe 1 heure en forêt, il trouve de quoi nourrir deux personnes (pour une journée) pour chaque rang qu’il possède dans cette voie. En passant 1d6 heure(s) et en réussissant un test de SAG difficulté 10, le rôdeur trouve des plantes médicinales qui lui permettent de soigner 1d6 PV par rang.Ces plantes doivent être utilisées immédiatement.Ces soins peuvent toutefois être répartis sur plusieurs patients: le joueur alloue les d6 correspondant aux plantes médicinales à sa guise.", "Nature nourricière");
+            c3 = new Compétence("le rôdeur augmente tous ses déplacements de 10 m.Il n’est pas gêné par les terrains accidentés et obtient + 5 aux tests de natation et d’escalade.", "Grand pas");
+            c4 = new Compétence("si vous croyez en avoir fini avec lui… Une fois par combat, lorsqu’il tombe à 0 PV, le rôdeur peut récupérer[3d6 + Mod. de CON] PV au tour suivant.", "Increvable");
+            c5 = new Compétence("le rôdeur augmente sa valeur de CON de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de CON lui est demandé et conserver le meilleur résultat.", "Constitution héroïque");
+
+            v1 = new Voie("Voie de la survie");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("quand il essaie de passer inaperçu en forêt, le rôdeur bénéficie d’un bonus de + 2 par Rang à son test de DEX.", "Pas de loup");
+            c2 = new Compétence("après avoir tué une créature, le rôdeur peut décider que tous ceux de sa race sont devenus des ennemis jurés.Contre ces créatures, il bénéficie d’un bonus égal à son Mod.de SAG pour ses attaques et il inflige + 1d6 de DM.Le rôdeur peut changer d’ennemi juré une fois au cours de chaque niveau.", "Ennemi juré");
+            c3 = new Compétence("en quelques minutes, le rôdeur peut cacher tous ses compagnons dans n’importe quel environnement naturel.Tant qu’ils ne bougent pas, le rôdeur et ses compagnons sont totalement indétectables.S’ils attaquent des adversaires, ces derniers sont automatiquement Surpris lors du premier tour du combat.", "Embuscade");
+            c4 = new Compétence("le rôdeur choisit une nouvelle race ennemie. Les règles et avantages de la capacité Ennemi Juré s’appliquent à l’identique.", "Second ennemi juré");
+            c5 = new Compétence("le rôdeur augmente sa valeur de SAG de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de SAG lui est demandé et conserver le meilleur résultat.", "Perception héroïque");
+
+            v1 = new Voie("Voie du traqueur");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+
+            ///VOLEUR: 
+
+            p1 = new Profil("Voleur", "1d6", "Rapière (DM 1d6, Crit 19 - 20), 5 dagues (DM 1d4, portée 5 m), outils de crochetage, armure de cuir(DEF + 2).", "Le voleur sait manier les armes de contact à une main et toutes les armes à distance.Il peut seulement porter une armure de cuir simple et ne manie pas de bouclier.", "", "Le voleur crochète les portes, détecte les pièges et préfère piller les cadavres des ennemis que se salir les mains pendant le combat.", "\\Images;Component\\Profil\\Voleur.png");
+
+            ///
+
+            c1 = new Compétence("quand il essaie de passer inaperçu, le voleur bénéficie d’un bonus de + 2 à son test de DEX pour chaque rang acquis dans cette voie.", "Discrétion");
+            c2 = new Compétence("quand il attaque un adversaire dans le dos * ou par surprise, le voleur inflige 1d6 de DM supplémentaires par rang possédé dans cette voie(notez que les dés d’Attaque sournoise ne sont pas multipliés en cas de critique).", "Attaque sournoise");
+            c3 = new Compétence("en réussissant un test de DEX difficulté 10, le voleur peut disparaître dans les ombres à son tour et ne réapparaître qu’au tour suivant durant sa phase d’initiative.Aucun adversaire ne peut l’attaquer pendant qu’il a disparu dans les ombres, mais il peut subir des DM de zone.Le voleur réapparait à une distance maximum de 10 m de sa position initiale, si le voleur a l’initiative, il peut réaliser une attaque sournoise.", "Ombre mouvante");
+            c4 = new Compétence("le voleur n’est jamais surpris.Il peut réaliser une Attaque sournoise en utilisant une action d’attaque plutôt qu’une action limitée contre un adversaire Surpris.", "Surprise");
+            c5 = new Compétence("une fois par combat, le voleur obtient une réussite critique automatique contre la cible de son choix.Il profite donc d’une réussite automatique, des dégâts multipliés par 2 prévus dans ce cas, et même des d6 d’attaque sournoise, eux aussi multipliés.", "Ouverture mortelle");
+
+            v1 = new Voie("Voie de l’assassin");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("une fois par combat, le voleur peut effectuer un déplacement supplémentaire gratuit de 20 mètres à n’importe quel moment du tour.", "Sprint");
+            c2 = new Compétence("le voleur maîtrise l’art de se rendre désagréable, voire insupportable.Par un test opposé de CHA contre l’INT de la victime, il peut forcer celle - ci à l’attaquer pendant ce tour.Le voleur peut immédiatement riposter par une attaque gratuite ou, si la cible l’a raté, par une Attaque sournoise!", "Provocation");
+            c3 = new Compétence("le voleur possède une démarche et une façon de se déplacer à la fois élégante, féline et souple.Il gagne son Mod.de CHA en Initiative, en DEF et à tous les tests de DEX en rapport avec le déplacement(escalade, saut, course, acrobaties, etc.).", "Grâce féline");
+            c4 = new Compétence("une fois par combat, le voleur peut feindre la mort après avoir reçu une blessure(même à 0 PV).Il peut ainsi passer pour mort aussi longtemps qu’il le souhaite et un test d’INT difficulté 20 est nécessaire pour révéler la supercherie.Lorsqu’il décide de se relever, le voleur gagne + 1d6 PV et il obtient une action de mouvement supplémentaire en plus des actions normales autorisées à son tour.", "Feindre la mort");
+            c5 = new Compétence("Le voleur augmente sa valeur de CHA de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de CHA lui est demandé et conserver le meilleur résultat.", "Charisme héroïque");
+
+            v1 = new Voie("Voie de l’aventurier");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("le voleur est très vif et bénéficie d’un bonus de + 1 par rang dans cette voie à sa DEF et à tous ses tests de DEX destinés à esquiver.", "Esquive");
+            c2 = new Compétence("le voleur peut tomber d’une hauteur de 3 m par rang sans se faire mal(rappel: un personnage qui n´a pas cette capacité subit 1d6 points de dégâts tous les 3 m de chute).", "Chute");
+            c3 = new Compétence("si le voleur réussit un test de DEX difficulté 15, il peut effectuer une acrobatie pour franchir un obstacle ou, s’il est au combat au contact, pour surprendre son adversaire par une cabriole, ce qui lui permet de l’attaquer dans le dos (et d’utiliser l’attaque sournoise).", "Acrobaties");
+            c4 = new Compétence("à chaque fois qu’un sort le prend pour cible(y compris un sort de zone ou l’affectant en plus de la personne visée), le voleur peut effectuer un test de DEX en opposition au test d’attaque magique du sort.S’il réussit, il échappe au sort.S’il échoue, tous les effets du sort(puissance, durée, etc.) sont divisés par 2.Au cas où un autre effet diviserait déjà les DM par 2, ils seront au total divisés par 4.", "Esquive de la magie");
+            c5 = new Compétence("le voleur augmente sa valeur de DEX de + 2 et il peut désormais lancer deux d20 à chaque fois qu’un test de DEX lui est demandé et conserver le meilleur résultat.", "Dextérité héroïque");
+
+            v1 = new Voie("Voie du déplacement");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+            c1 = new Compétence("pour chaque Rang acquis dans cette Voie, le voleur reçoit un bonus de + 2 pour tous ses tests de DEX liés à la précision: crocheter une serrure, désamorcer un piège, pickpocket…", "Doigts agiles");
+            c2 = new Compétence("en réussissant un test d’INT difficulté 10, le voleur peut détecter(et ensuite contourner sans danger) les pièges(avant qu’ils se déclenchent bien entendu).Les pièges magiques demandent un test d’INT de difficulté 15.", "Détecter les pièges");
+            c3 = new Compétence("lorsqu’il obtient un score de 17 à 20 sur son d20 en attaque au contact, le voleur fait chuter son adversaire en plus de lui infliger des DM normaux.Un score de 19 à 20 est nécessaire pour une créature quadrupède.", "Croc-en-jambe");
+            c4 = new Compétence("une fois par combat, le voleur peut, en réussissant une attaque de contact, paralyser un adversaire de douleur.Ce dernier n’encaisse pas de DM, mais il ne peut plus attaquer ni se déplacer pendant 1d4 tours.", "Attaque paralysante");
+            c5 = new Compétence("une fois par tour, lorsqu’un allié réussit à blesser une créature au contact du voleur, celui - ci peut lui porter une attaque normale gratuite en profitant de l’ouverture.", "Attaque en traître");
+
+            v1 = new Voie("Voie du roublard");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+
+   
+
+            c1 = new Compétence("le voleur peut utiliser son score d’Attaque à distance pour une attaque au contact lorsqu’il utilise une arme légère comme une dague ou une Rapière. S’il le souhaite, il peut dans ce cas remplacer le Mod.de FOR aux DM par son Mod.d’INT.", "Attaque en finesse");
+            c2 = new Compétence("une fois par combat, le duelliste peut esquiver une attaque qui devait le toucher et s’arranger pour que celle - ci affecte un autre adversaire à son contact.Comparez le test d’attaque à la DEF de la nouvelle cible pour savoir si celle - ci subit des DM.", "Esquive fatale");
+            c3 = new Compétence("par sa science de l’escrime(et de la fourberie), le voleur augmente de manière permanente ses chances de faire des coups critiques.Il retranche désormais son Mod.d’INT au score nécessaire pour obtenir un critique en attaque au contact. Par exemple, Alonzo(INT 14 / +2) obtient à présent un critique sur 17 ou plus au d20 lorsqu’il emploie la rapière(19 – Mod.d’INT).", "Frappe chirurgicale");
+            c4 = new Compétence("le voleur peut à présent utiliser une arme dans chaque main sans pénalité.Avec sa main gauche, il peut effectuer une attaque au contact gratuite supplémentaire à chaque tour. Cette deuxième attaque n’empêche pas l’utilisation d’une capacité limitée, mais elle ne peut pas en être l’origine.", "Ambidextrie");
+            c5 = new Compétence("lorsque le voleur obtient un critique sur une attaque au contact, l’attaque devient automatiquement une Attaque sournoise.Les effets de la capacité d’Attaque sournoise s’appliquent en plus des effets normaux du critique.", "Botte secrète");
+
+            v1 = new Voie("Voie du spadassin");
+            v1.AjoutCompétence(c1);
+            v1.AjoutCompétence(c2);
+            v1.AjoutCompétence(c3);
+            v1.AjoutCompétence(c4);
+            v1.AjoutCompétence(c5);
+            p1.AjoutVoie(v1);
+            stock.AjoutProfil(p1);
+       
 
             /// Utilisateurs
 
             Utilisateur u1 = new Utilisateur("u1", "azer");
-            u1.AjoutProfilFavori(p3);
             stock.AjoutUtilisateur(u1);
-
-            Utilisateur u2 = new Utilisateur("Nom utilisateur 2", "Mot de passe utilisateur 2");
-            u2.AjoutProfilFavori(p3);
-            u2.AjoutProfilHybride(p4);
-            stock.AjoutUtilisateur(u1);
-
-            Utilisateur u3 = new Utilisateur("Nom utilisateur 3", "Mot de passe utilisateur 3");
-            u3.AjoutProfilFavori(p1);
-            u3.AjoutProfilHybride(p4);
-            stock.AjoutUtilisateur(u1);
-
-
-            return stock;
+        
+           return stock;
         }
     }
 }

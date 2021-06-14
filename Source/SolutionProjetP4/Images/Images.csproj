@@ -41,7 +41,7 @@
     <None Remove="Profil\Magicien.png" />
     <None Remove="Profil\Moine.png" />
     <None Remove="Profil\Nécromancien.png" />
-    <None Remove="Profil\Prêtre.png" />
+    <None Remove="Profil\Pretre.png" />
     <None Remove="Profil\Rôdeur.png" />
     <None Remove="Profil\Voleur.png" />
     <None Remove="testImageFond.jpg" />
@@ -128,7 +128,7 @@
     <Resource Include="Profil\Nécromancien.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Profil\Prêtre.png">
+    <Resource Include="Profil\Pretre.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Profil\Rôdeur.png">
