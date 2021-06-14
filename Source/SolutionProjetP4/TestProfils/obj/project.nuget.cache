@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/NSTgoDw/9ZP+oH1nPgLKaUjwVl1a2K4S8kvcqi9UxPl3MEcS4kw+0yHkHX35WIzTVoULs5w64aCAv+mhUtpzQ==",
+  "dgSpecHash": "y7HsEw52tMoX34tyRCiDvFfUv+oFzc+CD0m4weAU/bIJS8L7uV9K0m5D/htO1HwzTql9ef07sOWug2pywzF29Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\IUT\\ProjetP4\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
+  "projectFilePath": "D:\\COURS\\Projet COO IHM\\Projet\\Source\\SolutionProjetP4\\TestProfils\\TestProfils.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+    "C:\\Users\\Bastien\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\Bastien\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Bastien\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\Bastien\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }

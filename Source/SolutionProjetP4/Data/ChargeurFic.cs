@@ -17,7 +17,7 @@ namespace Data
         public override StockageApp Charger(string chemin)
         {
             StockageApp stock = new StockageApp();
-            /*try
+            try
             {
                 Stream stream = File.Open(chemin, FileMode.Open);
                 BinaryFormatter formatter = new BinaryFormatter();
@@ -26,9 +26,9 @@ namespace Data
             }
 
             catch
-            {*/
+            {
                 stock = new Stub().Charger("");
-            //}
+            }
             return stock;
         }
     }
